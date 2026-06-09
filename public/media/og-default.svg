@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F5F1E8"/>
+  <rect x="48" y="48" width="1104" height="534" rx="32" fill="#FFFDF9" stroke="#D6CEC0"/>
+  <circle cx="1012" cy="162" r="88" fill="#0F766E" fill-opacity="0.12"/>
+  <circle cx="954" cy="210" r="124" fill="#D97706" fill-opacity="0.08"/>
+  <text x="92" y="188" fill="#0F766E" font-family="Arial, sans-serif" font-size="22" letter-spacing="8">REPO BASE</text>
+  <text x="92" y="284" fill="#102034" font-family="Arial, sans-serif" font-size="74" font-weight="700">Base Landing Template</text>
+  <text x="92" y="368" fill="#5E6A7B" font-family="Arial, sans-serif" font-size="30">Next.js + TypeScript + Tailwind CSS</text>
+  <text x="92" y="414" fill="#5E6A7B" font-family="Arial, sans-serif" font-size="30">Preparado para marketing, admin y media</text>
+  <rect x="92" y="470" width="214" height="58" rx="29" fill="#0F766E"/>
+  <text x="141" y="507" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24">Reusable starter</text>
+</svg>
