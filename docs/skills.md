@@ -6,21 +6,30 @@ Estos skills complementan el trabajo de diseño, implementación, testing, debug
 
 ## Skills solicitados
 
-### `frontend-design`
+### `ui-ux-pro-max`
 
 Comando:
 
 ```bash
-npx skills add https://github.com/anthropics/skills --skill frontend-design
+npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 ```
 
 Propósito:
 
-- apoyo para decisiones de diseño frontend y composición visual
+- inteligencia UI/UX para decisiones de estructura, accesibilidad, jerarquía visual, responsive design, interacción, color, tipografía y calidad visual
 
 Cuándo usarlo:
 
-- al diseñar nuevas landings o refinar jerarquía visual
+- al diseñar nuevas landings, vistas institucionales, dashboards o componentes visuales
+- al refinar jerarquía visual, accesibilidad, interacción, layouts responsivos o consistencia de producto
+- al revisar UI antes de cerrar una fase de implementación
+
+Notas:
+
+- reemplaza a la skill anterior de diseño frontend como skill principal de diseño del proyecto
+- origen solicitado: `https://ui-ux-pro-max-skill.nextlevelbuilder.io/`
+- repositorio usado por el instalador: `https://github.com/nextlevelbuilder/ui-ux-pro-max-skill`
+- la instalación también agrega skills auxiliares `ckm:*` del mismo paquete
 
 ### `vercel-react-best-practices`
 
@@ -171,3 +180,4 @@ Cuándo usarlo:
 - Estos skills se instalan en el entorno de Codex del usuario, no dentro del repo como dependencias de la app.
 - Después de instalarlos conviene reiniciar Codex para que queden disponibles en la sesión.
 - `next-cache-components` quedó instalado como parte de la preparación de v1.1.
+- La skill anterior de diseño frontend fue retirada y reemplazada por `ui-ux-pro-max`.

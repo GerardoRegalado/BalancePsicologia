@@ -96,7 +96,7 @@ Lee obligatoriamente:
 - `docs/quote.md`
 
 Usa un skill UX/UI o de diseño si existe y aporta valor real.
-- Prioriza `frontend-design` si está disponible.
+- Prioriza `ui-ux-pro-max` si está disponible.
 - No instales herramientas nuevas si una skill ya disponible cubre la necesidad.
 
 Objetivo:
@@ -182,7 +182,7 @@ Lee primero:
 - `docs/development-strategy.md`
 - `docs/client-discovery.md` (solo para contexto adicional, sin ampliar scope)
 
-Usa el skill `frontend-design` como apoyo para calidad visual y consistencia.
+Usa el skill `ui-ux-pro-max` como apoyo para calidad visual, consistencia, accesibilidad e interacción.
 
 Úsalo especialmente cuando la fase incluya UI o decisiones de implementación visual. Si la fase es principalmente técnica, úsalo solo cuando realmente aporte valor.
 
