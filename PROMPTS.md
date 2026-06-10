@@ -73,16 +73,83 @@ Además:
 
 ## C) Prompt definitivo para Stitch (generado por Codex)
 
-Uso manual:
-1. Codex reemplaza esta sección cuando se ejecute el prompt D.
-2. Copia manualmente el prompt final y pégalo en Stitch.
-3. Exporta el `.zip` desde Stitch.
-4. Guarda manualmente en `docs/design/` el `DESIGN.md` aprobado y las carpetas de vista aprobadas con sus archivos.
+### 1. Resumen del tipo de negocio
+
+Balance Psicología es un consultorio de psicología y salud mental en Aguascalientes, México. Necesita una presencia web pública profesional, cálida y confiable para personas que buscan atención psicológica y quieren entender servicios, costos, ubicación y formas de contacto antes de solicitar una cita.
+
+### 2. Resumen del objetivo principal de conversión
+
+El objetivo principal es que una persona interesada confíe en Balance Psicología, entienda rápidamente la oferta y pueda iniciar contacto o solicitud de cita, principalmente por WhatsApp y, en la landing completa, mediante formulario/solicitud básica.
+
+### 3. Pantallas o vistas visuales necesarias
+
+- Vista 1: Fase 0, página temporal simple de “Balance Psicología está en construcción” para `www.balancepsicologia.com`.
+- Vista 2: Fase 1, landing pública completa para `www.balancepsicologia.com`.
+- Variantes responsive recomendadas si Stitch lo permite: desktop y mobile para ambas vistas.
+- No diseñar pantallas, módulos ni navegación de `app.balancepsicologia.com`.
+
+### 4. Propuesta de dirección visual
+
+Dirección visual: minimalista, elegante, sobria, cálida, humana, profesional y tranquila. Debe transmitir seguridad, calma, privacidad y confianza sin verse fría, genérica, excesivamente médica ni como clínica corporativa sin personalidad.
+
+Usar una paleta suave y profesional con base clara, acentos naturales o terapéuticos y contraste accesible. Priorizar jerarquía limpia, tipografía legible, espacios amplios, secciones escaneables, CTAs claros y microcopy empático. Evitar elementos visuales de app privada, dashboards, login, pacientes, notas clínicas, finanzas, CRM o pagos.
 
 Prompt final para Stitch:
 
 ```md
-[Codex debe reemplazar este bloque completo con el prompt definitivo para Stitch]
+Diseña mockups web de alta fidelidad para Balance Psicología, consultorio de psicología en Aguascalientes, México.
+
+Objetivo: crear presencia pública profesional y generar confianza para que personas interesadas conozcan servicios, costos, ubicación y soliciten información o cita.
+
+Estilo visual:
+- Minimalista, elegante, sobrio, cálido, humano, confiable, limpio, profesional y tranquilo.
+- Debe transmitir seguridad, calma, privacidad y confianza.
+- Evitar look médico frío, genérico, improvisado, excesivamente corporativo o de template.
+- Usar tipografía muy legible, buen contraste, espacios amplios, jerarquía clara y diseño responsive.
+
+Generar solo estas vistas:
+
+1. Fase 0 - Página temporal en construcción
+- Vista simple para `www.balancepsicologia.com`.
+- Mensaje principal: “Balance Psicología está en construcción” o una variante profesional equivalente.
+- Incluir marca/nombre Balance Psicología, texto breve de presencia próxima y estética limpia, cálida y confiable.
+- No incluir formulario, agenda, captura de datos, login, base de datos, app privada ni almacenamiento de información.
+
+2. Fase 1 - Landing pública completa
+- Una landing principal para `www.balancepsicologia.com`.
+- Secciones permitidas:
+  - Hero / Inicio con propuesta clara.
+  - Nosotros.
+  - Servicios.
+  - Costos / Pricing / Paquetes.
+  - Agenda / solicitud de cita básica.
+  - Testimonios, usando placeholders claramente marcados como “testimonio real pendiente” si no hay contenido autorizado.
+  - FAQ.
+  - Contacto.
+  - Mapa / ubicación.
+  - Footer con información de contacto y enlaces relevantes.
+- CTAs principales: WhatsApp y solicitud de cita/contacto.
+- El formulario debe verse como solicitud básica, no como sistema de agenda automático.
+- El mapa puede mostrarse como bloque visual o placeholder de ubicación pendiente.
+
+Restricciones estrictas:
+- No diseñar pantallas para `app.balancepsicologia.com`.
+- No incluir login, panel administrativo, base de datos, pacientes, historial clínico, notas clínicas, finanzas, CRM, pagos en línea, membresías, tienda, carga de documentos ni almacenamiento de archivos de pacientes.
+- No inventar funcionalidades fuera del alcance.
+- No inventar testimonios reales; usar placeholders editoriales si hacen falta.
+
+Entregables deseados:
+- `DESIGN.md` con dirección visual, tokens sugeridos, paleta, tipografía, espaciado, componentes y notas responsive.
+- Carpeta/vista `fase-0-pagina-temporal/` con `screen.png` y `code.html`.
+- Carpeta/vista `fase-1-landing-publica/` con `screen.png` y `code.html`.
+- Si es posible, incluir variantes desktop y mobile o notas claras de responsive behavior.
+
+Prioridad del diseño:
+- Claridad comercial.
+- Confianza visual.
+- Jerarquía de conversión.
+- Accesibilidad básica.
+- Facilidad para implementar después con alta fidelidad en Next.js/Tailwind.
 ```
 
 ## D) Prompt para generar el prompt de Stitch
