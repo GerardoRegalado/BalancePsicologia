@@ -1,16 +1,11 @@
-import { HeroSection } from "@/components/sections/hero-section";
-import { heroContent } from "@/content/hero";
+import { ComingSoonSection } from "@/components/sections/coming-soon-section";
 import { buildMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata = buildMetadata({
-  title: "Balance Psicologia",
+  title: "Proximamente",
   path: "/",
 });
 
 export default function MarketingHomePage() {
-  return (
-    <>
-      <HeroSection content={heroContent} />
-    </>
-  );
+  return <ComingSoonSection />;
 }

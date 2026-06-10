@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
 
 type MarketingShellProps = {
   children: ReactNode;
@@ -8,9 +7,8 @@ type MarketingShellProps = {
 
 export function MarketingShell({ children }: MarketingShellProps) {
   return (
-    <div className="min-h-screen">
-      <SiteHeader />
-      <main>{children}</main>
+    <div className="flex min-h-screen flex-col bg-surface text-on-surface">
+      <main className="flex-1">{children}</main>
       <SiteFooter />
     </div>
   );
