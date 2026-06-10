@@ -2,15 +2,15 @@ import type { PricingPlan } from "@/types/content";
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "Sesion individual",
+    name: "Sesión de acompañamiento",
     description:
-      "Placeholder para costo de sesion cuando exista informacion comercial aprobada.",
+      "Información comercial disponible próximamente.",
     featured: false,
   },
   {
-    name: "Proceso terapeutico",
+    name: "Proceso de continuidad",
     description:
-      "Espacio para paquetes o continuidad si el cliente decide publicarlos.",
+      "Opciones de seguimiento disponibles cuando exista información aprobada.",
     featured: true,
   },
 ];

@@ -33,46 +33,6 @@ export const landingHeroContent: LandingSectionContent = {
   publicNote: "Muy pronto compartiremos más detalles sobre este espacio.",
 };
 
-export const landingPackagesContent: LandingSectionContent = {
-  id: "costos",
-  eyebrow: "Costos / Paquetes",
-  title: "Información comercial clara antes de solicitar una cita.",
-  description:
-    "Esta sección reunirá costos, paquetes o condiciones de atención de forma clara y fácil de consultar.",
-  publicNote: "Información disponible próximamente.",
-};
-
-export const landingPackageCards: LandingCardContent[] = [
-  {
-    title: "Sesión individual",
-    description:
-      "Aquí se compartirán detalles sobre duración, modalidad y condiciones de una sesión individual.",
-    meta: "Próximamente",
-  },
-  {
-    title: "Proceso terapéutico",
-    description:
-      "Este espacio explicará opciones de continuidad para quienes deseen iniciar un proceso terapéutico.",
-    meta: "Próximamente",
-  },
-  {
-    title: "Orientación inicial",
-    description:
-      "Muy pronto encontrarás la forma más clara de iniciar contacto con Balance Psicología.",
-    meta: "Próximamente",
-  },
-];
-
-export const landingAppointmentContent: LandingSectionContent = {
-  id: "agenda",
-  eyebrow: "Agenda básica",
-  title: "Solicitud de cita",
-  description:
-    "Este espacio reunirá información clara para iniciar contacto y solicitar orientación sobre una cita.",
-  publicNote:
-    "Próximamente se integrarán los canales oficiales de contacto.",
-};
-
 export const landingTestimonialsContent: LandingSectionContent = {
   id: "testimonios",
   eyebrow: "Testimonios",

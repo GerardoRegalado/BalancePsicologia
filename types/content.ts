@@ -92,7 +92,21 @@ export type ServicesSectionContent = {
 export type PackagePreview = {
   name: string;
   summary: string;
-  bestFor: string;
+  detail: string;
+  meta: string;
+};
+
+export type PackagesSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  publicNote: string;
+  items: PackagePreview[];
+  note: {
+    title: string;
+    description: string;
+  };
 };
 
 export type TestimonialItem = {
@@ -106,10 +120,26 @@ export type LeadFormField = {
   label: string;
   type: "text" | "email" | "textarea" | "select";
   required: boolean;
+  placeholder: string;
+  helperText?: string;
+  options?: string[];
 };
 
 export type LeadFormContent = {
+  id: string;
+  eyebrow: string;
   title: string;
   description: string;
+  publicNote: string;
+  aside: {
+    title: string;
+    description: string;
+    points: {
+      title: string;
+      description: string;
+    }[];
+  };
   fields: LeadFormField[];
+  visualSubmitLabel: string;
+  privacyNote: string;
 };
