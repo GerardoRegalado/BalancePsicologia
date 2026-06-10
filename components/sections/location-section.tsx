@@ -8,8 +8,8 @@ export function LocationSection() {
         <div className="min-h-80 rounded-xl border border-dashed border-outline-variant bg-surface-container">
           <div className="flex h-full min-h-80 items-center justify-center p-8 text-center">
             <p className="max-w-sm text-sm leading-7 text-on-surface-variant">
-              Placeholder de mapa. La integracion real y la direccion se
-              agregaran cuando exista ubicacion confirmada.
+              Ubicacion en Aguascalientes. Muy pronto compartiremos mas detalles
+              para llegar al consultorio.
             </p>
           </div>
         </div>
@@ -19,11 +19,11 @@ export function LocationSection() {
             Aguascalientes, Mexico
           </p>
           <h3 className="mt-4 font-serif text-3xl font-medium">
-            Direccion pendiente
+            Ubicacion del consultorio
           </h3>
           <p className="mt-5 leading-8 text-on-primary/85">
-            Espacio reservado para direccion, referencias, horarios de atencion
-            y enlaces de navegacion cuando sean aprobados.
+            Proximamente se compartiran direccion, referencias y detalles utiles
+            para planear tu visita.
           </p>
         </div>
       </div>

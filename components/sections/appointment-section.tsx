@@ -15,18 +15,18 @@ export function AppointmentSection() {
       <div className="grid gap-8 rounded-xl bg-surface-container p-6 md:grid-cols-[0.9fr_1.1fr] md:p-10">
         <div className="space-y-5">
           <h3 className="font-serif text-2xl font-medium text-on-surface">
-            Bloque reservado para solicitud basica
+            Primer contacto con Balance Psicologia
           </h3>
           <p className="leading-8 text-on-surface-variant">
-            El diseno contempla un flujo simple para iniciar contacto. La
-            captura real de datos, validacion y envio quedan fuera de esta
-            subfase.
+            Este espacio reunira una forma clara y amable de solicitar
+            informacion sobre una cita cuando los canales oficiales esten
+            disponibles.
           </p>
         </div>
 
         <div className="rounded-lg border border-outline-variant/70 bg-surface-container-lowest p-6">
           <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">
-            Campos planeados
+            Informacion de contacto
           </p>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             {appointmentFields.map((field) => (

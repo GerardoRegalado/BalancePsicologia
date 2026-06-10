@@ -10,7 +10,7 @@ type LandingSectionShellProps = {
   children?: ReactNode;
   className?: string;
   headerClassName?: string;
-  placeholderNote?: string;
+  publicNote?: string;
 };
 
 export function LandingSectionShell({
@@ -21,7 +21,7 @@ export function LandingSectionShell({
   children,
   className,
   headerClassName,
-  placeholderNote,
+  publicNote,
 }: LandingSectionShellProps) {
   return (
     <section
@@ -39,9 +39,9 @@ export function LandingSectionShell({
           <p className="text-base leading-8 text-on-surface-variant md:text-lg">
             {description}
           </p>
-          {placeholderNote ? (
+          {publicNote ? (
             <p className="inline-flex rounded-full border border-secondary-container bg-secondary-container/35 px-3 py-1.5 text-xs font-medium text-on-secondary-container">
-              {placeholderNote}
+              {publicNote}
             </p>
           ) : null}
         </div>

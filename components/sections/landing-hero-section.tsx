@@ -19,21 +19,22 @@ export function LandingHeroSection() {
           </div>
 
           <p className="text-sm leading-6 text-on-surface-variant">
-            {landingHeroContent.placeholderNote}
+            {landingHeroContent.publicNote}
           </p>
         </div>
 
         <div
-          aria-label="Placeholder visual para imagen hero aprobada posteriormente"
+          aria-label="Ambiente sereno de consultorio"
           className="relative min-h-[360px] overflow-hidden rounded-xl bg-surface-container shadow-atmospheric md:min-h-[520px]"
         >
           <div className="absolute inset-5 rounded-lg border border-outline-variant/70 bg-surface-container-lowest/60" />
           <div className="absolute right-10 bottom-10 left-10 rounded-lg bg-primary/10 p-6">
             <p className="font-serif text-2xl text-primary">
-              Imagen editorial pendiente
+              Un espacio tranquilo para conversar
             </p>
             <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-              La fotografia o asset final se integrara en la subfase del hero.
+              Muy pronto compartiremos mas detalles sobre el consultorio y la
+              experiencia de atencion.
             </p>
           </div>
         </div>

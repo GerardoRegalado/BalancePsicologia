@@ -2,10 +2,10 @@ import { LandingSectionShell } from "@/components/sections/landing-section-shell
 import { landingContactContent } from "@/content/landing";
 
 const contactPlaceholders = [
-  "WhatsApp por confirmar",
-  "Telefono por confirmar",
-  "Correo por confirmar",
-  "Redes por confirmar",
+  "WhatsApp",
+  "Telefono",
+  "Correo",
+  "Redes sociales",
 ] as const;
 
 export function ContactSection() {

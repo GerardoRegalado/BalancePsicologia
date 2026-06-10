@@ -8,7 +8,7 @@ export type LandingSectionContent = {
   eyebrow: string;
   title: string;
   description: string;
-  placeholderNote?: string;
+  publicNote?: string;
 };
 
 export type LandingCardContent = {
@@ -34,9 +34,8 @@ export const landingHeroContent: LandingSectionContent = {
   eyebrow: "Terapia psicologica en Aguascalientes",
   title: "Un espacio seguro para tu bienestar emocional.",
   description:
-    "Acompanamiento profesional y empatico para personas que buscan claridad, contencion y equilibrio. Copy editorial pendiente de aprobacion final.",
-  placeholderNote:
-    "Placeholder editorial: el hero final se implementara en la subfase 1.2.",
+    "Acompanamiento profesional y empatico para personas que buscan claridad, contencion y equilibrio.",
+  publicNote: "Muy pronto compartiremos mas detalles sobre este espacio.",
 };
 
 export const landingAboutContent: LandingSectionContent = {
@@ -44,9 +43,8 @@ export const landingAboutContent: LandingSectionContent = {
   eyebrow: "Nosotros",
   title: "Una practica terapeutica calida, clara y humana.",
   description:
-    "Esta seccion queda preparada para presentar la filosofia de Balance Psicologia, el enfoque de atencion y la informacion profesional que el cliente apruebe.",
-  placeholderNote:
-    "Pendiente de contenido real aprobado; no se declaran credenciales clinicas aun.",
+    "Este espacio reunira la filosofia de Balance Psicologia, su enfoque de atencion y la manera en que acompana cada proceso.",
+  publicNote: "Informacion disponible proximamente.",
 };
 
 export const landingServicesContent: LandingSectionContent = {
@@ -54,27 +52,27 @@ export const landingServicesContent: LandingSectionContent = {
   eyebrow: "Servicios",
   title: "Servicios terapeuticos",
   description:
-    "Estructura base para explicar las modalidades de atencion sin cerrar textos definitivos antes de la aprobacion del cliente.",
+    "Muy pronto compartiremos mas detalles sobre las modalidades de atencion disponibles.",
 };
 
 export const landingServiceCards: LandingCardContent[] = [
   {
     title: "Terapia individual",
     description:
-      "Espacio reservado para describir el acompanamiento individual cuando el contenido final sea validado.",
-    meta: "Copy editable",
+      "Un espacio personal para conversar, comprender lo que estas viviendo y comenzar un proceso de cuidado emocional.",
+    meta: "Proximamente",
   },
   {
     title: "Terapia de pareja",
     description:
-      "Placeholder para una modalidad que debera confirmarse con el cliente antes de publicarse.",
-    meta: "Por confirmar",
+      "Muy pronto compartiremos mas detalles sobre este servicio y sus alcances.",
+    meta: "Proximamente",
   },
   {
     title: "Terapia familiar",
     description:
-      "Bloque preparado para una descripcion sobria de alcance, beneficios y formato de atencion.",
-    meta: "Por confirmar",
+      "Informacion disponible proximamente para familias que buscan acompanamiento claro y cuidadoso.",
+    meta: "Proximamente",
   },
 ];
 
@@ -83,39 +81,39 @@ export const landingPackagesContent: LandingSectionContent = {
   eyebrow: "Costos / Paquetes",
   title: "Informacion comercial clara antes de solicitar una cita.",
   description:
-    "La landing reserva este espacio para costos, paquetes o condiciones comerciales, sin publicar precios definitivos hasta contar con aprobacion.",
-  placeholderNote: "Precios y paquetes pendientes de confirmacion.",
+    "Esta seccion reunira costos, paquetes o condiciones de atencion de forma clara y facil de consultar.",
+  publicNote: "Informacion disponible proximamente.",
 };
 
 export const landingPackageCards: LandingCardContent[] = [
   {
     title: "Sesion individual",
     description:
-      "Espacio para costo, duracion y condiciones de una sesion individual.",
-    meta: "Precio por confirmar",
+      "Aqui se compartiran detalles sobre duracion, modalidad y condiciones de una sesion individual.",
+    meta: "Proximamente",
   },
   {
     title: "Proceso terapeutico",
     description:
-      "Espacio para explicar paquetes o continuidad de sesiones si el cliente lo define.",
-    meta: "Alcance por confirmar",
+      "Este espacio explicara opciones de continuidad para quienes deseen iniciar un proceso terapeutico.",
+    meta: "Proximamente",
   },
   {
     title: "Orientacion inicial",
     description:
-      "Espacio para indicar como iniciar contacto sin prometer confirmacion automatica.",
-    meta: "Flujo no funcional",
+      "Muy pronto encontraras la forma mas clara de iniciar contacto con Balance Psicologia.",
+    meta: "Proximamente",
   },
 ];
 
 export const landingAppointmentContent: LandingSectionContent = {
   id: "agenda",
   eyebrow: "Agenda basica",
-  title: "Solicitud de cita preparada como bloque editorial.",
+  title: "Solicitud de cita",
   description:
-    "Esta seccion queda lista para una futura solicitud de cita o formulario de contacto. En esta subfase no captura datos ni envia mensajes.",
-  placeholderNote:
-    "No hay formulario funcional, agenda real, WhatsApp funcional ni envio de correo.",
+    "Este espacio reunira informacion clara para iniciar contacto y solicitar orientacion sobre una cita.",
+  publicNote:
+    "Proximamente se integraran los canales oficiales de contacto.",
 };
 
 export const landingTestimonialsContent: LandingSectionContent = {
@@ -123,8 +121,8 @@ export const landingTestimonialsContent: LandingSectionContent = {
   eyebrow: "Testimonios",
   title: "Historias reales solo cuando existan autorizaciones.",
   description:
-    "El bloque se reserva para testimonios proporcionados y autorizados por el cliente. Mientras tanto se muestra un estado editorial pendiente.",
-  placeholderNote: "No se inventan testimonios.",
+    "Este espacio reunira experiencias compartidas con autorizacion y cuidado de la privacidad.",
+  publicNote: "Informacion disponible proximamente.",
 };
 
 export const landingFaqContent: LandingSectionContent = {
@@ -139,42 +137,41 @@ export const landingFaqItems: LandingCardContent[] = [
   {
     title: "Como puedo solicitar informacion?",
     description:
-      "El canal final de contacto se agregara cuando existan datos aprobados por el cliente.",
+      "Proximamente se integraran los canales oficiales para iniciar contacto.",
   },
   {
     title: "Donde sera la atencion?",
     description:
-      "La ubicacion exacta y el mapa se publicaran cuando el dato este confirmado.",
+      "Balance Psicologia atiende en Aguascalientes. Muy pronto compartiremos mas detalles de ubicacion.",
   },
   {
     title: "Los costos ya son definitivos?",
     description:
-      "No. Esta estructura solo reserva el espacio para precios o paquetes aprobados.",
+      "La informacion de costos se publicara de forma clara cuando este disponible.",
   },
 ];
 
 export const landingContactContent: LandingSectionContent = {
   id: "contacto",
   eyebrow: "Contacto",
-  title: "Canales de contacto por confirmar.",
+  title: "Canales oficiales de contacto",
   description:
-    "Area preparada para telefono, WhatsApp, correo, redes o instrucciones de contacto cuando el cliente proporcione datos finales.",
-  placeholderNote:
-    "No se publica telefono, WhatsApp, correo ni enlaces funcionales sin confirmacion.",
+    "Proximamente se integraran los canales oficiales para solicitar informacion o iniciar una conversacion.",
+  publicNote: "Informacion disponible proximamente.",
 };
 
 export const landingLocationContent: LandingSectionContent = {
   id: "ubicacion",
   eyebrow: "Mapa / ubicacion",
-  title: "Ubicacion del consultorio pendiente de confirmacion.",
+  title: "Ubicacion en Aguascalientes.",
   description:
-    "La estructura contempla mapa, direccion y referencias de llegada. Por ahora se muestra un placeholder editorial sin direccion exacta.",
-  placeholderNote: "Mapa real pendiente; no se integra proveedor en esta subfase.",
+    "Este espacio reunira direccion, referencias de llegada y detalles utiles para ubicar el consultorio.",
+  publicNote: "Informacion disponible proximamente.",
 };
 
 export const landingFooterLinks = [
-  "WhatsApp pendiente",
-  "Instagram pendiente",
+  "WhatsApp",
+  "Instagram",
   "Aviso de privacidad",
   "Terminos y condiciones",
 ] as const;

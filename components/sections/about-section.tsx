@@ -15,12 +15,11 @@ export function AboutSection() {
 
         <div className="rounded-lg border border-outline-variant/70 bg-surface-container-lowest p-6 md:p-8">
           <h3 className="font-serif text-2xl font-medium text-on-surface">
-            Enfoque pendiente de aprobacion
+            Un enfoque centrado en la persona
           </h3>
           <p className="mt-4 leading-8 text-on-surface-variant">
-            Este bloque alojara la narrativa final sobre la practica, el tono de
-            atencion y la informacion profesional validada por Balance
-            Psicologia.
+            Muy pronto compartiremos mas detalles sobre la forma de trabajo, el
+            cuidado en cada sesion y la filosofia de Balance Psicologia.
           </p>
         </div>
       </div>
