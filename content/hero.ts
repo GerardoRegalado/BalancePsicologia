@@ -1,32 +1,33 @@
 import type { HeroContent } from "@/types/content";
+import { brandConfig } from "@/config/brand";
+
+const whatsappUrl = brandConfig.contact.whatsappUrl;
 
 export const heroContent: HeroContent = {
-  eyebrow: "Balance Psicologia",
-  title: "Estamos preparando un espacio para tu bienestar.",
+  eyebrow: brandConfig.location,
+  title: "Un espacio seguro para tu",
+  titleAccent: "bienestar mental.",
+  mobileTitleAccent: "bienestar emocional.",
   description:
-    "Muy pronto este sitio reunira informacion clara sobre servicios psicologicos, ubicacion y formas de contacto en Aguascalientes.",
+    "En Balance Psicología te ofrecemos un acompañamiento terapéutico empático, ético y profesional. Descubre la claridad y la paz que buscas a través de un proceso de autoconocimiento guiado.",
   actions: [
     {
-      label: "Sitio en preparacion",
-      href: "/",
+      label: "Solicitar cita",
+      mobileLabel: "Solicitar primera sesión",
+      href: "#agenda",
       variant: "primary",
     },
-  ],
-  highlights: [
     {
-      label: "Atencion cercana",
-      value:
-        "Un espacio pensado para brindar acompanamiento psicologico con calidez, respeto y claridad.",
-    },
-    {
-      label: "Informacion clara",
-      value:
-        "Pronto encontraras servicios, costos, ubicacion y formas de contacto en un solo lugar.",
-    },
-    {
-      label: "Aguascalientes",
-      value:
-        "Balance Psicologia prepara su presencia publica para personas que buscan apoyo profesional.",
+      label: "WhatsApp",
+      href: whatsappUrl,
+      variant: "secondary",
+      disabled: whatsappUrl.length === 0,
+      external: true,
     },
   ],
+  highlights: [],
+  image: {
+    src: "/media/hero-consultorio-balance.png",
+    alt: "Consultorio cálido con sillón claro, plantas y luz natural suave.",
+  },
 };

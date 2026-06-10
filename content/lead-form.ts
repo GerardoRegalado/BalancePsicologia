@@ -25,7 +25,7 @@ export const leadFormContent: LeadFormContent = {
     },
     {
       name: "serviceInterest",
-      label: "Servicio de interes",
+      label: "Servicio de interés",
       type: "select",
       required: true,
     },

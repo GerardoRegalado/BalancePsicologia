@@ -1,7 +1,10 @@
 export type ContentAction = {
   label: string;
+  mobileLabel?: string;
   href: string;
   variant: "primary" | "secondary";
+  disabled?: boolean;
+  external?: boolean;
 };
 
 export type HighlightItem = {
@@ -12,9 +15,15 @@ export type HighlightItem = {
 export type HeroContent = {
   eyebrow: string;
   title: string;
+  titleAccent: string;
+  mobileTitleAccent?: string;
   description: string;
   actions: ContentAction[];
   highlights: HighlightItem[];
+  image: {
+    src: string;
+    alt: string;
+  };
 };
 
 export type FeatureItem = {

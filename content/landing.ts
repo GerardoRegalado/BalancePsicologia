@@ -18,15 +18,10 @@ export type LandingCardContent = {
 };
 
 export const landingNavigation: LandingNavItem[] = [
-  { label: "Inicio", href: "#hero" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },
   { label: "Costos", href: "#costos" },
-  { label: "Agenda", href: "#agenda" },
-  { label: "Testimonios", href: "#testimonios" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
-  { label: "Ubicación", href: "#ubicacion" },
 ];
 
 export const landingHeroContent: LandingSectionContent = {

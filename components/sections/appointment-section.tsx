@@ -5,7 +5,7 @@ const appointmentFields = [
   "Nombre",
   "Teléfono o WhatsApp",
   "Correo opcional",
-  "Servicio de interes",
+  "Servicio de interés",
   "Mensaje breve",
 ] as const;
 
