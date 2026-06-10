@@ -6,18 +6,18 @@ import { siteConfig } from "@/config/site";
 
 export function SiteHeader() {
   return (
-    <header className="border-border bg-background/80 sticky top-0 z-20 border-b backdrop-blur">
-      <Container className="flex h-18 items-center justify-between gap-6">
+    <header className="border-outline-variant bg-surface/90 sticky top-0 z-20 border-b backdrop-blur">
+      <Container className="flex h-18 items-center justify-between gap-gutter">
         <div>
-          <p className="text-accent text-xs tracking-[0.35em] uppercase">
+          <p className="text-secondary text-xs font-semibold tracking-[0.2em] uppercase">
             {brandConfig.shortName}
           </p>
-          <Link href="/" className="text-lg font-semibold">
+          <Link href="/" className="font-serif text-lg font-medium text-primary">
             {brandConfig.name}
           </Link>
         </div>
 
-        <nav className="text-muted hidden items-center gap-6 text-sm md:flex">
+        <nav className="text-on-surface-variant hidden items-center gap-gutter text-sm md:flex">
           {siteConfig.navigation.map((item) => (
             <Link key={item.href} href={item.href as Route}>
               {item.label}
