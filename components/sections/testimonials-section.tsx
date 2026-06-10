@@ -9,8 +9,8 @@ export function TestimonialsSection() {
     >
       <div className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-8 text-center md:p-12">
         <p className="mx-auto max-w-2xl text-lg leading-8 text-on-surface-variant">
-          Aqui se integraran testimonios reales, anonimizados o firmados segun
-          autorizacion expresa. El estado actual evita publicar citas ficticias.
+          Aquí se integrarán testimonios reales, anonimizados o firmados según
+          autorización expresa. El estado actual evita publicar citas ficticias.
         </p>
       </div>
     </LandingSectionShell>

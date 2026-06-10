@@ -3,7 +3,7 @@ import { landingAppointmentContent } from "@/content/landing";
 
 const appointmentFields = [
   "Nombre",
-  "Telefono o WhatsApp",
+  "Teléfono o WhatsApp",
   "Correo opcional",
   "Servicio de interes",
   "Mensaje breve",
@@ -15,18 +15,18 @@ export function AppointmentSection() {
       <div className="grid gap-8 rounded-xl bg-surface-container p-6 md:grid-cols-[0.9fr_1.1fr] md:p-10">
         <div className="space-y-5">
           <h3 className="font-serif text-2xl font-medium text-on-surface">
-            Primer contacto con Balance Psicologia
+            Primer contacto con Balance Psicología
           </h3>
           <p className="leading-8 text-on-surface-variant">
-            Este espacio reunira una forma clara y amable de solicitar
-            informacion sobre una cita cuando los canales oficiales esten
+            Este espacio reunirá una forma clara y amable de solicitar
+            información sobre una cita cuando los canales oficiales estén
             disponibles.
           </p>
         </div>
 
         <div className="rounded-lg border border-outline-variant/70 bg-surface-container-lowest p-6">
           <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">
-            Informacion de contacto
+            Información de contacto
           </p>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             {appointmentFields.map((field) => (

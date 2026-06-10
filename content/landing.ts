@@ -26,94 +26,94 @@ export const landingNavigation: LandingNavItem[] = [
   { label: "Testimonios", href: "#testimonios" },
   { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
-  { label: "Ubicacion", href: "#ubicacion" },
+  { label: "Ubicación", href: "#ubicacion" },
 ];
 
 export const landingHeroContent: LandingSectionContent = {
   id: "hero",
-  eyebrow: "Terapia psicologica en Aguascalientes",
+  eyebrow: "Terapia psicológica en Aguascalientes",
   title: "Un espacio seguro para tu bienestar emocional.",
   description:
-    "Acompanamiento profesional y empatico para personas que buscan claridad, contencion y equilibrio.",
-  publicNote: "Muy pronto compartiremos mas detalles sobre este espacio.",
+    "Acompañamiento profesional y empático para personas que buscan claridad, contención y equilibrio.",
+  publicNote: "Muy pronto compartiremos más detalles sobre este espacio.",
 };
 
 export const landingAboutContent: LandingSectionContent = {
   id: "nosotros",
   eyebrow: "Nosotros",
-  title: "Una practica terapeutica calida, clara y humana.",
+  title: "Una práctica terapéutica cálida, clara y humana.",
   description:
-    "Este espacio reunira la filosofia de Balance Psicologia, su enfoque de atencion y la manera en que acompana cada proceso.",
-  publicNote: "Informacion disponible proximamente.",
+    "Este espacio reunirá la filosofía de Balance Psicología, su enfoque de atención y la manera en que acompaña cada proceso.",
+  publicNote: "Información disponible próximamente.",
 };
 
 export const landingServicesContent: LandingSectionContent = {
   id: "servicios",
   eyebrow: "Servicios",
-  title: "Servicios terapeuticos",
+  title: "Servicios terapéuticos",
   description:
-    "Muy pronto compartiremos mas detalles sobre las modalidades de atencion disponibles.",
+    "Muy pronto compartiremos más detalles sobre las modalidades de atención disponibles.",
 };
 
 export const landingServiceCards: LandingCardContent[] = [
   {
     title: "Terapia individual",
     description:
-      "Un espacio personal para conversar, comprender lo que estas viviendo y comenzar un proceso de cuidado emocional.",
-    meta: "Proximamente",
+      "Un espacio personal para conversar, comprender lo que estás viviendo y comenzar un proceso de cuidado emocional.",
+    meta: "Próximamente",
   },
   {
     title: "Terapia de pareja",
     description:
-      "Muy pronto compartiremos mas detalles sobre este servicio y sus alcances.",
-    meta: "Proximamente",
+      "Muy pronto compartiremos más detalles sobre este servicio y sus alcances.",
+    meta: "Próximamente",
   },
   {
     title: "Terapia familiar",
     description:
-      "Informacion disponible proximamente para familias que buscan acompanamiento claro y cuidadoso.",
-    meta: "Proximamente",
+      "Información disponible próximamente para familias que buscan acompañamiento claro y cuidadoso.",
+    meta: "Próximamente",
   },
 ];
 
 export const landingPackagesContent: LandingSectionContent = {
   id: "costos",
   eyebrow: "Costos / Paquetes",
-  title: "Informacion comercial clara antes de solicitar una cita.",
+  title: "Información comercial clara antes de solicitar una cita.",
   description:
-    "Esta seccion reunira costos, paquetes o condiciones de atencion de forma clara y facil de consultar.",
-  publicNote: "Informacion disponible proximamente.",
+    "Esta sección reunirá costos, paquetes o condiciones de atención de forma clara y fácil de consultar.",
+  publicNote: "Información disponible próximamente.",
 };
 
 export const landingPackageCards: LandingCardContent[] = [
   {
-    title: "Sesion individual",
+    title: "Sesión individual",
     description:
-      "Aqui se compartiran detalles sobre duracion, modalidad y condiciones de una sesion individual.",
-    meta: "Proximamente",
+      "Aquí se compartirán detalles sobre duración, modalidad y condiciones de una sesión individual.",
+    meta: "Próximamente",
   },
   {
-    title: "Proceso terapeutico",
+    title: "Proceso terapéutico",
     description:
-      "Este espacio explicara opciones de continuidad para quienes deseen iniciar un proceso terapeutico.",
-    meta: "Proximamente",
+      "Este espacio explicará opciones de continuidad para quienes deseen iniciar un proceso terapéutico.",
+    meta: "Próximamente",
   },
   {
-    title: "Orientacion inicial",
+    title: "Orientación inicial",
     description:
-      "Muy pronto encontraras la forma mas clara de iniciar contacto con Balance Psicologia.",
-    meta: "Proximamente",
+      "Muy pronto encontrarás la forma más clara de iniciar contacto con Balance Psicología.",
+    meta: "Próximamente",
   },
 ];
 
 export const landingAppointmentContent: LandingSectionContent = {
   id: "agenda",
-  eyebrow: "Agenda basica",
+  eyebrow: "Agenda básica",
   title: "Solicitud de cita",
   description:
-    "Este espacio reunira informacion clara para iniciar contacto y solicitar orientacion sobre una cita.",
+    "Este espacio reunirá información clara para iniciar contacto y solicitar orientación sobre una cita.",
   publicNote:
-    "Proximamente se integraran los canales oficiales de contacto.",
+    "Próximamente se integrarán los canales oficiales de contacto.",
 };
 
 export const landingTestimonialsContent: LandingSectionContent = {
@@ -121,8 +121,8 @@ export const landingTestimonialsContent: LandingSectionContent = {
   eyebrow: "Testimonios",
   title: "Historias reales solo cuando existan autorizaciones.",
   description:
-    "Este espacio reunira experiencias compartidas con autorizacion y cuidado de la privacidad.",
-  publicNote: "Informacion disponible proximamente.",
+    "Este espacio reunirá experiencias compartidas con autorización y cuidado de la privacidad.",
+  publicNote: "Información disponible próximamente.",
 };
 
 export const landingFaqContent: LandingSectionContent = {
@@ -130,24 +130,24 @@ export const landingFaqContent: LandingSectionContent = {
   eyebrow: "FAQ",
   title: "Preguntas frecuentes",
   description:
-    "Preguntas base para orientar a visitantes sin sustituir una conversacion directa con Balance Psicologia.",
+    "Preguntas base para orientar a visitantes sin sustituir una conversación directa con Balance Psicología.",
 };
 
 export const landingFaqItems: LandingCardContent[] = [
   {
-    title: "Como puedo solicitar informacion?",
+    title: "¿Cómo puedo solicitar información?",
     description:
-      "Proximamente se integraran los canales oficiales para iniciar contacto.",
+      "Próximamente se integrarán los canales oficiales para iniciar contacto.",
   },
   {
-    title: "Donde sera la atencion?",
+    title: "¿Dónde será la atención?",
     description:
-      "Balance Psicologia atiende en Aguascalientes. Muy pronto compartiremos mas detalles de ubicacion.",
+      "Balance Psicología atiende en Aguascalientes. Muy pronto compartiremos más detalles de ubicación.",
   },
   {
-    title: "Los costos ya son definitivos?",
+    title: "¿Los costos ya son definitivos?",
     description:
-      "La informacion de costos se publicara de forma clara cuando este disponible.",
+      "La información de costos se publicará de forma clara cuando esté disponible.",
   },
 ];
 
@@ -156,22 +156,22 @@ export const landingContactContent: LandingSectionContent = {
   eyebrow: "Contacto",
   title: "Canales oficiales de contacto",
   description:
-    "Proximamente se integraran los canales oficiales para solicitar informacion o iniciar una conversacion.",
-  publicNote: "Informacion disponible proximamente.",
+    "Próximamente se integrarán los canales oficiales para solicitar información o iniciar una conversación.",
+  publicNote: "Información disponible próximamente.",
 };
 
 export const landingLocationContent: LandingSectionContent = {
   id: "ubicacion",
-  eyebrow: "Mapa / ubicacion",
-  title: "Ubicacion en Aguascalientes.",
+  eyebrow: "Mapa / ubicación",
+  title: "Ubicación en Aguascalientes.",
   description:
-    "Este espacio reunira direccion, referencias de llegada y detalles utiles para ubicar el consultorio.",
-  publicNote: "Informacion disponible proximamente.",
+    "Este espacio reunirá dirección, referencias de llegada y detalles útiles para ubicar el consultorio.",
+  publicNote: "Información disponible próximamente.",
 };
 
 export const landingFooterLinks = [
   "WhatsApp",
   "Instagram",
   "Aviso de privacidad",
-  "Terminos y condiciones",
+  "Términos y condiciones",
 ] as const;

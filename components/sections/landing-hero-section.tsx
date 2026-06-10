@@ -33,8 +33,8 @@ export function LandingHeroSection() {
               Un espacio tranquilo para conversar
             </p>
             <p className="mt-2 text-sm leading-6 text-on-surface-variant">
-              Muy pronto compartiremos mas detalles sobre el consultorio y la
-              experiencia de atencion.
+              Muy pronto compartiremos más detalles sobre el consultorio y la
+              experiencia de atención.
             </p>
           </div>
         </div>

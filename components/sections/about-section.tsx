@@ -18,8 +18,8 @@ export function AboutSection() {
             Un enfoque centrado en la persona
           </h3>
           <p className="mt-4 leading-8 text-on-surface-variant">
-            Muy pronto compartiremos mas detalles sobre la forma de trabajo, el
-            cuidado en cada sesion y la filosofia de Balance Psicologia.
+            Muy pronto compartiremos más detalles sobre la forma de trabajo, el
+            cuidado en cada sesión y la filosofía de Balance Psicología.
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { landingContactContent } from "@/content/landing";
 
 const contactPlaceholders = [
   "WhatsApp",
-  "Telefono",
+  "Teléfono",
   "Correo",
   "Redes sociales",
 ] as const;
