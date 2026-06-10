@@ -2,15 +2,15 @@ import type { PricingPlan } from "@/types/content";
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: "Starter",
+    name: "Sesion individual",
     description:
-      "Placeholder para futuros bloques de pricing o paquetes comerciales.",
+      "Placeholder para costo de sesion cuando exista informacion comercial aprobada.",
     featured: false,
   },
   {
-    name: "Growth",
+    name: "Proceso terapeutico",
     description:
-      "Úsalo como punto de partida cuando el proyecto necesite comparar alcances o paquetes.",
+      "Espacio para paquetes o continuidad si el cliente decide publicarlos.",
     featured: true,
   },
 ];

@@ -1,34 +1,34 @@
 import type { FeatureSectionContent } from "@/types/content";
 
 export const featureSectionContent: FeatureSectionContent = {
-  eyebrow: "Estructura base",
-  title: "Todo queda listo para crecer sin sobreingeniería temprana.",
+  eyebrow: "Landing publica",
+  title: "Estructura lista para completar la experiencia publica.",
   description:
-    "El template separa branding, contenido, servicios y UI para poder clonar el repo, rebrandearlo rápido y evolucionarlo por cliente.",
+    "La pagina queda organizada por secciones editables para integrar contenido real sin mezclar copy comercial dentro de la UI.",
   items: [
     {
-      tag: "Architecture",
-      title: "Single app, modular por diseño",
+      tag: "Hero",
+      title: "Entrada principal preparada",
       description:
-        "Se elige una sola app Next.js para mantener simplicidad hoy, con separación clara entre superficies, servicios, configuración y contenido.",
+        "El espacio inicial queda reservado para la propuesta principal y CTAs de la siguiente subfase.",
     },
     {
-      tag: "Content",
-      title: "Contenido reusable por archivos",
+      tag: "Contenido",
+      title: "Copy editable centralizado",
       description:
-        "Hero, features, pricing, FAQ y metadata usan archivos TypeScript fáciles de versionar y luego reemplazar por CMS o base de datos.",
+        "Las secciones leen placeholders desde content para poder reemplazarlos por textos aprobados.",
     },
     {
-      tag: "Admin readiness",
-      title: "Ruta interna preparada",
+      tag: "Contacto",
+      title: "Canales pendientes protegidos",
       description:
-        "La sección /admin ya existe como placeholder y deja resuelta la frontera conceptual para futuras herramientas internas del cliente.",
+        "Telefono, WhatsApp, correo y mapa se dejan como pendientes hasta tener datos confirmados.",
     },
     {
-      tag: "Media",
-      title: "Storage desacoplado",
+      tag: "Scope",
+      title: "Sin funcionalidad prematura",
       description:
-        "Los adapters de media aíslan la futura integración cloud para que UI y contenido no dependan del proveedor elegido.",
+        "La estructura no captura datos, no agenda citas y no integra proveedores externos.",
     },
   ],
 };

@@ -1,9 +1,9 @@
 import type { LeadFormContent } from "@/types/content";
 
 export const leadFormContent: LeadFormContent = {
-  title: "Cuéntame sobre tu proyecto",
+  title: "Solicitud de cita pendiente",
   description:
-    "Placeholder para un futuro formulario de leads. La implementación real deberá conectarse desde services/ y respetar validación, anti-spam y handoff comercial.",
+    "Placeholder editorial para una futura solicitud basica. En la subfase 1.1 no existe formulario funcional, envio de correo ni agenda real.",
   fields: [
     {
       name: "name",
@@ -12,22 +12,28 @@ export const leadFormContent: LeadFormContent = {
       required: true,
     },
     {
-      name: "email",
-      label: "Correo",
-      type: "email",
+      name: "phone",
+      label: "Telefono o WhatsApp",
+      type: "text",
       required: true,
     },
     {
-      name: "projectType",
-      label: "Tipo de proyecto",
+      name: "email",
+      label: "Correo opcional",
+      type: "email",
+      required: false,
+    },
+    {
+      name: "serviceInterest",
+      label: "Servicio de interes",
       type: "select",
       required: true,
     },
     {
-      name: "scope",
-      label: "Objetivo o alcance",
+      name: "message",
+      label: "Mensaje breve",
       type: "textarea",
-      required: true,
+      required: false,
     },
   ],
 };

@@ -1,18 +1,22 @@
 import { Container } from "@/components/ui/container";
 import { brandConfig } from "@/config/brand";
-import { comingSoonContent } from "@/content/coming-soon";
+import { landingFooterLinks } from "@/content/landing";
 
 export function SiteFooter() {
   return (
-    <footer aria-label="Footer" className="bg-surface-container w-full">
-      <Container className="flex flex-col items-center justify-between gap-5 py-5 md:flex-row md:py-6">
+    <footer
+      id="footer"
+      aria-label="Footer"
+      className="w-full bg-surface-container"
+    >
+      <Container className="flex flex-col items-center justify-between gap-6 py-8 md:flex-row md:py-7">
         <div className="font-serif text-xl leading-7 font-medium text-primary">
           <span className="block">Balance</span>
           <span className="block">Psicología</span>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium tracking-[0.16em] text-on-secondary-container">
-          {comingSoonContent.footerItems.map((item) => (
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-center text-xs font-medium tracking-[0.12em] text-on-secondary-container uppercase">
+          {landingFooterLinks.map((item) => (
             <span
               key={item}
               aria-disabled="true"
@@ -23,9 +27,9 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <p className="max-w-sm text-center text-sm font-medium leading-6 text-primary md:text-left">
+        <p className="max-w-sm text-center text-sm leading-6 text-primary md:text-left">
           © 2024 {brandConfig.name}. Todos los derechos reservados.{" "}
-          {comingSoonContent.location}.
+          {brandConfig.location}.
         </p>
       </Container>
     </footer>

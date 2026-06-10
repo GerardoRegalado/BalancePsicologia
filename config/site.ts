@@ -1,4 +1,5 @@
 import { brandConfig } from "@/config/brand";
+import { landingNavigation } from "@/content/landing";
 
 export type NavigationItem = {
   label: string;
@@ -12,7 +13,7 @@ export const siteConfig = {
   titleTemplate: `%s | ${brandConfig.name}`,
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
-    "Balance Psicología está preparando una presencia pública profesional para informar sobre sus servicios psicológicos en Aguascalientes.",
+    "Balance Psicología prepara una landing pública profesional para informar servicios psicológicos, costos, ubicación y solicitud básica de cita en Aguascalientes.",
   keywords: [
     "psicología",
     "terapia psicológica",
@@ -22,7 +23,5 @@ export const siteConfig = {
     "Balance Psicología",
   ],
   ogImage: process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE ?? "/media/og-default.svg",
-  navigation: [
-    { label: "Inicio", href: "/" },
-  ] satisfies NavigationItem[],
+  navigation: landingNavigation satisfies NavigationItem[],
 } as const;

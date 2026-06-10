@@ -2,24 +2,21 @@ import type { ServiceItem } from "@/types/content";
 
 export const serviceItems: ServiceItem[] = [
   {
-    name: "Landing pages comerciales",
+    name: "Terapia individual",
     summary:
-      "Servicio preparado para vender una oferta clara, captar leads y validar positioning rápidamente.",
-    outcome:
-      "Base ideal para discovery corto, propuesta clara y salida rápida.",
+      "Placeholder para describir el acompanamiento individual cuando exista copy aprobado.",
+    outcome: "Modalidad pendiente de validacion editorial.",
   },
   {
-    name: "Sitios institucionales",
+    name: "Terapia de pareja",
     summary:
-      "Bloques y contenido pensados para comunicar credibilidad, capacidades y proceso de trabajo.",
-    outcome:
-      "Escalable a nuevas secciones, páginas de servicio y panel interno sin rehacer la base.",
+      "Espacio reservado para confirmar si esta modalidad forma parte de la oferta publica.",
+    outcome: "Contenido por confirmar con el cliente.",
   },
   {
-    name: "Bases para futuros SaaS ligeros",
+    name: "Terapia familiar",
     summary:
-      "Arquitectura lista para sumar admin, formularios y flujos internos cuando el alcance crezca.",
-    outcome:
-      "Permite arrancar simple hoy y abrir el camino a producto o dashboard después.",
+      "Bloque preparado para explicar alcance, formato y condiciones si se aprueba.",
+    outcome: "Descripcion editable pendiente.",
   },
 ];

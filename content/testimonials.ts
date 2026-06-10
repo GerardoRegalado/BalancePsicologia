@@ -2,15 +2,15 @@ import type { TestimonialItem } from "@/types/content";
 
 export const testimonialItems: TestimonialItem[] = [
   {
-    name: "Cliente ejemplo",
-    role: "Founder",
+    name: "Testimonio pendiente",
+    role: "Autorizacion requerida",
     quote:
-      "Placeholder listo para reemplazarse por testimonios reales cuando exista un caso publicado o una referencia aprobada.",
+      "Placeholder listo para reemplazarse por un testimonio real, autorizado y revisado por el cliente.",
   },
   {
-    name: "Aliado comercial",
-    role: "Project lead",
+    name: "Historia pendiente",
+    role: "Contenido editable",
     quote:
-      "Este bloque existe para preparar futuras pruebas sociales sin mezclar el copy definitivo dentro de los componentes.",
+      "Este bloque evita inventar pruebas sociales y conserva el espacio para contenido validado.",
   },
 ];

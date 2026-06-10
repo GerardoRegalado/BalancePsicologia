@@ -2,13 +2,13 @@ import type { FaqItem } from "@/types/content";
 
 export const faqItems: FaqItem[] = [
   {
-    question: "¿Dónde vive el contenido editable?",
+    question: "Como puedo solicitar informacion?",
     answer:
-      "En esta base comienza en archivos TypeScript dentro de config y content para facilitar rebranding rápido y posterior migración a CMS.",
+      "El canal final de contacto se agregara cuando Balance Psicologia confirme sus datos publicos.",
   },
   {
-    question: "¿Cómo crecerá el panel administrativo?",
+    question: "La ubicacion ya esta confirmada?",
     answer:
-      "La ruta /admin está reservada para integrar autenticación, formularios internos y gestión de media cuando el alcance lo justifique.",
+      "La landing reserva espacio para direccion y mapa, pero la direccion exacta queda pendiente de aprobacion.",
   },
 ];

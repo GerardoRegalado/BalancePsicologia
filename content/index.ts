@@ -1,6 +1,22 @@
 export { faqItems } from "@/content/faq";
 export { featureSectionContent } from "@/content/features";
 export { heroContent } from "@/content/hero";
+export {
+  landingAboutContent,
+  landingAppointmentContent,
+  landingContactContent,
+  landingFaqContent,
+  landingFaqItems,
+  landingFooterLinks,
+  landingHeroContent,
+  landingLocationContent,
+  landingNavigation,
+  landingPackageCards,
+  landingPackagesContent,
+  landingServiceCards,
+  landingServicesContent,
+  landingTestimonialsContent,
+} from "@/content/landing";
 export { leadFormContent } from "@/content/lead-form";
 export { packagePreviews } from "@/content/packages";
 export { pricingPlans } from "@/content/pricing";

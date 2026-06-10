@@ -2,21 +2,21 @@ import type { PackagePreview } from "@/types/content";
 
 export const packagePreviews: PackagePreview[] = [
   {
-    name: "Starter",
+    name: "Sesion individual",
     summary:
-      "Ideal para una landing o sitio corto con alcance bien definido y tiempo de entrega compacto.",
-    bestFor: "Validación rápida y presencia comercial inicial.",
+      "Espacio reservado para costo, duracion y condiciones aprobadas de una sesion.",
+    bestFor: "Precio por confirmar.",
   },
   {
-    name: "Growth",
+    name: "Proceso terapeutico",
     summary:
-      "Pensado para proyectos con varias secciones, mejor documentación y margen para iteración.",
-    bestFor: "Negocios que ya necesitan una base más sólida para vender.",
+      "Placeholder para explicar continuidad, paquetes o recomendaciones si el cliente las define.",
+    bestFor: "Alcance por confirmar.",
   },
   {
-    name: "Custom",
+    name: "Orientacion inicial",
     summary:
-      "Ruta flexible para integraciones, panel interno o flujos especiales que no caben en un paquete fijo.",
-    bestFor: "Proyectos con necesidades operativas o comerciales particulares.",
+      "Espacio para detallar como iniciar contacto sin prometer agenda automatica.",
+    bestFor: "Flujo no funcional en esta subfase.",
   },
 ];

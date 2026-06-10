@@ -26,7 +26,13 @@ describe("project readiness", () => {
     expect(packagePreviews.length).toBeGreaterThanOrEqual(3);
     expect(testimonialItems.length).toBeGreaterThanOrEqual(2);
     expect(leadFormContent.fields.map((field) => field.name)).toEqual(
-      expect.arrayContaining(["name", "email", "projectType", "scope"]),
+      expect.arrayContaining([
+        "name",
+        "phone",
+        "email",
+        "serviceInterest",
+        "message",
+      ]),
     );
   });
 
