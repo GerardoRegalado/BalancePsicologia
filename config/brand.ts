@@ -1,15 +1,15 @@
 export const brandConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Base Landing Template",
-  shortName: process.env.NEXT_PUBLIC_SITE_SHORT_NAME ?? "Repo Base",
+  name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Balance Psicologia",
+  shortName: process.env.NEXT_PUBLIC_SITE_SHORT_NAME ?? "Balance",
   legalName:
-    process.env.NEXT_PUBLIC_SITE_LEGAL_NAME ?? "Base Landing Template Studio",
+    process.env.NEXT_PUBLIC_SITE_LEGAL_NAME ?? "Balance Psicologia",
   tagline:
     process.env.NEXT_PUBLIC_SITE_TAGLINE ??
-    "Plantilla reusable para proyectos comerciales ligeros.",
-  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "hola@tuestudio.com",
-  location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Remote-first",
+    "Consultorio psicologico en construccion.",
+  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "pendiente@balancepsicologia.com",
+  location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Aguascalientes, Mexico",
   social: {
-    instagram: "https://instagram.com/tuestudio",
-    linkedin: "https://linkedin.com/company/tuestudio",
+    instagram: "https://instagram.com/",
+    linkedin: "https://linkedin.com/",
   },
 } as const;

@@ -1,37 +1,32 @@
 import type { HeroContent } from "@/types/content";
 
 export const heroContent: HeroContent = {
-  eyebrow: "Professional starter kit",
-  title: "Base landing template",
+  eyebrow: "Balance Psicologia",
+  title: "Estamos preparando un espacio para tu bienestar.",
   description:
-    "Una base limpia y comercial para clonar, rebrandear y extender con rapidez en proyectos tipo landing, sitio institucional, SPA ligera o futuro SaaS.",
+    "Muy pronto este sitio reunira informacion clara sobre servicios psicologicos, ubicacion y formas de contacto en Aguascalientes.",
   actions: [
     {
-      label: "Explorar estructura",
-      href: "/#structure",
+      label: "Sitio en preparacion",
+      href: "/",
       variant: "primary",
-    },
-    {
-      label: "Ver admin base",
-      href: "/admin",
-      variant: "secondary",
     },
   ],
   highlights: [
     {
-      label: "Contenido editable",
+      label: "Fase actual",
       value:
-        "Branding, copies, links, metadata y secciones viven en config y content, no regados por toda la UI.",
+        "Limpieza inicial de referencias del template antes de construir la pagina temporal aprobada.",
     },
     {
-      label: "Preparado para media",
+      label: "Proximo entregable",
       value:
-        "Queda lista la capa de adapters para conectar Cloudflare R2 o S3 cuando el proyecto lo necesite.",
+        "Pagina temporal publica para comunicar que Balance Psicologia esta en construccion.",
     },
     {
-      label: "Escalable sin dolor",
+      label: "Limite de alcance",
       value:
-        "La arquitectura privilegia una sola app bien organizada hoy, pero deja separación suficiente para crecer a panel o módulos dedicados.",
+        "No se implementa app privada, login, base de datos ni captura de informacion en esta subfase.",
     },
   ],
 };

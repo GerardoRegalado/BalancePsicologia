@@ -6,26 +6,23 @@ export type NavigationItem = {
 };
 
 export const siteConfig = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.balancepsicologia.com",
   locale: process.env.NEXT_PUBLIC_SITE_LOCALE ?? "es_MX",
   defaultTitle: brandConfig.name,
   titleTemplate: `%s | ${brandConfig.name}`,
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
-    "Template principal para lanzar landings, sitios institucionales, SPAs ligeras y futuros SaaS con una base limpia, reusable y escalable.",
+    "Balance Psicologia esta preparando una presencia publica profesional para informar sobre sus servicios psicologicos en Aguascalientes.",
   keywords: [
-    "next.js",
-    "template base",
-    "landing page",
-    "spa",
-    "saas ligero",
-    "tailwind css",
-    "typescript",
+    "psicologia",
+    "terapia psicologica",
+    "salud mental",
+    "consultorio psicologico",
+    "Aguascalientes",
+    "Balance Psicologia",
   ],
   ogImage: process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE ?? "/media/og-default.svg",
   navigation: [
     { label: "Inicio", href: "/" },
-    { label: "Estructura", href: "/#structure" },
-    { label: "Admin", href: "/admin" },
   ] satisfies NavigationItem[],
 } as const;

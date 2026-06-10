@@ -1,6 +1,5 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { brandConfig } from "@/config/brand";
 import { siteConfig } from "@/config/site";
@@ -25,14 +24,6 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-
-        <div className="hidden md:block">
-          <ButtonLink
-            href="/admin"
-            label="Ver admin base"
-            variant="secondary"
-          />
-        </div>
       </Container>
     </header>
   );
