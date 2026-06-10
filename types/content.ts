@@ -68,6 +68,14 @@ export type FaqItem = {
   answer: string;
 };
 
+export type FaqSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: FaqItem[];
+};
+
 export type ServiceItem = {
   name: string;
   summary: string;
@@ -113,6 +121,56 @@ export type TestimonialItem = {
   name: string;
   role: string;
   quote: string;
+};
+
+export type TestimonialsSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  emptyState: {
+    title: string;
+    description: string;
+  };
+  items: TestimonialItem[];
+};
+
+export type ContactChannel = {
+  label: string;
+  description: string;
+  status: string;
+  kind: "whatsapp" | "email" | "instagram" | "general";
+};
+
+export type ContactSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  channels: ContactChannel[];
+};
+
+export type LocationSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  mapLabel: string;
+  areaLabel: string;
+  note: {
+    title: string;
+    description: string;
+  };
+};
+
+export type FooterLinkItem = {
+  label: string;
+  href?: `#${string}`;
+};
+
+export type FooterContent = {
+  navigation: FooterLinkItem[];
+  legal: FooterLinkItem[];
 };
 
 export type LeadFormField = {

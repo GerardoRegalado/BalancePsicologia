@@ -1,16 +1,20 @@
-import type { TestimonialItem } from "@/types/content";
+import type {
+  TestimonialsSectionContent,
+  TestimonialItem,
+} from "@/types/content";
 
-export const testimonialItems: TestimonialItem[] = [
-  {
-    name: "Testimonio pendiente",
-    role: "Autorizacion requerida",
-    quote:
-      "Placeholder listo para reemplazarse por un testimonio real, autorizado y revisado por el cliente.",
+export const testimonialItems: TestimonialItem[] = [];
+
+export const testimonialsSectionContent: TestimonialsSectionContent = {
+  id: "testimonios",
+  eyebrow: "Testimonios",
+  title: "Experiencias compartidas con autorización",
+  description:
+    "Balance Psicología publicará experiencias reales únicamente cuando exista autorización clara y cuidado de privacidad.",
+  emptyState: {
+    title: "Testimonios disponibles próximamente",
+    description:
+      "Este espacio queda preparado para integrar experiencias reales cuando sean compartidas y autorizadas para uso público.",
   },
-  {
-    name: "Historia pendiente",
-    role: "Contenido editable",
-    quote:
-      "Este bloque evita inventar pruebas sociales y conserva el espacio para contenido validado.",
-  },
-];
+  items: testimonialItems,
+};

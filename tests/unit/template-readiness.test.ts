@@ -1,11 +1,16 @@
 import { adminConfig } from "@/config/admin";
 import { brandConfig } from "@/config/brand";
 import { siteConfig } from "@/config/site";
+import { contactSectionContent, footerContent } from "@/content/contact";
+import { faqSectionContent } from "@/content/faq";
 import { featureSectionContent } from "@/content/features";
 import { leadFormContent } from "@/content/lead-form";
 import { packagePreviews } from "@/content/packages";
 import { serviceItems } from "@/content/services";
-import { testimonialItems } from "@/content/testimonials";
+import {
+  testimonialItems,
+  testimonialsSectionContent,
+} from "@/content/testimonials";
 import { describe, expect, it } from "vitest";
 
 describe("project readiness", () => {
@@ -24,7 +29,13 @@ describe("project readiness", () => {
     expect(featureSectionContent.items.length).toBeGreaterThanOrEqual(4);
     expect(serviceItems.length).toBeGreaterThanOrEqual(3);
     expect(packagePreviews.length).toBeGreaterThanOrEqual(3);
-    expect(testimonialItems.length).toBeGreaterThanOrEqual(2);
+    expect(testimonialsSectionContent.items).toBe(testimonialItems);
+    expect(testimonialsSectionContent.emptyState.title).toMatch(/testimonios/i);
+    expect(faqSectionContent.items.length).toBeGreaterThanOrEqual(4);
+    expect(contactSectionContent.channels.length).toBeGreaterThanOrEqual(4);
+    expect(footerContent.navigation).not.toContainEqual(
+      expect.objectContaining({ href: "/admin" }),
+    );
     expect(leadFormContent.fields.map((field) => field.name)).toEqual(
       expect.arrayContaining([
         "name",

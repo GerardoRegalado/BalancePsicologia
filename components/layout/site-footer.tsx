@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { brandConfig } from "@/config/brand";
-import { landingFooterLinks } from "@/content/landing";
+import { footerContent } from "@/content/contact";
 
 export function SiteFooter() {
   return (
@@ -16,13 +16,18 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-center text-xs font-medium tracking-[0.12em] text-on-secondary-container uppercase">
-          {landingFooterLinks.map((item) => (
-            <span
-              key={item}
-              aria-disabled="true"
-              className="cursor-default transition-colors"
+          {footerContent.navigation.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="transition-colors hover:text-primary focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
             >
-              {item}
+              {item.label}
+            </a>
+          ))}
+          {footerContent.legal.map((item) => (
+            <span key={item.label} aria-disabled="true" className="cursor-default">
+              {item.label}
             </span>
           ))}
         </div>
