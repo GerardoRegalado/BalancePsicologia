@@ -14,19 +14,19 @@ export const heroContent: HeroContent = {
   ],
   highlights: [
     {
-      label: "Fase actual",
+      label: "Atencion cercana",
       value:
-        "Limpieza inicial de referencias del template antes de construir la pagina temporal aprobada.",
+        "Un espacio pensado para brindar acompanamiento psicologico con calidez, respeto y claridad.",
     },
     {
-      label: "Proximo entregable",
+      label: "Informacion clara",
       value:
-        "Pagina temporal publica para comunicar que Balance Psicologia esta en construccion.",
+        "Pronto encontraras servicios, costos, ubicacion y formas de contacto en un solo lugar.",
     },
     {
-      label: "Limite de alcance",
+      label: "Aguascalientes",
       value:
-        "No se implementa app privada, login, base de datos ni captura de informacion en esta subfase.",
+        "Balance Psicologia prepara su presencia publica para personas que buscan apoyo profesional.",
     },
   ],
 };
