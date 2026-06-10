@@ -5,49 +5,49 @@ export const servicesSectionContent: ServicesSectionContent = {
   eyebrow: "Servicios",
   title: "Servicios terapéuticos",
   description:
-    "Un enfoque personalizado para distintas necesidades emocionales y relacionales, en un entorno profesional, discreto y seguro.",
+    "Una guía inicial de espacios de acompañamiento emocional y relacional, presentada con un tono claro, profesional y cuidadoso.",
   items: [
     {
-      title: "Terapia individual",
+      title: "Acompañamiento individual",
       description:
-        "Espacio confidencial para explorar ansiedad, estrés, duelo, autoestima o momentos de cambio personal con acompañamiento respetuoso.",
+        "Espacio pensado para conversar con calma sobre lo que estás viviendo y reconocer necesidades personales con acompañamiento respetuoso.",
       icon: "individual",
-      tags: ["Ansiedad", "Autoestima"],
+      tags: ["Claridad", "Autocuidado"],
     },
     {
-      title: "Terapia de pareja",
+      title: "Acompañamiento para parejas",
       description:
-        "Acompañamiento para conversar con mayor claridad, reconocer patrones de conflicto y abrir acuerdos desde un espacio neutral.",
+        "Espacio orientado a facilitar conversaciones más claras, reconocer dinámicas de relación y abrir acuerdos de forma cuidadosa.",
       icon: "couple",
       tags: ["Comunicación", "Conflictos"],
     },
     {
-      title: "Terapia familiar",
+      title: "Acompañamiento familiar",
       description:
-        "Apoyo para comprender dinámicas familiares, mejorar la convivencia y construir conversaciones más cuidadosas entre sus integrantes.",
+        "Espacio para mirar dinámicas familiares, fortalecer la convivencia y promover conversaciones más respetuosas entre sus integrantes.",
       icon: "family",
-      tags: ["Dinámicas", "Crianza"],
+      tags: ["Dinámicas", "Convivencia"],
     },
   ],
 };
 
 export const serviceItems: ServiceItem[] = [
   {
-    name: "Terapia individual",
+    name: "Acompañamiento individual",
     summary:
-      "Espacio confidencial para explorar ansiedad, estrés, duelo, autoestima o momentos de cambio personal.",
+      "Espacio pensado para conversar con calma sobre lo que estás viviendo y reconocer necesidades personales.",
     outcome: "Acompañamiento respetuoso al ritmo de cada persona.",
   },
   {
-    name: "Terapia de pareja",
+    name: "Acompañamiento para parejas",
     summary:
-      "Acompañamiento para conversar con mayor claridad y reconocer patrones de conflicto.",
-    outcome: "Un espacio neutral para abrir acuerdos y mejorar la comunicación.",
+      "Espacio orientado a facilitar conversaciones más claras y reconocer dinámicas de relación.",
+    outcome: "Un entorno cuidadoso para abrir acuerdos y mejorar la comunicación.",
   },
   {
-    name: "Terapia familiar",
+    name: "Acompañamiento familiar",
     summary:
-      "Apoyo para comprender dinámicas familiares y mejorar la convivencia.",
+      "Espacio para mirar dinámicas familiares y fortalecer la convivencia.",
     outcome: "Conversaciones más cuidadosas entre sus integrantes.",
   },
 ];

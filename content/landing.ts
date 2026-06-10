@@ -33,44 +33,6 @@ export const landingHeroContent: LandingSectionContent = {
   publicNote: "Muy pronto compartiremos más detalles sobre este espacio.",
 };
 
-export const landingAboutContent: LandingSectionContent = {
-  id: "nosotros",
-  eyebrow: "Nosotros",
-  title: "Una práctica terapéutica cálida, clara y humana.",
-  description:
-    "Este espacio reunirá la filosofía de Balance Psicología, su enfoque de atención y la manera en que acompaña cada proceso.",
-  publicNote: "Información disponible próximamente.",
-};
-
-export const landingServicesContent: LandingSectionContent = {
-  id: "servicios",
-  eyebrow: "Servicios",
-  title: "Servicios terapéuticos",
-  description:
-    "Muy pronto compartiremos más detalles sobre las modalidades de atención disponibles.",
-};
-
-export const landingServiceCards: LandingCardContent[] = [
-  {
-    title: "Terapia individual",
-    description:
-      "Un espacio personal para conversar, comprender lo que estás viviendo y comenzar un proceso de cuidado emocional.",
-    meta: "Próximamente",
-  },
-  {
-    title: "Terapia de pareja",
-    description:
-      "Muy pronto compartiremos más detalles sobre este servicio y sus alcances.",
-    meta: "Próximamente",
-  },
-  {
-    title: "Terapia familiar",
-    description:
-      "Información disponible próximamente para familias que buscan acompañamiento claro y cuidadoso.",
-    meta: "Próximamente",
-  },
-];
-
 export const landingPackagesContent: LandingSectionContent = {
   id: "costos",
   eyebrow: "Costos / Paquetes",

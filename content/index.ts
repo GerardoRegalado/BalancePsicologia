@@ -3,7 +3,6 @@ export { faqItems } from "@/content/faq";
 export { featureSectionContent } from "@/content/features";
 export { heroContent } from "@/content/hero";
 export {
-  landingAboutContent,
   landingAppointmentContent,
   landingContactContent,
   landingFaqContent,
@@ -14,8 +13,6 @@ export {
   landingNavigation,
   landingPackageCards,
   landingPackagesContent,
-  landingServiceCards,
-  landingServicesContent,
   landingTestimonialsContent,
 } from "@/content/landing";
 export { leadFormContent } from "@/content/lead-form";
