@@ -6,24 +6,49 @@ Documento para cerrar el alcance aprobado antes de cotizar, antes del diseno/moc
 
 - Cliente: Balance Psicologia
 - Contacto principal: Fernanda Regalado
-- Proyecto: Landing publica y vision futura de plataforma privada para consultorio psicologico
-- Fecha: 2026-06-09
+- Proyecto: Pagina temporal, landing publica y vision futura de plataforma privada para consultorio psicologico
+- Fecha: 2026-06-10
 - Fuente principal: `docs/client-discovery.md`
-- Dominio deseado para fase actual: `www.balancepsicologia.com`
-- Dominio deseado para fase futura: `app.balancepsicologia.com`
+- Dominio deseado para fase publica: `www.balancepsicologia.com`
+- Dominio deseado para fase futura privada: `app.balancepsicologia.com`
 - Orden en el flujo: se define despues de discovery y antes de quote, design y development strategy.
 
 ## Resumen del proyecto
 
 Balance Psicologia necesita una presencia profesional en internet para presentar sus servicios psicologicos, costos, ubicacion del consultorio, medios de contacto y una opcion sencilla para solicitar o agendar una cita.
 
+Antes de publicar la landing completa, el proyecto incluye una Fase 0 para colocar una pagina temporal simple en `www.balancepsicologia.com`. Esta pagina comunicara que Balance Psicologia esta en construccion y servira como primer entregable visible para validar dominio, despliegue inicial y presencia publica basica.
+
 El proyecto tambien contempla una vision futura para una app privada en `app.balancepsicologia.com`, orientada a administrar citas, pacientes, seguimiento clinico, notas internas, estados y finanzas del consultorio. Esa app privada no forma parte de la primera entrega, salvo por una preparacion conceptual minima para no bloquear su crecimiento posterior.
 
 ## Fases del alcance
 
-### Fase 1 - Landing publica en `www.balancepsicologia.com`
+### Fase 0 - Pagina temporal en construccion en `www.balancepsicologia.com`
 
-Esta es la fase actual del proyecto y el unico alcance de implementacion inicial.
+Esta fase es un entregable rapido previo a la landing final.
+
+Objetivo:
+
+- Publicar una pagina temporal simple para que el dominio tenga presencia visible mientras se desarrolla la landing completa.
+- Comunicar de forma profesional que Balance Psicologia esta en construccion.
+- Validar de forma basica que el dominio y el despliegue inicial funcionan.
+
+Estado y limites:
+
+- Incluye una pagina publica temporal en `www.balancepsicologia.com`.
+- Incluye un mensaje simple tipo "Balance Psicologia esta en construccion" o equivalente profesional.
+- Incluye estetica sencilla, limpia, calida y confiable.
+- Incluye validacion basica de dominio y despliegue inicial.
+- No incluye formulario.
+- No incluye agenda funcional.
+- No incluye captura de datos.
+- No incluye base de datos.
+- No incluye app privada.
+- No incluye almacenamiento de informacion.
+
+### Fase 1 - Landing publica completa en `www.balancepsicologia.com`
+
+Esta fase es la landing publica completa definida como primera entrega comercial del sitio.
 
 Objetivo:
 
@@ -52,6 +77,14 @@ Estado en esta entrega:
 - Solo se considera preparacion conceptual minima para que la arquitectura de la fase 1 no cierre la puerta a una fase posterior.
 
 ## Alcance incluido
+
+### Fase 0 - Entregable incluido
+
+- Pagina temporal publica en `www.balancepsicologia.com`.
+- Mensaje profesional de sitio en construccion para Balance Psicologia.
+- Estetica sencilla, limpia, calida y confiable.
+- Validacion basica de dominio y despliegue inicial.
+- Reemplazo posterior por la landing completa de Fase 1 cuando este lista.
 
 ### Fase 1 - Paginas y secciones incluidas
 
@@ -85,20 +118,33 @@ Estado en esta entrega:
 - Uso del logo si el cliente lo proporciona.
 - Propuesta visual inicial basada en referencias pendientes y en los atributos definidos en discovery.
 
-### Fase 1 - Entregables
+### Fases 0 y 1 - Entregables
 
 - Codigo fuente en este repositorio.
-- Implementacion de la landing publica definida en este alcance.
-- Configuracion inicial necesaria para la landing.
+- Implementacion de la pagina temporal de Fase 0.
+- Implementacion de la landing publica completa definida en Fase 1.
+- Configuracion inicial necesaria para la presencia publica.
 - Integracion de contenido aprobado por el cliente.
 - QA basico y validacion previa a entrega.
 - Preparacion conceptual minima para futura separacion entre `www.balancepsicologia.com` y `app.balancepsicologia.com`.
 
 ## Alcance excluido
 
+### Excluido de la Fase 0
+
+- Formulario.
+- Agenda funcional.
+- Captura de datos.
+- Envio de correo.
+- Integracion con WhatsApp como flujo funcional.
+- Google Analytics, salvo que se acuerde como validacion tecnica minima.
+- Base de datos.
+- App privada.
+- Almacenamiento de informacion.
+- Panel administrativo.
+
 ### Excluido de la Fase 1
 
-- Cotizacion, presupuesto o desglose economico.
 - Prompt para Stitch o generacion de mockup final en esta etapa.
 - App privada funcional en `app.balancepsicologia.com`.
 - Login, usuarios, roles o permisos.
@@ -146,9 +192,11 @@ Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad
 ## Supuestos
 
 - El discovery en `docs/client-discovery.md` refleja correctamente la necesidad del cliente.
-- La primera entrega se enfoca en la landing publica de `www.balancepsicologia.com`.
+- La Fase 0 funciona como entregable temporal previo y no reemplaza la landing completa.
+- La Fase 0 puede publicarse con copy minimo y no requiere todos los contenidos finales de la landing.
+- La Fase 1 se enfoca en la landing publica completa de `www.balancepsicologia.com`.
 - `app.balancepsicologia.com` se considera una fase futura y no forma parte del scope inicial.
-- La agenda de fase 1 puede iniciar como solicitud de cita o formulario de contacto, sin confirmacion automatica.
+- La agenda de Fase 1 puede iniciar como solicitud de cita o formulario de contacto, sin confirmacion automatica.
 - El contenido final de servicios, costos, FAQ, direccion, horarios y datos de contacto sera validado o entregado por el cliente.
 - Los testimonios solo se publicaran si el cliente entrega testimonios reales, autorizados y aptos para uso publico.
 - Si no hay testimonios disponibles al momento de entrega, la seccion podra quedar preparada, oculta o con un estado editorial pendiente, sin inventar contenido.
@@ -157,6 +205,15 @@ Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad
 - La fecha objetivo de entrega esta pendiente y se considera flexible.
 
 ## Pendientes de informacion critica
+
+### Para Fase 0
+
+- Acceso operativo o instrucciones para apuntar/publicar `www.balancepsicologia.com`.
+- Confirmacion del mensaje temporal o aprobacion del texto propuesto.
+- Logo en formato utilizable, si se desea mostrarlo en la pagina temporal.
+- Confirmacion del entorno de hosting o despliegue inicial.
+
+### Para Fase 1
 
 - Correo electronico y telefono / WhatsApp finales para contacto publico.
 - Direccion exacta o ubicacion aprobada del consultorio para mapa.
@@ -173,10 +230,11 @@ Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad
 
 ## Dependencias
 
-- Aprobacion del presente alcance antes de cotizar o avanzar a diseno.
-- Contenido final aprobado por el cliente.
+- Aprobacion del presente alcance antes de avanzar a diseno o implementacion.
+- Acceso o instrucciones para dominio y hosting desde Fase 0.
+- Contenido minimo aprobado para la pagina temporal.
+- Contenido final aprobado por el cliente para Fase 1.
 - Material visual disponible o autorizacion para trabajar con placeholders.
-- Acceso o instrucciones para dominio y hosting cuando llegue la etapa de publicacion.
 - Cuenta de Google Analytics o aprobacion para configurarla despues.
 - Datos de contacto publicos y direccion aprobada.
 - Testimonios reales y autorizados para publicar la seccion correspondiente.
@@ -184,16 +242,31 @@ Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad
 
 ## Riesgos y notas operativas
 
-- La falta de contenido final puede retrasar la publicacion o requerir trabajar con textos preliminares sujetos a aprobacion.
+- Si no hay acceso al dominio o hosting, la Fase 0 puede retrasarse aunque la pagina temporal sea simple.
+- La Fase 0 es temporal; no debe evaluarse como reemplazo de la landing completa.
+- La falta de contenido final puede retrasar la publicacion de Fase 1 o requerir trabajar con textos preliminares sujetos a aprobacion.
 - La falta de testimonios reales puede impedir publicar la seccion de testimonios en la primera version visible.
 - La falta de referencias visuales puede requerir una propuesta inicial basada solamente en los atributos de marca definidos en discovery.
 - La app privada involucra informacion sensible de salud mental; no debe implementarse sin una etapa especifica de seguridad, privacidad y definicion tecnica.
-- La integracion de agenda puede mantenerse como solicitud de cita en fase 1 para evitar complejidad prematura.
+- La integracion de agenda puede mantenerse como solicitud de cita en Fase 1 para evitar complejidad prematura.
 - La integracion de pagos no forma parte de la primera etapa.
 
 ## Criterios de aceptacion
 
-### Fase 1 - Landing publica
+### Fase 0 - Pagina temporal
+
+- La pagina temporal esta disponible en `www.balancepsicologia.com` o en un entorno de revision equivalente si el dominio aun no esta listo.
+- La pagina comunica claramente que Balance Psicologia esta en construccion.
+- La estetica se percibe sencilla, limpia, calida y confiable.
+- Se valida de forma basica el dominio y/o despliegue inicial.
+- No hay formulario.
+- No hay agenda funcional.
+- No hay captura de datos.
+- No hay base de datos.
+- No hay app privada.
+- No hay almacenamiento de informacion.
+
+### Fase 1 - Landing publica completa
 
 - La landing esta disponible para representar a Balance Psicologia en `www.balancepsicologia.com` o en un entorno de revision previo a publicacion.
 - La pagina comunica de forma clara servicios, costos, ubicacion, contacto y solicitud de cita.
@@ -204,7 +277,7 @@ Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad
 - La FAQ y el footer incluyen informacion aprobada.
 - La medicion basica con Google Analytics queda instalada o documentada como pendiente si faltan accesos.
 - El sitio mantiene una apariencia profesional, calida, humana, confiable, limpia y tranquila.
-- No se implementa ni simula una app privada funcional dentro de la fase 1.
+- No se implementa ni simula una app privada funcional dentro de la Fase 1.
 - No se almacenan datos sensibles de pacientes.
 - El build, la validacion basica y la revision final no presentan bloqueadores criticos.
 
