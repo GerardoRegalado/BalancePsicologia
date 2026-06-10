@@ -1,4 +1,4 @@
-import { AdminPanelPlaceholder } from "@/components/admin/admin-panel-placeholder";
+import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata = buildMetadata({
@@ -8,5 +8,5 @@ export const metadata = buildMetadata({
 });
 
 export default function AdminPage() {
-  return <AdminPanelPlaceholder />;
+  notFound();
 }
