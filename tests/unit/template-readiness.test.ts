@@ -9,9 +9,9 @@ import { testimonialItems } from "@/content/testimonials";
 import { describe, expect, it } from "vitest";
 
 describe("project readiness", () => {
-  it("keeps public site config aligned with Balance Psicologia", () => {
-    expect(brandConfig.name).toBe("Balance Psicologia");
-    expect(brandConfig.location).toBe("Aguascalientes, Mexico");
+  it("keeps public site config aligned with Balance Psicología", () => {
+    expect(brandConfig.name).toBe("Balance Psicología");
+    expect(brandConfig.location).toBe("Aguascalientes, México");
     expect(siteConfig.url).toBe("https://www.balancepsicologia.com");
     expect(siteConfig.locale).toBe("es_MX");
     expect(siteConfig.navigation).not.toContainEqual(

@@ -3,19 +3,19 @@ import { buildMetadata } from "@/lib/seo/build-metadata";
 import { describe, expect, it } from "vitest";
 
 describe("buildMetadata", () => {
-  it("returns Balance Psicologia metadata by default", () => {
+  it("returns Balance Psicología metadata by default", () => {
     const metadata = buildMetadata();
 
     expect(metadata.metadataBase?.toString()).toBe(`${siteConfig.url}/`);
     expect(siteConfig.url).toBe("https://www.balancepsicologia.com");
-    expect(siteConfig.defaultTitle).toBe("Balance Psicologia");
+    expect(siteConfig.defaultTitle).toBe("Balance Psicología");
     expect(siteConfig.locale).toBe("es_MX");
     expect(metadata.title).toEqual({
       default: siteConfig.defaultTitle,
       template: siteConfig.titleTemplate,
     });
     expect(metadata.description).toBe(siteConfig.description);
-    expect(metadata.openGraph?.siteName).toBe("Balance Psicologia");
+    expect(metadata.openGraph?.siteName).toBe("Balance Psicología");
     expect(metadata.openGraph?.locale).toBe("es_MX");
   });
 

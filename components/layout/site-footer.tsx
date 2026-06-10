@@ -8,7 +8,7 @@ export function SiteFooter() {
       <Container className="flex flex-col items-center justify-between gap-5 py-5 md:flex-row md:py-6">
         <div className="font-serif text-xl leading-7 font-medium text-primary">
           <span className="block">Balance</span>
-          <span className="block">Psicologia</span>
+          <span className="block">Psicología</span>
         </div>
 
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium tracking-[0.16em] text-on-secondary-container">

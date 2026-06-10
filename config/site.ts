@@ -12,14 +12,14 @@ export const siteConfig = {
   titleTemplate: `%s | ${brandConfig.name}`,
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
-    "Balance Psicologia esta preparando una presencia publica profesional para informar sobre sus servicios psicologicos en Aguascalientes.",
+    "Balance Psicología está preparando una presencia pública profesional para informar sobre sus servicios psicológicos en Aguascalientes.",
   keywords: [
-    "psicologia",
-    "terapia psicologica",
+    "psicología",
+    "terapia psicológica",
     "salud mental",
-    "consultorio psicologico",
+    "consultorio psicológico",
     "Aguascalientes",
-    "Balance Psicologia",
+    "Balance Psicología",
   ],
   ogImage: process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE ?? "/media/og-default.svg",
   navigation: [

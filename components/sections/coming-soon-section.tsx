@@ -34,7 +34,7 @@ export function ComingSoonSection() {
         </div>
 
         <div className="flex max-w-2xl flex-col items-center gap-5">
-          <h1 className="max-w-3xl font-serif text-[2.5rem] leading-[1.14] font-semibold text-balance text-on-surface md:text-[3.25rem]">
+          <h1 className="max-w-3xl font-sans text-[2.5rem] leading-[1.14] font-semibold text-balance text-on-surface md:text-[3.25rem]">
             {comingSoonContent.title}
           </h1>
           <p className="max-w-xl text-lg leading-8 text-on-surface-variant">
