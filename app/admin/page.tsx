@@ -2,7 +2,7 @@ import { AdminPanelPlaceholder } from "@/components/admin/admin-panel-placeholde
 import { buildMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata = buildMetadata({
-  title: "Admin panel base",
+  title: "Area interna",
   path: "/admin",
   noIndex: true,
 });

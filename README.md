@@ -1,14 +1,8 @@
-# Repo Base
+# Balance Psicologia
 
-Plantilla principal para arrancar proyectos comerciales ligeros con Next.js, TypeScript y Tailwind CSS.
+Proyecto web para Balance Psicologia, consultorio psicologico en Aguascalientes, Mexico.
 
-## Sirve para
-
-- Landing pages
-- Sitios institucionales
-- SPAs ligeras
-- Marketing sites
-- Proyectos que luego puedan crecer a admin panel o SaaS ligero
+La entrega actual se organiza por fases: primero una pagina temporal publica para `www.balancepsicologia.com` y despues una landing publica completa. La app privada de `app.balancepsicologia.com` queda documentada como vision futura y no forma parte de la implementacion actual.
 
 ## Stack
 
@@ -16,39 +10,38 @@ Plantilla principal para arrancar proyectos comerciales ligeros con Next.js, Typ
 - TypeScript estricto
 - Tailwind CSS
 - ESLint + Prettier
-- Vitest como base de testing
+- Vitest
 
 ## Scripts
 
 ```bash
 npm run dev
-npm run check
-npm run validate
 npm run lint
-npm run format
 npm run typecheck
 npm run test
+npm run check
 npm run build
-npm run unlight:staging
-npm run unlight:prod
+npm run validate
+npm run format
+npm run format:check
 ```
 
 ## Node recomendado
 
-Usa `20.19.0` o superior. El proyecto incluye `.nvmrc`.
+Usa Node `20.19.0` o superior.
 
-## Documentación
+## Documentacion
 
 - `docs/client-discovery.md`
 - `docs/project-scope.md`
 - `docs/quote.md`
-- `docs/design.md`
+- `docs/design/README.md`
+- `docs/design/DESIGN.md`
 - `docs/development-strategy.md`
 - `docs/workflow.md`
-- `docs/skills.md`
 - `PROMPTS.md`
 
-## Estructura rápida
+## Estructura principal
 
 ```text
 app/
@@ -62,14 +55,6 @@ tests/
 types/
 ```
 
-## Qué mejora en v1.1
+## Nota de alcance
 
-- Configuración de branding, site y media con variables de entorno más completas
-- Fronteras más claras entre `config/`, `content/`, `services/` y `components/sections/`
-- Placeholder operativo para la futura superficie admin
-- Documentación más cercana al flujo real de proyectos freelance
-- Baseline tests para metadata, media y readiness del template
-
-## Nota sobre media
-
-El repo no implementa todavía uploads reales ni cloud storage operativo. Sí deja lista la capa de adapters y la documentación para conectar Cloudflare R2 o AWS S3 cuando el proyecto lo necesite.
+No se debe implementar login, base de datos, pacientes, notas clinicas, finanzas, CRM, pagos ni app privada real sin un alcance posterior aprobado.
