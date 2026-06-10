@@ -21,19 +21,19 @@ function BrandMark() {
 
 export function ComingSoonSection() {
   return (
-    <section className="relative flex min-h-[calc(100dvh-136px)] items-center justify-center overflow-hidden px-margin-mobile py-section-padding-lg text-center md:min-h-[calc(100dvh-104px)] md:px-gutter">
+    <section className="relative flex flex-1 items-center justify-center overflow-hidden px-margin-mobile py-12 text-center md:px-gutter md:py-16">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,var(--surface),var(--surface-container-low))] opacity-80" />
 
-      <div className="animate-[fade-in-up_800ms_ease-out_forwards] mx-auto flex max-w-3xl flex-col items-center gap-stack-lg">
-        <div className="flex flex-col items-center gap-stack-sm">
+      <div className="animate-[fade-in-up_800ms_ease-out_forwards] mx-auto flex max-w-3xl flex-col items-center gap-9 md:gap-10">
+        <div className="flex flex-col items-center gap-3">
           <BrandMark />
           <p className="text-2xl font-medium text-primary">
             {comingSoonContent.brandName}
           </p>
         </div>
 
-        <div className="flex max-w-2xl flex-col items-center gap-stack-md">
-          <h1 className="max-w-3xl text-5xl leading-[1.12] font-semibold text-balance text-on-surface md:text-6xl">
+        <div className="flex max-w-2xl flex-col items-center gap-5">
+          <h1 className="max-w-3xl font-sans text-[2.5rem] leading-[1.14] font-semibold text-balance text-on-surface md:text-[3.25rem]">
             {comingSoonContent.title}
           </h1>
           <p className="max-w-xl text-lg leading-8 text-on-surface-variant">
@@ -41,7 +41,7 @@ export function ComingSoonSection() {
           </p>
         </div>
 
-        <div className="my-stack-md h-px w-16 bg-outline-variant/60" />
+        <div className="h-px w-16 bg-outline-variant/60" />
 
         <p className="text-sm font-medium tracking-[0.18em] text-secondary">
           {comingSoonContent.location}
