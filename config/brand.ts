@@ -1,8 +1,7 @@
 export const brandConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Balance Psicologia",
   shortName: process.env.NEXT_PUBLIC_SITE_SHORT_NAME ?? "Balance",
-  legalName:
-    process.env.NEXT_PUBLIC_SITE_LEGAL_NAME ?? "Balance Psicologia",
+  legalName: process.env.NEXT_PUBLIC_SITE_LEGAL_NAME ?? "Balance Psicologia",
   tagline:
     process.env.NEXT_PUBLIC_SITE_TAGLINE ??
     "Consultorio psicologico en construccion.",
