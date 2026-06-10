@@ -64,11 +64,12 @@
   --spacing-stack-sm: 12px;
   --spacing-stack-md: 24px;
   --spacing-stack-lg: 48px;
-  /* Design font targets. Fallbacks keep local builds deterministic offline. */
-  --font-serif:
-    "Source Serif 4", Georgia, "Times New Roman", Times, serif;
-  --font-sans: "Work Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+  /* Design font targets. next/font provides the first family; the rest are fallbacks. */
+  --font-family-serif:
+    var(--font-source-serif-4), Georgia, "Times New Roman", Times, serif;
+  --font-family-sans:
+    var(--font-work-sans), "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-family-mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
   --shadow-atmospheric: 0 30px 80px rgb(50 79 71 / 6%);
   --shadow-atmospheric-sm: 0 16px 40px rgb(50 79 71 / 5%);
 }
@@ -124,9 +125,9 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-border: var(--border);
-  --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
-  --font-mono: var(--font-mono);
+  --font-sans: var(--font-family-sans);
+  --font-serif: var(--font-family-serif);
+  --font-mono: var(--font-family-mono);
   --radius-sm: var(--radius-sm);
   --radius-default: var(--radius-default);
   --radius-md: var(--radius-md);
@@ -156,7 +157,7 @@ body {
   min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-family-sans);
   text-rendering: optimizeLegibility;
 }
 
@@ -169,7 +170,7 @@ h1,
 h2,
 h3 {
   color: var(--on-surface);
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-family-serif);
   letter-spacing: 0;
 }
 
