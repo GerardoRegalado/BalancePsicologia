@@ -39,6 +39,24 @@ export type FeatureSectionContent = {
   items: FeatureItem[];
 };
 
+export type EditorialImage = {
+  src: string;
+  alt: string;
+};
+
+export type AboutSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  lead: string;
+  body: string;
+  images: EditorialImage[];
+  callout: {
+    title: string;
+    description: string;
+  };
+};
+
 export type PricingPlan = {
   name: string;
   description: string;
@@ -54,6 +72,21 @@ export type ServiceItem = {
   name: string;
   summary: string;
   outcome: string;
+};
+
+export type ServiceCardItem = {
+  title: string;
+  description: string;
+  icon: "individual" | "couple" | "family";
+  tags: string[];
+};
+
+export type ServicesSectionContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: ServiceCardItem[];
 };
 
 export type PackagePreview = {

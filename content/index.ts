@@ -1,3 +1,4 @@
+export { aboutSectionContent } from "@/content/about";
 export { faqItems } from "@/content/faq";
 export { featureSectionContent } from "@/content/features";
 export { heroContent } from "@/content/hero";
@@ -20,5 +21,5 @@ export {
 export { leadFormContent } from "@/content/lead-form";
 export { packagePreviews } from "@/content/packages";
 export { pricingPlans } from "@/content/pricing";
-export { serviceItems } from "@/content/services";
+export { serviceItems, servicesSectionContent } from "@/content/services";
 export { testimonialItems } from "@/content/testimonials";
