@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { ctaClass } from "@/components/ui/cta-styles";
 import { heroContent } from "@/content/hero";
 import type { ContentAction } from "@/types/content";
 
 function HeroAction({ action }: { action: ContentAction }) {
-  const className =
-    action.variant === "primary"
-      ? "inline-flex min-h-14 items-center justify-center rounded-md bg-primary px-8 py-4 text-sm font-semibold text-on-primary shadow-sm transition-[background-color,transform] duration-300 hover:-translate-y-0.5 hover:bg-primary-container focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:outline-none"
-      : "inline-flex min-h-14 items-center justify-center gap-2 rounded-md border border-primary/20 bg-surface-container-lowest px-8 py-4 text-sm font-semibold text-primary transition-colors duration-300 hover:bg-surface-container-low focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none";
+  const className = ctaClass({
+    variant: action.variant,
+    size: "lg",
+    disabled: action.disabled,
+    className: action.variant === "primary" ? "shadow-sm hover:-translate-y-0.5" : undefined,
+  });
 
   if (action.disabled) {
     return (

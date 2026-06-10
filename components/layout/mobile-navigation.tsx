@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ctaClass } from "@/components/ui/cta-styles";
 import type { NavigationItem } from "@/config/site";
 import type { ContentAction } from "@/types/content";
 
@@ -55,7 +56,11 @@ export function MobileNavigation({
             <a
               href={primaryAction.href}
               onClick={closeMenu}
-              className="mt-4 inline-flex min-h-12 items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-container focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:outline-none"
+              className={ctaClass({
+                variant: "primary",
+                size: "md",
+                className: "mt-4 w-full",
+              })}
             >
               {primaryAction.mobileLabel ?? primaryAction.label}
             </a>

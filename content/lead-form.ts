@@ -1,9 +1,9 @@
 import type { LeadFormContent } from "@/types/content";
 
 export const leadFormContent: LeadFormContent = {
-  title: "Solicitud de cita pendiente",
+  title: "Solicitud de cita",
   description:
-    "Placeholder editorial para una futura solicitud basica. En la subfase 1.1 no existe formulario funcional, envio de correo ni agenda real.",
+    "Este espacio reunirá información clara para iniciar contacto con Balance Psicología.",
   fields: [
     {
       name: "name",
@@ -13,7 +13,7 @@ export const leadFormContent: LeadFormContent = {
     },
     {
       name: "phone",
-      label: "Telefono o WhatsApp",
+      label: "Teléfono o WhatsApp",
       type: "text",
       required: true,
     },

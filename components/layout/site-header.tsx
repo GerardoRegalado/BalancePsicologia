@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Container } from "@/components/ui/container";
+import { ctaClass } from "@/components/ui/cta-styles";
 import { siteConfig } from "@/config/site";
 import { heroContent } from "@/content/hero";
 
@@ -40,7 +41,11 @@ export function SiteHeader() {
 
         <a
           href={primaryAction.href}
-          className="hidden min-h-11 items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-container focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:outline-none md:inline-flex"
+          className={ctaClass({
+            variant: "primary",
+            size: "sm",
+            className: "hidden md:inline-flex",
+          })}
         >
           {primaryAction.label}
         </a>
