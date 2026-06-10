@@ -66,7 +66,9 @@ Completa esta tabla para dejar claro qué carpeta corresponde a cada superficie 
 
 | Vista o superficie | Carpeta aprobada en `docs/design/` | Notas |
 | --- | --- | --- |
-| Landing pública |  |  |
-| Login |  |  |
-| Dashboard |  |  |
-| Otras vistas |  |  |
+| Página temporal / próximamente | `fase_0_proximamente` | Vista aprobada para la Fase 0. Página simple de “Balance Psicología está en construcción”. |
+| Landing pública - Desktop | `fase_1_landing_page_desktop` | Vista desktop aprobada para la Fase 1. Usar `screen.png` como referencia visual principal y `code.html` solo como referencia estructural. |
+| Landing pública - Mobile | `fase_1_landing_page_mobile` | Vista mobile aprobada para la Fase 1. Debe guiar el comportamiento responsive junto con la vista desktop. |
+| Login | No aplica | No está incluido en el scope actual. Pertenece a una fase futura de `app.balancepsicologia.com`. |
+| Dashboard | No aplica | No está incluido en el scope actual. Pertenece a una fase futura de `app.balancepsicologia.com`. |
+| Otras vistas | No aplica | No hay otras vistas aprobadas para esta entrega. No inventar pantallas fuera del scope. |
