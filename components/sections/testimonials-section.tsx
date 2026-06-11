@@ -34,8 +34,8 @@ export function TestimonialsSection() {
           ))}
         </div>
       ) : (
-        <div className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-8 text-center md:p-12">
-          <h3 className="font-serif text-2xl font-medium text-on-surface">
+        <div className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-6 text-center md:p-12">
+          <h3 className="font-serif text-xl font-medium text-on-surface md:text-2xl">
             {testimonialsSectionContent.emptyState.title}
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-on-surface-variant md:text-lg">

@@ -80,12 +80,12 @@ export function AppointmentSection() {
       description={leadFormContent.description}
       publicNote={leadFormContent.publicNote}
     >
-      <div className="grid gap-8 rounded-xl bg-surface-container-low p-6 shadow-atmospheric-sm md:grid-cols-[0.9fr_1.1fr] md:gap-12 md:p-10 lg:p-12">
+      <div className="grid gap-8 rounded-xl bg-surface-container-low p-4 shadow-atmospheric-sm sm:p-6 md:grid-cols-[0.9fr_1.1fr] md:gap-12 md:p-10 lg:p-12">
         <div className="space-y-7">
           <h3 className="font-serif text-2xl font-medium text-on-surface">
             {leadFormContent.aside.title}
           </h3>
-          <p className="leading-8 text-on-surface-variant">
+          <p className="leading-7 text-on-surface-variant md:leading-8">
             {leadFormContent.aside.description}
           </p>
 
@@ -129,7 +129,7 @@ export function AppointmentSection() {
         </div>
 
         <div
-          className="rounded-lg border border-outline-variant/50 bg-surface-container-lowest p-6 md:p-8"
+          className="rounded-lg border border-outline-variant/50 bg-surface-container-lowest p-5 md:p-8"
           role="group"
           aria-labelledby="appointment-visual-title"
         >

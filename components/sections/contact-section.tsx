@@ -49,7 +49,7 @@ export function ContactSection() {
             <a
               key={channel.label}
               href={href}
-              className="rounded-lg border border-primary/20 bg-surface-container-lowest p-6 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-atmospheric-sm focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
+              className="rounded-lg border border-primary/20 bg-surface-container-lowest p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-atmospheric-sm focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none md:p-6"
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
             >
@@ -58,7 +58,7 @@ export function ContactSection() {
           ) : (
             <article
               key={channel.label}
-              className="rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6"
+              className="rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-5 md:p-6"
             >
               {content}
             </article>

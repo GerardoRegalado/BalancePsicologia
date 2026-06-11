@@ -48,9 +48,12 @@ function HeroAction({ action }: { action: ContentAction }) {
 
 export function LandingHeroSection() {
   return (
-    <section id="hero" className="scroll-mt-32 pt-12 pb-20 md:pt-14 md:pb-28">
-      <Container className="grid items-center gap-12 md:grid-cols-[1fr_0.95fr] lg:gap-16">
-        <div className="mx-auto max-w-2xl space-y-8 text-center md:mx-0 md:text-left">
+    <section
+      id="hero"
+      className="scroll-mt-24 pt-10 pb-16 md:scroll-mt-32 md:pt-14 md:pb-28"
+    >
+      <Container className="grid items-center gap-10 md:grid-cols-[1fr_0.95fr] lg:gap-16">
+        <div className="mx-auto max-w-2xl space-y-7 text-center md:mx-0 md:space-y-8 md:text-left">
           <div className="space-y-6">
             <p className="inline-flex items-center gap-2 rounded-full border border-secondary-container/60 bg-secondary-container/35 px-3 py-1.5 text-xs font-medium text-on-secondary-container">
               <span
@@ -59,7 +62,7 @@ export function LandingHeroSection() {
               />
               {heroContent.eyebrow}
             </p>
-            <h1 className="font-serif text-4xl leading-[1.08] font-semibold text-balance text-on-surface md:text-5xl">
+            <h1 className="font-serif text-4xl leading-[1.12] font-semibold text-balance text-on-surface md:text-5xl md:leading-[1.08]">
               {heroContent.title}{" "}
               <span className="text-primary italic md:hidden">
                 {heroContent.mobileTitleAccent ?? heroContent.titleAccent}
@@ -68,7 +71,7 @@ export function LandingHeroSection() {
                 {heroContent.titleAccent}
               </span>
             </h1>
-            <p className="mx-auto max-w-xl text-lg leading-8 text-on-surface-variant md:mx-0">
+            <p className="mx-auto max-w-xl text-base leading-7 text-on-surface-variant md:mx-0 md:text-lg md:leading-8">
               {heroContent.description}
             </p>
           </div>
@@ -80,7 +83,7 @@ export function LandingHeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-md md:aspect-square md:max-w-none">
+        <div className="relative mx-auto aspect-square w-full max-w-md md:max-w-none">
           <div className="absolute inset-0 rounded-xl bg-surface-container opacity-60 shadow-atmospheric md:-right-5 md:-bottom-5 md:left-5 md:top-5" />
           <Image
             src={heroContent.image.src}

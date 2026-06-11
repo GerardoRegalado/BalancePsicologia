@@ -26,17 +26,17 @@ export function LandingSectionShell({
   return (
     <section
       id={id}
-      className={cn("scroll-mt-32 py-20 md:py-28", className)}
+      className={cn("scroll-mt-24 py-16 md:scroll-mt-32 md:py-28", className)}
     >
-      <Container className="space-y-10 md:space-y-12">
+      <Container className="space-y-8 md:space-y-12">
         <div className={cn("max-w-3xl space-y-4", headerClassName)}>
           <p className="text-xs font-semibold tracking-[0.18em] text-secondary uppercase">
             {eyebrow}
           </p>
-          <h2 className="text-3xl leading-tight font-medium text-balance md:text-4xl">
+          <h2 className="text-2xl leading-tight font-medium text-balance md:text-4xl">
             {title}
           </h2>
-          <p className="text-base leading-8 text-on-surface-variant md:text-lg">
+          <p className="text-base leading-7 text-on-surface-variant md:text-lg md:leading-8">
             {description}
           </p>
           {publicNote ? (

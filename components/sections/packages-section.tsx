@@ -17,8 +17,8 @@ export function PackagesSection() {
             key={item.name}
             className={
               index === 1
-                ? "flex min-h-72 flex-col rounded-lg border border-primary/20 bg-surface-container-lowest p-6 shadow-atmospheric-sm md:p-8"
-                : "flex min-h-72 flex-col rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6 md:p-8"
+                ? "flex flex-col rounded-lg border border-primary/20 bg-surface-container-lowest p-6 shadow-atmospheric-sm md:min-h-72 md:p-8"
+                : "flex flex-col rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6 md:min-h-72 md:p-8"
             }
           >
             <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">

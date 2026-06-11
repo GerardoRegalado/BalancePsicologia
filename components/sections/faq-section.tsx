@@ -13,9 +13,9 @@ export function FaqSection() {
         {faqSectionContent.items.map((item) => (
           <article
             key={item.question}
-            className="rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6 md:p-8"
+            className="rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-5 md:p-8"
           >
-            <h3 className="font-serif text-xl font-medium text-on-surface">
+            <h3 className="font-serif text-lg font-medium text-on-surface md:text-xl">
               {item.question}
             </h3>
             <p className="mt-3 leading-7 text-on-surface-variant">

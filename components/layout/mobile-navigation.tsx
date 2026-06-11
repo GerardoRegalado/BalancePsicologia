@@ -40,9 +40,9 @@ export function MobileNavigation({
       {isOpen ? (
         <div
           id="mobile-navigation"
-          className="absolute inset-x-0 top-full border-t border-outline-variant/55 bg-surface px-margin-mobile py-6 shadow-atmospheric-sm"
+          className="fixed inset-x-0 top-14 bottom-0 z-40 overflow-y-auto border-t border-outline-variant/55 bg-surface px-margin-mobile py-8 shadow-atmospheric-sm"
         >
-          <nav aria-label="Navegación móvil" className="flex flex-col gap-4">
+          <nav aria-label="Navegación móvil" className="flex min-h-full flex-col gap-4">
             {links.map((item) => (
               <a
                 key={item.href}
@@ -59,7 +59,7 @@ export function MobileNavigation({
               className={ctaClass({
                 variant: "primary",
                 size: "md",
-                className: "mt-4 w-full",
+                className: "mt-auto w-full",
               })}
             >
               {primaryAction.mobileLabel ?? primaryAction.label}

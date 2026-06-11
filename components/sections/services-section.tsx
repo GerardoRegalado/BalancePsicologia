@@ -57,7 +57,7 @@ export function ServicesSection() {
         {servicesSectionContent.items.map((service) => (
           <article
             key={service.title}
-            className="group flex min-h-80 flex-col rounded-lg border border-outline-variant/50 bg-surface-container-lowest p-6 transition-[box-shadow,transform,border-color] duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-atmospheric-sm md:p-8"
+            className="group flex flex-col rounded-lg border border-outline-variant/50 bg-surface-container-lowest p-6 transition-[box-shadow,transform,border-color] duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-atmospheric-sm md:min-h-80 md:p-8"
           >
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-surface-container-high text-primary transition-colors duration-300 group-hover:bg-primary group-hover:[color:var(--on-primary)]">
               <ServiceIcon icon={service.icon} />
