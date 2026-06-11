@@ -112,7 +112,20 @@ Estos puntos no son asesoria legal final. Deben validarse con asesoria legal/pro
 - [ ] Proceso para soporte definido.
 - [ ] Revision de auditoria definida.
 
-## 10. Checklist de costos y monitoreo
+## 10. Checklist de finanzas y administracion interna
+
+- [ ] Alcance financiero definido.
+- [ ] Que informacion financiera se capturara definido.
+- [ ] Que informacion financiera NO se capturara definido.
+- [ ] Reglas para cobros, pagos o saldos definidas, si aplican.
+- [ ] Reglas para recibos, comprobantes o facturacion definidas, si aplican.
+- [ ] Permisos para ver informacion financiera definidos.
+- [ ] Permisos para editar informacion financiera definidos.
+- [ ] Relacion entre citas, pagos y reportes definida, si aplica.
+- [ ] Politica para correcciones o cancelaciones administrativas definida.
+- [ ] Confirmacion de que pagos online quedan fuera hasta aprobacion explicita.
+
+## 11. Checklist de costos y monitoreo
 
 - [ ] Presupuesto mensual esperado definido.
 - [ ] Budget alerts configuradas antes de produccion.
@@ -121,7 +134,7 @@ Estos puntos no son asesoria legal final. Deben validarse con asesoria legal/pro
 - [ ] Monitoreo de uso definido.
 - [ ] Procedimiento ante abuso o loops definido.
 
-## 11. Bloqueantes absolutos
+## 12. Bloqueantes absolutos
 
 Estos puntos bloquean cualquier implementacion con datos reales si no estan aprobados:
 
@@ -137,10 +150,11 @@ Estos puntos bloquean cualquier implementacion con datos reales si no estan apro
 - IA solo como borrador revisable.
 - Capa segura para IA.
 - Budget alerts.
+- Alcance financiero definido si la app manejara cobros, pagos, saldos, recibos o reportes administrativos.
 
 Si cualquiera de estos puntos esta pendiente o en revision, la futura app privada no debe procesar pacientes reales, notas clinicas, sesiones reales, expedientes, IA clinica real ni workflows administrativos reales.
 
-## 12. Criterios de aceptacion
+## 13. Criterios de aceptacion
 
 - El checklist queda documentado.
 - La Fase 2.5 sigue siendo documental.
