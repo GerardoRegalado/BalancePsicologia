@@ -889,6 +889,7 @@ Listar riesgos que deben resolverse antes de gestionar datos clinicos o administ
 #### Archivos o carpetas involucradas
 
 - Docs unicamente.
+- `docs/future/private-app-risk-register.md`
 
 #### Criterios de aceptacion
 
