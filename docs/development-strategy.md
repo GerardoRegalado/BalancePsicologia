@@ -932,6 +932,7 @@ Definir el checklist minimo para poder iniciar una fase privada futura de forma 
 #### Archivos o carpetas involucradas
 
 - Docs unicamente.
+- `docs/future/private-app-readiness-checklist.md`
 
 #### Criterios de aceptacion
 
