@@ -116,7 +116,7 @@ El `/admin` existente pertenece al template/futuro. No debe enlazarse desde la l
 
 - Version 0.x: `next-best-practices`, `ui-ux-pro-max`, `webapp-testing`.
 - Version 1.x: `next-best-practices`, `ui-ux-pro-max`, `vercel-react-best-practices`, `webapp-testing`.
-- Version 2.x: `next-best-practices`, `supabase` solo si una futura fase privada lo aprueba; por ahora no usar para implementar.
+- Version 2.x: `next-best-practices`, `firebase` / `firebase-security-rules` solo si una futura fase privada lo aprueba, `webapp-testing`; por ahora no usar para implementar.
 
 ---
 
@@ -956,6 +956,137 @@ Definir el checklist minimo para poder iniciar una fase privada futura de forma 
 #### Prompt sugerido de implementacion
 
 `Implementa solo la subfase 2.5: checklist previo para futura app privada, sin implementacion.`
+
+### 2.6 Checkpoint de arquitectura futura: Firebase, multiusuario-lite e IA supervisada
+
+#### Objetivo
+
+Documentar una direccion conceptual para una futura app privada en `app.balancepsicologia.com`, sin autorizar implementacion inmediata ni avance real de Fase 2.
+
+#### Direccion conceptual
+
+Firebase queda como opcion futura a evaluar para:
+
+- Firebase Auth como autenticacion de usuarios internos.
+- Firestore como base de datos operacional de la app privada.
+- Firebase Storage solo si una fase posterior aprueba manejo de archivos o documentos.
+- Cloud Functions como capa segura para operaciones privilegiadas, validaciones sensibles e integraciones con IA.
+- Gemini, Firebase AI Logic o Vertex AI como asistente de apoyo supervisado, nunca como sustituto del criterio profesional.
+
+La app privada debe pensarse como `single-client UI, multi-tenant-ready backend`: al inicio puede existir una sola usuaria o consultorio visible, pero el modelo interno debe poder separar profesionales, consultorios o workspaces sin reescribir seguridad y datos desde cero.
+
+#### Modelo conceptual minimo
+
+- `workspace` / `clinic`: unidad de separacion operativa y de seguridad.
+- `users`: identidad autenticada.
+- `memberships`: relacion entre usuario y workspace.
+- `roles`: permisos activos dentro de un workspace.
+- `patients`: pacientes asociados al workspace.
+- `sessionNotes`: notas clinicas asociadas a paciente y workspace.
+- `aiAssistances`: borradores o apoyos generados por IA, siempre revisables.
+- `auditLogs`: accesos, cambios relevantes y eventos de seguridad.
+
+Roles iniciales sugeridos:
+
+- `owner`
+- `psychologist`
+
+Roles futuros opcionales:
+
+- `assistant`
+- `admin`
+- `viewer`
+
+#### Reglas conceptuales de acceso
+
+Todo dato sensible debe estar aislado por `workspaceId`.
+
+- Nadie lee datos si no pertenece al workspace correspondiente.
+- Nadie escribe datos si no tiene un rol activo y autorizado dentro del workspace.
+- Las notas clinicas solo son visibles para usuarios autorizados.
+- El frontend nunca se considera una barrera de seguridad suficiente.
+- Las reglas de Firestore, las Cloud Functions y la auditoria deben validar acceso por servidor o reglas, no por UI.
+
+#### Checkpoint de IA supervisada
+
+La IA debe plantearse como asistente clinico supervisado, no como autoridad clinica ni como reemplazo de la psicologa.
+
+Usos aceptables:
+
+- Resumen de sesion.
+- Puntos importantes.
+- Temas recurrentes.
+- Cambios entre sesiones.
+- Objetivos terapeuticos.
+- Tareas o acuerdos.
+- Preguntas sugeridas para proxima sesion.
+- Borradores SOAP / DAP / progreso clinico.
+- Banderas de riesgo para revision profesional.
+- Hipotesis clinicas a explorar con validacion humana.
+
+Restricciones criticas:
+
+- La IA no sustituye el criterio profesional.
+- La IA no debe producir ni decidir diagnosticos.
+- Todo output debe quedar como borrador revisable.
+- La psicologa debe aprobar, editar o descartar cualquier salida.
+- No se debe mandar todo el expediente al modelo si no es necesario.
+- Se debe minimizar la informacion enviada al modelo.
+- No deben guardarse datos clinicos en logs.
+
+#### Arquitectura recomendada para IA
+
+Flujo recomendado:
+
+`Frontend -> Firebase Auth -> Firestore -> Cloud Function segura -> Gemini / Firebase AI Logic / Vertex AI -> respuesta revisable -> Firestore como borrador/asistencia`
+
+Flujo a evitar:
+
+`Frontend -> Gemini`
+
+La integracion con IA debe pasar por una capa segura que controle permisos, minimice datos, registre auditoria sin exponer contenido clinico sensible en logs y devuelva una respuesta editable antes de almacenarla como asistencia.
+
+#### Seguridad y privacidad a contemplar
+
+Cualquier fase futura que avance hacia app privada debe contemplar:
+
+- Aviso de privacidad robusto.
+- Consentimiento explicito.
+- Control de acceso por rol.
+- Reglas estrictas de Firestore.
+- App Check.
+- Auditoria de accesos.
+- Registro de cambios.
+- Politica de retencion y borrado.
+- Separacion por profesional o consultorio.
+- Cuidado especial con prompts, outputs y logs.
+
+#### Criterios de aceptacion
+
+- El checkpoint queda como documentacion estrategica, no como especificacion implementable inmediata.
+- No se crean rutas privadas, modelos, servicios, dependencias ni integraciones.
+- Firebase, Gemini, Firebase AI Logic y Vertex AI quedan como opciones futuras sujetas a nuevo scope.
+- La arquitectura futura contempla `workspaceId`, roles, auditoria y minimizacion de datos desde el diseno.
+- La IA queda limitada a asistencia supervisada y borradores revisables.
+
+#### Validacion tecnica
+
+- No requerida si solo se modifica documentacion.
+
+#### Restricciones
+
+- No crear app privada.
+- No agregar Firebase.
+- No agregar Gemini.
+- No agregar dependencias.
+- No crear rutas nuevas.
+- No tocar landing publica.
+- No modificar produccion.
+- No avanzar a implementacion real de Fase 2.
+
+#### Prompt sugerido de implementacion
+
+`Documenta solo la subfase 2.6 como checkpoint conceptual de arquitectura futura; no implementes app privada, Firebase, Gemini ni rutas nuevas.`
 
 ## Validaciones globales
 
