@@ -968,6 +968,10 @@ Definir el checklist minimo para poder iniciar una fase privada futura de forma 
 
 Documentar una direccion conceptual para una futura app privada en `app.balancepsicologia.com`, sin autorizar implementacion inmediata ni avance real de Fase 2.
 
+#### Documento de checkpoint
+
+- `docs/future/firebase-ai-architecture-checkpoint.md`
+
 #### Direccion conceptual
 
 Firebase queda como opcion futura a evaluar para:
