@@ -798,6 +798,7 @@ Registrar limites tecnicos, legales y operativos para una futura app privada.
 #### Archivos o carpetas involucradas
 
 - Docs unicamente.
+- `docs/future/private-app-limits.md`
 
 #### Criterios de aceptacion
 
