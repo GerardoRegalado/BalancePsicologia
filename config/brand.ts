@@ -4,7 +4,7 @@ export const brandConfig = {
   legalName: process.env.NEXT_PUBLIC_SITE_LEGAL_NAME ?? "Balance Psicología",
   tagline:
     process.env.NEXT_PUBLIC_SITE_TAGLINE ??
-    "Consultorio psicológico en construcción.",
+    "Acompañamiento psicológico cálido y profesional en Aguascalientes.",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "",
   location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Aguascalientes, México",
   contact: {

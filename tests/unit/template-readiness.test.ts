@@ -22,7 +22,11 @@ describe("project readiness", () => {
     expect(siteConfig.navigation).not.toContainEqual(
       expect.objectContaining({ href: "/admin" }),
     );
-    expect(siteConfig.description).not.toMatch(/template|repo base/i);
+    expect(siteConfig.description).not.toMatch(
+      /template|repo base|prepara una landing/i,
+    );
+    expect(siteConfig.description).toMatch(/Aguascalientes/);
+    expect(siteConfig.ogImage).toMatch(/^\/media\//);
   });
 
   it("keeps the public content model prepared for the next landing phase", () => {
@@ -35,6 +39,9 @@ describe("project readiness", () => {
     expect(contactSectionContent.channels.length).toBeGreaterThanOrEqual(4);
     expect(footerContent.navigation).not.toContainEqual(
       expect.objectContaining({ href: "/admin" }),
+    );
+    expect(footerContent.navigation).not.toContainEqual(
+      expect.objectContaining({ href: expect.stringContaining("app.") }),
     );
     expect(leadFormContent.fields.map((field) => field.name)).toEqual(
       expect.arrayContaining([

@@ -10,7 +10,7 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { buildMetadata } from "@/lib/seo/build-metadata";
 
 export const metadata = buildMetadata({
-  title: "Inicio",
+  title: "Terapia psicológica en Aguascalientes",
   path: "/",
 });
 

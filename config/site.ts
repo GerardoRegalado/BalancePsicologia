@@ -13,7 +13,7 @@ export const siteConfig = {
   titleTemplate: `%s | ${brandConfig.name}`,
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
-    "Balance Psicología prepara una landing pública profesional para informar servicios psicológicos, costos, ubicación y solicitud básica de cita en Aguascalientes.",
+    "Balance Psicología ofrece un espacio cálido y profesional en Aguascalientes para conocer opciones de acompañamiento psicológico, costos, ubicación y solicitud de cita.",
   keywords: [
     "psicología",
     "terapia psicológica",

@@ -26,6 +26,7 @@ export function MobileNavigation({
         aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
+        aria-haspopup="menu"
         onClick={() => setIsOpen((current) => !current)}
         className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-primary transition-colors hover:bg-surface-container focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
       >
@@ -42,7 +43,10 @@ export function MobileNavigation({
           id="mobile-navigation"
           className="fixed inset-x-0 top-14 bottom-0 z-40 overflow-y-auto border-t border-outline-variant/55 bg-surface px-margin-mobile py-8 shadow-atmospheric-sm"
         >
-          <nav aria-label="Navegación móvil" className="flex min-h-full flex-col gap-4">
+          <nav
+            aria-label="Navegación móvil"
+            className="flex min-h-full flex-col gap-4"
+          >
             {links.map((item) => (
               <a
                 key={item.href}

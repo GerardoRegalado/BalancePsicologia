@@ -15,8 +15,11 @@ describe("buildMetadata", () => {
       template: siteConfig.titleTemplate,
     });
     expect(metadata.description).toBe(siteConfig.description);
+    expect(metadata.alternates?.canonical).toBe(`${siteConfig.url}/`);
     expect(metadata.openGraph?.siteName).toBe("Balance Psicología");
     expect(metadata.openGraph?.locale).toBe("es_MX");
+    expect(metadata.openGraph?.url).toBe(`${siteConfig.url}/`);
+    expect(metadata.twitter).toMatchObject({ card: "summary_large_image" });
   });
 
   it("supports route-specific overrides", () => {
@@ -27,7 +30,7 @@ describe("buildMetadata", () => {
     });
 
     expect(metadata.title).toBe("Contacto");
-    expect(metadata.alternates?.canonical).toBe("/#contacto");
+    expect(metadata.alternates?.canonical).toBe(`${siteConfig.url}/#contacto`);
     expect(metadata.robots).toEqual({ index: false, follow: false });
     expect(metadata.openGraph?.images).toEqual([
       expect.objectContaining({

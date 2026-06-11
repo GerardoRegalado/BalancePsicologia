@@ -5,7 +5,9 @@ import type { LeadFormField } from "@/types/content";
 
 function AppointmentField({ field }: { field: LeadFormField }) {
   const fieldId = `appointment-${field.name}`;
+  const statusId = `${fieldId}-status`;
   const helperId = field.helperText ? `${fieldId}-helper` : undefined;
+  const describedBy = [statusId, helperId].filter(Boolean).join(" ");
   const fieldClass =
     "w-full border-0 border-b border-outline/30 bg-surface-container-lowest px-0 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 disabled:opacity-100";
 
@@ -18,7 +20,7 @@ function AppointmentField({ field }: { field: LeadFormField }) {
         >
           {field.label}
         </label>
-        <span className="text-xs text-on-surface-variant">
+        <span id={statusId} className="text-xs text-on-surface-variant">
           {field.required ? "Requerido" : "Opcional"}
         </span>
       </div>
@@ -30,6 +32,7 @@ function AppointmentField({ field }: { field: LeadFormField }) {
           className={fieldClass}
           defaultValue=""
           disabled
+          aria-describedby={describedBy}
           aria-required={field.required}
         >
           <option value="">{field.placeholder}</option>
@@ -46,7 +49,7 @@ function AppointmentField({ field }: { field: LeadFormField }) {
           className={`${fieldClass} min-h-24 resize-none`}
           placeholder={field.placeholder}
           disabled
-          aria-describedby={helperId}
+          aria-describedby={describedBy}
           aria-required={field.required}
         />
       ) : (
@@ -57,7 +60,7 @@ function AppointmentField({ field }: { field: LeadFormField }) {
           className={fieldClass}
           placeholder={field.placeholder}
           disabled
-          aria-describedby={helperId}
+          aria-describedby={describedBy}
           aria-required={field.required}
         />
       )}
@@ -132,6 +135,7 @@ export function AppointmentSection() {
           className="rounded-lg border border-outline-variant/50 bg-surface-container-lowest p-5 md:p-8"
           role="group"
           aria-labelledby="appointment-visual-title"
+          aria-describedby="appointment-visual-note"
         >
           <h3
             id="appointment-visual-title"
@@ -158,6 +162,9 @@ export function AppointmentSection() {
           </button>
 
           <p className="mt-4 text-center text-xs leading-5 text-on-surface-variant">
+            <span id="appointment-visual-note">
+              Esta solicitud es una vista previa visual.
+            </span>{" "}
             {leadFormContent.privacyNote}
           </p>
         </div>

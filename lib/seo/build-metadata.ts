@@ -34,7 +34,7 @@ export function buildMetadata(input: MetadataInput = {}): Metadata {
     description,
     keywords: [...siteConfig.keywords],
     alternates: {
-      canonical: canonicalPath,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: input.title ?? siteConfig.defaultTitle,

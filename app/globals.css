@@ -64,7 +64,9 @@
   --spacing-stack-sm: 12px;
   --spacing-stack-md: 24px;
   --spacing-stack-lg: 48px;
-  /* Design font targets. next/font provides the first family; the rest are fallbacks. */
+  /* Design font targets with local/system fallbacks for offline-safe builds. */
+  --font-source-serif-4: "Source Serif 4";
+  --font-work-sans: "Work Sans";
   --font-family-serif:
     var(--font-source-serif-4), Georgia, "Times New Roman", Times, serif;
   --font-family-sans:
