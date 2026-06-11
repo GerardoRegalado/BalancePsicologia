@@ -753,6 +753,7 @@ Documentar la frontera entre `www.balancepsicologia.com` y la futura superficie 
 #### Archivos o carpetas involucradas
 
 - `docs/development-strategy.md`
+- `docs/future/public-private-boundary.md`
 - Docs futuros, si se crean despues con aprobacion.
 
 #### Criterios de aceptacion
