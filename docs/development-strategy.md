@@ -842,6 +842,7 @@ Dejar lineamientos conceptuales para una futura estructura privada sin implement
 #### Archivos o carpetas involucradas
 
 - Docs unicamente.
+- `docs/future/private-app-structure-guidelines.md`
 - No tocar codigo salvo aprobacion posterior.
 
 #### Criterios de aceptacion
