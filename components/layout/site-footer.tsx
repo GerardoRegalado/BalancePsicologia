@@ -2,6 +2,8 @@ import { Container } from "@/components/ui/container";
 import { brandConfig } from "@/config/brand";
 import { footerContent } from "@/content/contact";
 
+const currentYear = new Date().getFullYear();
+
 export function SiteFooter() {
   return (
     <footer
@@ -41,7 +43,7 @@ export function SiteFooter() {
         </div>
 
         <p className="max-w-sm text-center text-sm leading-6 text-primary md:text-left">
-          © 2024 {brandConfig.name}. Todos los derechos reservados.{" "}
+          © {currentYear} {brandConfig.name}. Todos los derechos reservados.{" "}
           {brandConfig.location}.
         </p>
       </Container>
