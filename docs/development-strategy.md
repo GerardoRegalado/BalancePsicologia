@@ -122,7 +122,7 @@ Nota de diseno: la vista mobile aprobada no cubre toda la landing. Las secciones
 - SEO base y metadata.
 - Google Analytics basico solo si hay acceso y se implementa en una subfase aprobada.
 
-## Fuera de alcance
+## Fuera de alcance de la entrega actual / Version 3.x
 
 - App privada funcional en `app.balancepsicologia.com`.
 - Login, usuarios, roles o permisos.
@@ -1205,19 +1205,19 @@ Registrar ubicacion, WhatsApp, redes sociales, costos, logos y estructura clinic
 
 #### Objetivo
 
-Revisar formatos disponibles de logo/assets y preparar decisiones para logo principal, variantes, favicon, Open Graph, optimizacion, accesibilidad y responsive.
+Revisar formatos disponibles de logo/assets, seleccionar variantes aprobadas, optimizar archivos y validar dimensiones, contraste y legibilidad antes de cualquier integracion visual.
 
 #### Entregables
 
 - Lista de assets recibidos y estado de validacion.
-- Recomendacion de logo principal, variantes, favicon y OG.
-- Criterios de uso accesible y responsive.
+- Recomendacion de logo principal, variantes y favicon candidato.
+- Archivos aprobados preparados u optimizados cuando aplique.
+- Criterios de dimensiones, contraste, legibilidad y uso responsive.
 
 #### Archivos o carpetas probables
 
 - `public/`
 - `config/media.ts`
-- `content/`
 - `docs/`
 
 #### Criterios de aceptacion
@@ -1234,11 +1234,13 @@ Revisar formatos disponibles de logo/assets y preparar decisiones para logo prin
 #### Validacion tecnica
 
 - Si se integran assets: `npm run typecheck`.
-- Si se toca UI: `npm run lint` y revision visual.
+- Si solo se preparan archivos/documentacion: no requiere build.
 
 #### Restricciones
 
 - No redisenar logo.
+- No modificar UI, layout, header ni footer.
+- No cerrar canonical, SEO local, robots ni metadata SEO final.
 - No tocar app privada.
 - No agregar dependencias de optimizacion nuevas.
 
@@ -1250,13 +1252,14 @@ Revisar formatos disponibles de logo/assets y preparar decisiones para logo prin
 
 #### Objetivo
 
-Sustituir marcas/placeholders por identidad real aprobada: logos, favicon, metadata visual, header, footer y consistencia desktop/mobile.
+Sustituir marcas/placeholders por identidad real aprobada en UI y configuracion de marca: logo, favicon, header, footer y referencias visuales publicas.
 
 #### Entregables
 
 - Logo aprobado integrado.
-- Favicon y metadata visual actualizados.
+- Favicon aprobado integrado en la configuracion visual basica.
 - Header/footer alineados a marca real.
+- Referencias visuales publicas actualizadas.
 - Consistencia responsive revisada.
 
 #### Archivos o carpetas probables
@@ -1275,7 +1278,7 @@ Sustituir marcas/placeholders por identidad real aprobada: logos, favicon, metad
 
 #### Validacion manual
 
-- Revisar header, footer, favicon y metadata visual.
+- Revisar header, footer, favicon y referencias visuales.
 - Comparar contra assets aprobados.
 
 #### Validacion tecnica
@@ -1288,6 +1291,8 @@ Sustituir marcas/placeholders por identidad real aprobada: logos, favicon, metad
 - No cambiar arquitectura.
 - No agregar app privada.
 - No inventar nuevos assets.
+- No cerrar canonical, SEO local, robots ni metadata final.
+- Open Graph final queda para 3.9.
 
 #### Prompt sugerido de implementacion
 
@@ -1532,14 +1537,18 @@ Consolidar WhatsApp como canal publico principal, revisar CTAs, estados, navegac
 
 #### Objetivo
 
-Cerrar metadata final, canonical, Open Graph, favicon/logo, enlaces sociales, SEO local, ubicacion, aviso de privacidad publico si existe, staging noindex/nofollow, contenido sensible y enlaces rotos.
+Cerrar metadata final de la landing publica: canonical, Open Graph, Twitter metadata si aplica, SEO local, robots, staging `noindex,nofollow`, contenido legal publico si existe, contenido sensible y enlaces rotos. Esta subfase valida el favicon y la imagen OG ya preparados en subfases previas.
 
 #### Entregables
 
 - Metadata final revisada.
-- Canonical y Open Graph actualizados.
+- Canonical actualizado.
+- Open Graph final actualizado.
+- Twitter metadata actualizada si aplica.
 - SEO local alineado a ubicacion aprobada.
+- Robots revisado.
 - Staging marcado `noindex,nofollow`.
+- Favicon e imagen OG validados contra los assets aprobados.
 - Revision de enlaces rotos y contenido sensible.
 
 #### Archivos o carpetas probables
@@ -1558,7 +1567,7 @@ Cerrar metadata final, canonical, Open Graph, favicon/logo, enlaces sociales, SE
 
 #### Validacion manual
 
-- Revisar metadata, OG, favicon, canonical y enlaces.
+- Revisar metadata, canonical, OG, Twitter metadata si aplica, favicon, robots y enlaces.
 - Confirmar staging noindex antes de promocion.
 
 #### Validacion tecnica
@@ -1636,7 +1645,7 @@ Version 4.x es fase puente obligatoria despues de Version 3.x y antes de Version
 - Archivos probables: repo completo en modo lectura, `.gitignore`, `docs/`.
 - Criterios de aceptacion: no se detectan datos clinicos reales o quedan riesgos documentados.
 - Validaciones: `git status --short`, busquedas por patrones sensibles, revision manual.
-- Riesgos: secretos o datos historicos en Git.
+- Riesgos: secretos o datos historicos en Git; cambiar un repositorio publico a privado no vuelve privados forks publicos existentes, clones, artefactos ni contenido previamente publicado.
 - Rollback: no aplica si solo se audita; no reescribir historial automaticamente.
 - Prompt sugerido: `Implementa solo 4.1: auditoria documental de seguridad e historial sin reescribir Git.`
 
@@ -1645,22 +1654,36 @@ Version 4.x es fase puente obligatoria despues de Version 3.x y antes de Version
 - Objetivo: documentar y ejecutar manualmente desde GitHub el cambio a privado.
 - Entregables: checklist de colaboradores, GitHub Apps, Vercel, deploy keys, Actions, webhooks, forks y accesos.
 - Archivos probables: `docs/`.
-- Criterios de aceptacion: visibilidad privada confirmada por responsable humano.
+- Criterios de aceptacion: visibilidad privada confirmada por responsable humano; existencia de forks, clones, artefactos o contenido previamente publicado revisada y documentada.
 - Validaciones: revision manual de GitHub, Vercel y accesos.
-- Riesgos: perder integraciones o dejar accesos obsoletos.
+- Riesgos: perder integraciones o dejar accesos obsoletos; los forks publicos existentes pueden quedar separados y continuar publicos; cambiar visibilidad no elimina informacion ya copiada externamente.
 - Rollback: documentar pasos para restaurar accesos; no asumir cambio automatico por Codex.
 - Prompt sugerido: `Planifica 4.2: checklist manual para convertir repo a privado sin tocar codigo.`
 
-### 4.3 Preparacion del workspace
+### 4.3 Preparacion de pnpm workspaces
 
-- Objetivo: planear `pnpm-workspace.yaml`, root `package.json`, scripts raiz, nombres, lockfile, TypeScript, ESLint y configuracion compartida minima.
-- Entregables: plan tecnico de workspace y criterios de migracion.
+- Objetivo: planear los workspaces de paquetes del monorepo con pnpm: `pnpm-workspace.yaml`, root `package.json`, scripts raiz, nombres, lockfile, TypeScript, ESLint y configuracion compartida minima.
+- Entregables: plan tecnico de pnpm workspaces y criterios de migracion.
 - Archivos probables: `package.json`, `pnpm-workspace.yaml`, configs raiz en fase aprobada.
-- Criterios de aceptacion: workspace definido sin paquetes innecesarios.
+- Criterios de aceptacion: workspace del package manager definido sin paquetes innecesarios; migracion npm -> pnpm aprobada antes de ejecutarse.
 - Validaciones: lint/typecheck/build despues de implementacion real.
-- Riesgos: romper scripts existentes o mezclar configuraciones.
+- Riesgos: romper scripts existentes, mezclar configuraciones o mezclar lockfiles.
 - Rollback: conservar commit previo y revertir migracion si falla validacion.
-- Prompt sugerido: `Implementa solo 4.3: prepara workspace monorepo minimo sin crear paquetes innecesarios.`
+- Prompt sugerido: `Implementa solo 4.3: prepara pnpm workspaces del monorepo sin crear paquetes innecesarios.`
+
+Checklist de migracion npm -> pnpm para esta subfase futura:
+
+- Detectar package manager y lockfile actuales.
+- Aprobar explicitamente la migracion a pnpm.
+- Fijar la version con el campo `packageManager` del `package.json` raiz.
+- Crear `pnpm-workspace.yaml`.
+- Generar lockfile de pnpm.
+- No eliminar el lockfile anterior hasta que instalacion, lint, typecheck, tests y build pasen.
+- Validar compatibilidad con Vercel y scripts.
+- Documentar rollback al package manager anterior.
+- No mezclar lockfiles despues de cerrar la migracion.
+
+Estos pasos no se ejecutan durante esta actualizacion documental.
 
 ### 4.4 Migracion de landing a `apps/marketing`
 
@@ -1677,7 +1700,7 @@ Version 4.x es fase puente obligatoria despues de Version 3.x y antes de Version
 
 - Objetivo: crear `packages/ui`, `packages/config`, `packages/types` solo si existe reutilizacion real.
 - Entregables: paquetes minimos o decision documentada de no crearlos todavia.
-- Archivos probables: `packages/`, configs workspace.
+- Archivos probables: `packages/`, configs de pnpm workspaces.
 - Criterios de aceptacion: no hay abstracciones prematuras ni tipos clinicos compartidos.
 - Validaciones: lint, typecheck, tests.
 - Riesgos: mover logica especifica de marketing o clinica a paquetes compartidos.
@@ -1698,10 +1721,10 @@ Version 4.x es fase puente obligatoria despues de Version 3.x y antes de Version
 ### 4.7 Preparacion de `apps/clinic`
 
 - Objetivo: preferir no crear app clinica funcional en Version 4.x; reservar creacion real para 5.1.
-- Entregables: decision documentada; placeholder estructural solo si es indispensable para validar workspace.
+- Entregables: decision documentada; placeholder estructural solo si es indispensable para validar pnpm workspaces.
 - Archivos probables: `docs/`, y `apps/clinic` solo con aprobacion explicita.
 - Criterios de aceptacion: no existe app privada funcional.
-- Validaciones: workspace valida sin rutas clinicas reales.
+- Validaciones: pnpm workspaces validan sin rutas clinicas reales.
 - Riesgos: crear funcionalidad privada prematura.
 - Rollback: eliminar placeholder si genera confusion.
 - Prompt sugerido: `Implementa solo 4.7: documenta preparacion de apps/clinic sin app funcional.`

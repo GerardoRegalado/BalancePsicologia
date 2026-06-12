@@ -87,7 +87,7 @@ Incluye solo:
 - Privacidad del repositorio.
 - Hardening y auditoria previa.
 - Migracion estructural a monorepo.
-- Workspaces.
+- Pnpm workspaces / workspaces de paquetes del monorepo.
 - Movimiento de la landing a `apps/marketing`.
 - Configuracion de Vercel con Root Directory.
 - Validacion de staging/produccion.
