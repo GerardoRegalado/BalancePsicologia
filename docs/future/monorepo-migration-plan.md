@@ -1,0 +1,155 @@
+# Plan futuro de migracion a monorepo
+
+Documento estrategico para Phase 4.x. Describe la migracion futura del repositorio actual a un monorepo privado, sin ejecutarla durante esta tarea.
+
+## Proposito
+
+El monorepo se adopta para separar claramente la landing publica de la futura app privada, conservar documentacion centralizada y permitir paquetes compartidos solo cuando exista reutilizacion real.
+
+El repositorio actual se conserva. No se creara un repositorio nuevo desde cero.
+
+## Estructura objetivo
+
+```text
+BalancePsicologia/
+├── apps/
+│   ├── marketing/
+│   │   └── www.balancepsicologia.com
+│   └── clinic/
+│       └── app.balancepsicologia.com
+├── packages/
+│   ├── ui/
+│   ├── config/
+│   └── types/
+├── docs/
+├── package.json
+└── pnpm-workspace.yaml
+```
+
+## Aplicaciones
+
+- `apps/marketing`: contendra la landing publica y conservara `www.balancepsicologia.com`.
+- `apps/clinic`: contendra la futura app privada y usara `app.balancepsicologia.com` cuando Phase 5 lo apruebe.
+- La aplicacion publica no debe importar codigo clinico.
+- La app privada no debe depender de contenido editorial de marketing como fuente de datos clinicos.
+
+## Paquetes
+
+- `packages/ui`: componentes realmente compartidos entre aplicaciones.
+- `packages/config`: configuracion compartida no sensible.
+- `packages/types`: tipos compartidos que no expongan informacion clinica.
+
+Reglas:
+
+- No crear paquetes si no hay reutilizacion real.
+- No extraer abstracciones innecesarias.
+- No mover logica clinica a paquetes publicos.
+- No crear tipos clinicos compartidos antes de Phase 6.
+
+## Estrategia de workspaces
+
+Phase 4 debera definir:
+
+- `pnpm-workspace.yaml`.
+- Scripts raiz.
+- Convencion de nombres.
+- Lockfile.
+- TypeScript compartido minimo.
+- ESLint/Prettier compartidos.
+- Scripts por app para lint, typecheck, test y build.
+
+La migracion debe mantener el comportamiento actual de la landing.
+
+## Estrategia de Vercel
+
+- La landing y la app privada tendran proyectos Vercel separados.
+- Cada proyecto usara su propio Root Directory.
+- `www.balancepsicologia.com` seguira apuntando a marketing.
+- `app.balancepsicologia.com` quedara reservado para clinic.
+- Staging y previews se configuraran por aplicacion.
+- Variables y secretos se separaran por proyecto.
+- No se compartiran secretos privados con marketing.
+
+## Seguridad y secretos
+
+Antes de migrar:
+
+- Revisar secretos en archivos.
+- Revisar variables `.env`.
+- Revisar historial Git por datos sensibles.
+- Confirmar que no hay datos reales de pacientes.
+- Revisar `.gitignore`.
+- Revisar integraciones GitHub/Vercel.
+
+El cambio de visibilidad del repositorio a privado debe hacerse manualmente desde GitHub por una persona autorizada. Codex no debe asumir que puede cambiar la visibilidad.
+
+## Datos clinicos
+
+Git no debe usarse como almacenamiento clinico, incluso despues de volver privado el repositorio.
+
+No se deben guardar:
+
+- Datos de pacientes.
+- Historiales clinicos llenos.
+- Nombres.
+- Diagnosticos.
+- Notas reales.
+- Capturas con datos clinicos.
+- Identificadores de pacientes.
+- Credenciales.
+- Secretos.
+
+## Riesgos
+
+- Romper imports o aliases al mover la landing.
+- Configurar mal Root Directory en Vercel.
+- Mezclar variables de marketing y clinic.
+- Crear paquetes compartidos prematuros.
+- Exponer codigo clinico desde marketing.
+- Conservar secretos o datos sensibles en historial Git.
+- Perder configuracion de staging o produccion.
+
+## Rollback
+
+Antes de ejecutar la migracion real se debe documentar:
+
+- Commit base previo a migracion.
+- Pasos para restaurar estructura actual.
+- Root Directory anterior de Vercel.
+- Variables actuales por proyecto.
+- Validaciones minimas para confirmar rollback.
+
+Si falla build, preview, staging o produccion, se debe revertir la migracion o restaurar Root Directory anterior hasta corregir.
+
+## Checklist previo
+
+- [ ] Phase 3 cerrada y aprobada.
+- [ ] Repo auditado por secretos y datos sensibles.
+- [ ] Repo convertido a privado manualmente.
+- [ ] Colaboradores y GitHub Apps revisados.
+- [ ] Vercel, Actions, webhooks y deploy keys revisados.
+- [ ] Rollback documentado.
+- [ ] Plan de workspaces aprobado.
+- [ ] No existen datos clinicos reales en repo.
+
+## Checklist posterior
+
+- [ ] Landing movida a `apps/marketing` sin cambios funcionales.
+- [ ] Scripts funcionan desde raiz y app.
+- [ ] Lint, typecheck, tests y build pasan.
+- [ ] Vercel marketing usa Root Directory correcto.
+- [ ] Preview y staging funcionan.
+- [ ] Produccion conserva `www.balancepsicologia.com`.
+- [ ] `apps/clinic` no existe como app funcional salvo aprobacion de Phase 5.
+- [ ] Variables privadas no se comparten con marketing.
+- [ ] Rollback probado o documentado.
+
+## Criterios de aceptacion
+
+- El repositorio queda privado antes de cualquier app privada real.
+- La landing publica conserva comportamiento y dominio.
+- La estructura monorepo queda preparada sin funcionalidades clinicas.
+- No se crea app privada funcional en Phase 4.
+- No se agregan Firebase, Gemini, pacientes, notas, pagos ni datos sensibles.
+- Vercel queda configurado con Root Directory correcto para marketing.
+- La migracion queda documentada y reversible.

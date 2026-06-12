@@ -22,6 +22,8 @@ La cotizacion cubre dos entregables publicos para `www.balancepsicologia.com`:
 - Fase 0: pagina temporal en construccion, como entregable rapido previo para mostrar presencia inicial y validar dominio/despliegue.
 - Fase 1: landing publica completa para presentar servicios, costos, ubicacion, contacto y solicitud de cita.
 
+Nota de vigencia de alcance: esta cotizacion corresponde unicamente a las Fases 0 y 1. Phase 2 fue una preparacion documental interna. Phase 3 y las fases posteriores requieren adendas o cotizaciones independientes.
+
 La pagina temporal de Fase 0 no reemplaza la landing final. Su objetivo es dar una primera senal visible de avance mientras se trabaja la experiencia completa.
 
 La vision futura de `app.balancepsicologia.com` queda reconocida como una posible fase posterior, pero no esta incluida ni cotizada en este documento.

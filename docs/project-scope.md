@@ -6,286 +6,267 @@ Documento para cerrar el alcance aprobado antes de cotizar, antes del diseno/moc
 
 - Cliente: Balance Psicologia
 - Contacto principal: Fernanda Regalado
-- Proyecto: Pagina temporal, landing publica y vision futura de plataforma privada para consultorio psicologico
-- Fecha: 2026-06-10
+- Proyecto: pagina temporal, landing publica, fine tuning publico y vision futura de plataforma privada para consultorio psicologico
+- Fecha original: 2026-06-10
 - Fuente principal: `docs/client-discovery.md`
-- Dominio deseado para fase publica: `www.balancepsicologia.com`
-- Dominio deseado para fase futura privada: `app.balancepsicologia.com`
-- Orden en el flujo: se define despues de discovery y antes de quote, design y development strategy.
+- Dominio publico: `www.balancepsicologia.com`
+- Dominio futuro privado: `app.balancepsicologia.com`
+- Estado actual del plan: Fases 0, 1 y 2 cerradas; la siguiente fase real de implementacion es Phase 3.
 
 ## Resumen del proyecto
 
-Balance Psicologia necesita una presencia profesional en internet para presentar sus servicios psicologicos, costos, ubicacion del consultorio, medios de contacto y una opcion sencilla para solicitar o agendar una cita.
+Balance Psicologia necesita una presencia profesional en internet para presentar servicios psicologicos, costos, ubicacion del consultorio, medios de contacto y una opcion sencilla para solicitar informacion o cita.
 
-Antes de publicar la landing completa, el proyecto incluye una Fase 0 para colocar una pagina temporal simple en `www.balancepsicologia.com`. Esta pagina comunicara que Balance Psicologia esta en construccion y servira como primer entregable visible para validar dominio, despliegue inicial y presencia publica basica.
+El proyecto inicio con una pagina temporal y una landing publica inicial. La direccion aprobada ahora separa el trabajo en fases: fine tuning publico primero, migracion futura a repositorio privado/monorepo despues, y app privada real solo en fases posteriores con nuevo scope y aprobacion.
 
-El proyecto tambien contempla una vision futura para una app privada en `app.balancepsicologia.com`, orientada a administrar citas, pacientes, seguimiento clinico, notas internas, estados y finanzas del consultorio. Esa app privada no forma parte de la primera entrega, salvo por una preparacion conceptual minima para no bloquear su crecimiento posterior.
+La futura app privada en `app.balancepsicologia.com` no forma parte de Phase 3 ni de la cotizacion original. Cualquier manejo de pacientes, notas, historial clinico, datos sensibles, finanzas internas o IA requiere una fase separada con seguridad, privacidad, permisos, criterios legales y cotizacion independiente.
 
-## Fases del alcance
+## Mapa actualizado de fases
 
-### Fase 0 - Pagina temporal en construccion en `www.balancepsicologia.com`
+### Phase 0 - Pagina temporal, cerrada
 
-Esta fase es un entregable rapido previo a la landing final.
+- Pagina temporal publica para `www.balancepsicologia.com`.
+- Mensaje profesional de sitio en construccion.
+- Sin formulario, agenda funcional, captura de datos, base de datos, app privada ni almacenamiento.
 
-Objetivo:
+### Phase 1 - Landing publica inicial, cerrada
 
-- Publicar una pagina temporal simple para que el dominio tenga presencia visible mientras se desarrolla la landing completa.
-- Comunicar de forma profesional que Balance Psicologia esta en construccion.
-- Validar de forma basica que el dominio y el despliegue inicial funcionan.
+- Landing publica inicial para `www.balancepsicologia.com`.
+- Secciones base: inicio, nosotros, servicios, costos/paquetes, solicitud de cita, testimonios condicionados, FAQ, contacto, mapa y footer.
+- Presencia profesional y canal publico de contacto.
+- Sin app privada funcional ni datos sensibles.
 
-Estado y limites:
+### Phase 2 - Preparacion conceptual privada, cerrada
 
-- Incluye una pagina publica temporal en `www.balancepsicologia.com`.
-- Incluye un mensaje simple tipo "Balance Psicologia esta en construccion" o equivalente profesional.
-- Incluye estetica sencilla, limpia, calida y confiable.
-- Incluye validacion basica de dominio y despliegue inicial.
-- No incluye formulario.
-- No incluye agenda funcional.
-- No incluye captura de datos.
-- No incluye base de datos.
-- No incluye app privada.
-- No incluye almacenamiento de informacion.
+- Documentacion estrategica para futura separacion publica/privada.
+- Limites para app privada futura.
+- Lineamientos de estructura privada futura.
+- Registro de riesgos.
+- Checklist de preparacion.
+- Checkpoint Firebase/IA supervisada.
+- No implemento app privada, login, base de datos, Firebase, Gemini, rutas privadas ni datos reales.
 
-### Fase 1 - Landing publica completa en `www.balancepsicologia.com`
+### Phase 3 - Fine tuning publico
 
-Esta fase es la landing publica completa definida como primera entrega comercial del sitio.
+Siguiente fase real de implementacion.
 
-Objetivo:
+Incluye:
 
-- Crear una landing publica profesional, calida, humana, confiable, limpia y tranquila.
-- Facilitar que una persona interesada entienda los servicios, revise costos, conozca la ubicacion y solicite informacion o una cita.
-- Generar presencia profesional y puntos de contacto claros para leads.
+- Integracion de logos aprobados.
+- Integracion de WhatsApp publico aprobado.
+- Integracion de redes sociales aprobadas.
+- Integracion de ubicacion publica aprobada.
+- Integracion de costos y servicios reales aprobados.
+- Consolidacion de CTA publico.
+- SEO, metadata, Open Graph y favicon.
+- Staging `noindex,nofollow`.
+- QA responsive, accesibilidad, enlaces y contenido.
+- Revision en staging y promocion controlada a produccion.
 
-Usuario principal:
+Fuera de Phase 3:
 
-- Personas que buscan atencion psicologica en Aguascalientes, Mexico, y necesitan informacion clara antes de contactar o solicitar una cita.
-
-### Fase 2 - App privada en `app.balancepsicologia.com`
-
-Esta fase queda documentada como vision futura y no incluida en la primera entrega.
-
-Objetivo futuro:
-
-- Crear una plataforma privada para administrar el consultorio, citas, pacientes, historial o seguimiento, notas internas, estados y finanzas.
-
-Estado en esta entrega:
-
-- No se implementa login.
-- No se implementa base de datos.
-- No se implementa panel administrativo completo.
-- No se almacenan datos sensibles de pacientes.
-- Solo se considera preparacion conceptual minima para que la arquitectura de la fase 1 no cierre la puerta a una fase posterior.
-
-## Alcance incluido
-
-### Fase 0 - Entregable incluido
-
-- Pagina temporal publica en `www.balancepsicologia.com`.
-- Mensaje profesional de sitio en construccion para Balance Psicologia.
-- Estetica sencilla, limpia, calida y confiable.
-- Validacion basica de dominio y despliegue inicial.
-- Reemplazo posterior por la landing completa de Fase 1 cuando este lista.
-
-### Fase 1 - Paginas y secciones incluidas
-
-- Inicio / Home con propuesta clara de Balance Psicologia.
-- Seccion Nosotros.
-- Seccion Servicios.
-- Seccion Costos / Pricing / Paquetes, enfocada en presentar informacion comercial de servicios o paquetes.
-- Seccion Agenda / solicitud de cita.
-- Seccion Testimonios, sujeta a que el cliente proporcione testimonios reales y autorizados.
-- Seccion FAQ.
-- Seccion Contacto.
-- Mapa / ubicacion del consultorio.
-- Footer con informacion de contacto y enlaces relevantes.
-
-### Fase 1 - Funcionalidades incluidas
-
-- Formulario de contacto o solicitud de cita.
-- Boton de WhatsApp como canal principal de contacto.
-- Integracion con correo / SMTP para recibir solicitudes, si el cliente proporciona los datos o proveedor necesario.
-- Agenda entendida como solicitud de cita o contacto inicial, sin confirmacion automatica obligatoria.
-- Mapa o enlace de ubicacion del consultorio.
-- SEO base para presencia inicial en buscadores.
-- Medicion basica de visitas y clics importantes mediante Google Analytics, sujeta a contar con cuenta o acceso del cliente.
-- Presentacion de imagenes y/o PDFs/documentos cuando el cliente los proporcione y sean necesarios para la landing.
-
-### Fase 1 - Contenido y diseno incluidos
-
-- Apoyo para redactar o mejorar el contenido de la landing con base en el discovery.
-- Estructura comercial clara para servicios, costos, contacto y solicitud de cita.
-- Direccion visual alineada a una marca profesional, minimalista, sobria, calida, humana, confiable, limpia y tranquila.
-- Uso del logo si el cliente lo proporciona.
-- Propuesta visual inicial basada en referencias pendientes y en los atributos definidos en discovery.
-
-### Fases 0 y 1 - Entregables
-
-- Codigo fuente en este repositorio.
-- Implementacion de la pagina temporal de Fase 0.
-- Implementacion de la landing publica completa definida en Fase 1.
-- Configuracion inicial necesaria para la presencia publica.
-- Integracion de contenido aprobado por el cliente.
-- QA basico y validacion previa a entrega.
-- Preparacion conceptual minima para futura separacion entre `www.balancepsicologia.com` y `app.balancepsicologia.com`.
-
-## Alcance excluido
-
-### Excluido de la Fase 0
-
-- Formulario.
-- Agenda funcional.
-- Captura de datos.
-- Envio de correo.
-- Integracion con WhatsApp como flujo funcional.
-- Google Analytics, salvo que se acuerde como validacion tecnica minima.
+- Login.
+- Firebase.
 - Base de datos.
+- Pacientes.
+- Historial clinico.
+- Notas clinicas.
 - App privada.
-- Almacenamiento de informacion.
-- Panel administrativo.
+- IA.
+- Finanzas internas.
+- Pagos online.
+- Almacenamiento de datos sensibles.
+- Cualquier backend no aprobado.
 
-### Excluido de la Fase 1
+### Phase 4 - Repositorio privado y monorepo
 
-- Prompt para Stitch o generacion de mockup final en esta etapa.
+Fase puente obligatoria despues de Phase 3 y antes de Phase 5.
+
+Incluye solo:
+
+- Privacidad del repositorio.
+- Hardening y auditoria previa.
+- Migracion estructural a monorepo.
+- Workspaces.
+- Movimiento de la landing a `apps/marketing`.
+- Configuracion de Vercel con Root Directory.
+- Validacion de staging/produccion.
+- Documentacion y rollback.
+
+No incluye funcionalidades clinicas, pacientes, Firebase real, app privada funcional, IA, pagos ni datos sensibles.
+
+### Phase 5 - Fundacion privada futura
+
+Fase futura independiente sujeta a nuevo scope, cotizacion, seguridad, privacidad, aprobacion, criterios legales y diseno tecnico.
+
+Podria incluir:
+
+- Creacion real de `apps/clinic`.
+- Proyecto Vercel separado para `app.balancepsicologia.com`.
+- Firebase project y ambientes.
+- Firebase Auth.
+- Workspaces, users, memberships y roles.
+- Matriz de permisos.
+- App shell privada.
+- Firestore Rules, App Check y Cloud Functions base.
+- Auditoria, sesiones, observabilidad, backups, budgets y QA de seguridad.
+
+No incluye todavia historial clinico completo.
+
+### Phase 6 - Gestion clinica y administrativa futura
+
+Fase futura independiente sujeta a nuevo scope, cotizacion, seguridad, privacidad, aprobacion, criterios legales y diseno tecnico.
+
+Podria incluir:
+
+- Discovery de la estructura real del historial clinico.
+- Pacientes y perfiles.
+- Notas de sesion.
+- Historial.
+- Citas internas.
+- Estados.
+- Busqueda y filtros.
+- Correcciones y anulaciones.
+- Auditoria.
+- Exportacion, borrado y retencion.
+- Finanzas administrativas si se aprueban.
+- Permisos por profesional/workspace.
+- Pruebas con datos ficticios.
+
+La estructura de historial clinico disponible queda como insumo privado para discovery/modelado. No debe publicarse en la landing ni guardarse con datos reales en el repositorio.
+
+### Phase 7 - Asistente de IA supervisado futuro
+
+Fase futura independiente sujeta a nuevo scope, cotizacion, seguridad, privacidad, aprobacion, criterios legales y diseno tecnico.
+
+Podria incluir:
+
+- Casos de uso aprobados.
+- Cloud Function o capa segura.
+- Gemini, Firebase AI Logic o Vertex AI.
+- Minimizacion de datos.
+- Resumenes, temas recurrentes, objetivos, preguntas sugeridas, borradores SOAP/DAP, hipotesis a explorar y banderas para revision.
+- Revision humana: editar, aprobar o descartar.
+- Versionado de prompts/modelos.
+- Auditoria.
+- Costos y rate limits.
+- Consentimiento y privacidad.
+
+Debe mantenerse prohibido:
+
+- Diagnostico automatico.
+- Diagnostico definitivo.
+- Tratamiento decidido por IA.
+- Evaluacion clinica automatica.
+- Guardar outputs como nota final sin revision.
+- Enviar expedientes completos sin necesidad.
+- Llamar al modelo directamente desde frontend.
+
+## Alcance incluido de Phase 3
+
+- Inventario y clasificacion de insumos reales.
+- Preparacion y validacion de logos/assets.
+- Integracion de identidad visual real aprobada.
+- Integracion de WhatsApp y contacto real aprobado.
+- Integracion de redes sociales aprobadas.
+- Integracion de ubicacion real aprobada.
+- Integracion de costos y servicios reales aprobados.
+- Consolidacion del flujo publico de solicitud de cita, por defecto hacia WhatsApp.
+- SEO, metadata, Open Graph, favicon y SEO local.
+- Staging `noindex,nofollow`.
+- QA final y promocion controlada.
+
+## Alcance excluido de Phase 3
+
 - App privada funcional en `app.balancepsicologia.com`.
 - Login, usuarios, roles o permisos.
+- Firebase, Firestore, Cloud Functions o Gemini.
 - Base de datos.
-- Panel administrativo interno.
-- Gestion de pacientes.
-- Historial clinico o seguimiento del paciente.
-- Notas clinicas o notas internas.
-- Estados de pacientes o procesos internos.
-- Gestion financiera del consultorio.
-- Registro de citas pagadas.
-- Registro de paquetes pagados.
-- Ingresos, egresos, gastos o renta del consultorio.
-- Carga, edicion o administracion de archivos desde un panel.
-- Almacenamiento de documentos o archivos relacionados con pacientes.
-- Pagos en linea, Stripe, Mercado Pago, tienda, membresias o suscripciones.
-- CRM o integracion con CRM.
-- Meta Pixel.
-- Blog.
-- Portafolio / proyectos.
-- Gestion de proyectos.
-- Confirmacion automatica de citas, sincronizacion avanzada con calendario real o sistema interno de citas.
-- Produccion profesional de fotografia, video, identidad visual completa, logo nuevo o assets finales, salvo que se acuerde despues.
-- Testimonios inventados, genericos o no autorizados.
+- Pacientes.
+- Historial clinico.
+- Notas clinicas.
+- Expedientes.
+- IA.
+- Finanzas internas.
+- Pagos online.
+- Stripe, Mercado Pago o facturacion.
+- CRM.
+- Storage/uploads.
+- Almacenamiento de datos sensibles.
+- Agenda automatica o confirmacion automatica de citas.
 
-### Fase 2 futura no incluida en la primera entrega
+## Insumos disponibles para Phase 3
 
-La siguiente vision queda registrada para continuidad, pero no debe tratarse como implementacion inmediata:
+Ya existen insumos disponibles para integracion, pendientes de validacion final y publicacion dentro de Phase 3:
 
-- Plataforma privada en `app.balancepsicologia.com`.
-- Autenticacion segura.
-- Permisos y roles.
-- Base de datos.
-- Gestion de citas.
-- Creacion y gestion de pacientes.
-- Historial o seguimiento del paciente.
-- Notas internas o clinicas.
-- Estatus de pacientes o procesos.
-- Finanzas del consultorio.
-- Citas pagadas, paquetes pagados, ingresos, egresos y gastos.
-- Manejo seguro de documentos o archivos de pacientes.
+- Ubicacion real de la oficina.
+- WhatsApp publico de la psicologa.
+- Redes sociales.
+- Costos de sesiones.
+- Logos.
 
-Antes de implementar esta fase sera necesario definir alcance tecnico, seguridad, privacidad, permisos, validacion de datos, modelo de datos, responsabilidades operativas y criterios legales aplicables.
+La estructura usada por la psicologa para llevar historial clinico queda registrada como insumo privado para Phase 6. No debe integrarse en la landing publica ni publicarse en documentacion con datos reales.
 
-## Supuestos
+## Reglas de datos sensibles
 
-- El discovery en `docs/client-discovery.md` refleja correctamente la necesidad del cliente.
-- La Fase 0 funciona como entregable temporal previo y no reemplaza la landing completa.
-- La Fase 0 puede publicarse con copy minimo y no requiere todos los contenidos finales de la landing.
-- La Fase 1 se enfoca en la landing publica completa de `www.balancepsicologia.com`.
-- `app.balancepsicologia.com` se considera una fase futura y no forma parte del scope inicial.
-- La agenda de Fase 1 puede iniciar como solicitud de cita o formulario de contacto, sin confirmacion automatica.
-- El contenido final de servicios, costos, FAQ, direccion, horarios y datos de contacto sera validado o entregado por el cliente.
-- Los testimonios solo se publicaran si el cliente entrega testimonios reales, autorizados y aptos para uso publico.
-- Si no hay testimonios disponibles al momento de entrega, la seccion podra quedar preparada, oculta o con un estado editorial pendiente, sin inventar contenido.
-- El cliente cuenta con logo, pero colores, tipografias, referencias visuales y material fotografico siguen pendientes.
-- La fase privada no debe almacenar informacion sensible hasta contar con medidas de seguridad, privacidad y arquitectura adecuadas.
-- La fecha objetivo de entrega esta pendiente y se considera flexible.
+El repositorio actualmente puede contener documentacion publica y no debe recibir:
 
-## Pendientes de informacion critica
+- Datos de pacientes.
+- Historiales clinicos llenos.
+- Nombres.
+- Diagnosticos.
+- Notas de sesiones reales.
+- Capturas con datos clinicos.
+- Identificadores de pacientes.
+- Credenciales.
+- Secretos.
 
-### Para Fase 0
+Incluso despues de convertir el repositorio en privado, Git no debe utilizarse como almacenamiento de informacion clinica real.
 
-- Acceso operativo o instrucciones para apuntar/publicar `www.balancepsicologia.com`.
-- Confirmacion del mensaje temporal o aprobacion del texto propuesto.
-- Logo en formato utilizable, si se desea mostrarlo en la pagina temporal.
-- Confirmacion del entorno de hosting o despliegue inicial.
+## Dependencias de Phase 3
 
-### Para Fase 1
-
-- Correo electronico y telefono / WhatsApp finales para contacto publico.
-- Direccion exacta o ubicacion aprobada del consultorio para mapa.
-- Costos, paquetes y servicios finales a publicar.
-- Textos finales o aprobacion del copy propuesto.
-- Logo en formato utilizable.
-- Referencias visuales aprobadas.
-- Fotografias, imagenes de apoyo, iconos o recursos visuales.
-- Testimonios reales y autorizados, si se desea mostrar la seccion en la primera publicacion.
-- Cuenta o acceso para Google Analytics.
-- Proveedor o datos para envio por correo / SMTP, si aplica.
-- Definicion final de como se recibiran las solicitudes de cita: WhatsApp, correo, formulario o combinacion.
-- Validacion de disponibilidad y acceso operativo al dominio `www.balancepsicologia.com`.
-
-## Dependencias
-
-- Aprobacion del presente alcance antes de avanzar a diseno o implementacion.
-- Acceso o instrucciones para dominio y hosting desde Fase 0.
-- Contenido minimo aprobado para la pagina temporal.
-- Contenido final aprobado por el cliente para Fase 1.
-- Material visual disponible o autorizacion para trabajar con placeholders.
-- Cuenta de Google Analytics o aprobacion para configurarla despues.
-- Datos de contacto publicos y direccion aprobada.
-- Testimonios reales y autorizados para publicar la seccion correspondiente.
-- Feedback y aprobaciones del cliente dentro de tiempos acordados.
+- Validacion final de logos.
+- Validacion final de WhatsApp publico.
+- Validacion final de redes sociales.
+- Validacion final de ubicacion publica.
+- Validacion final de costos y servicios.
+- Aprobacion del copy publico.
+- Acceso o confirmacion de staging.
+- Aprobacion del cliente antes de promocion a produccion.
 
 ## Riesgos y notas operativas
 
-- Si no hay acceso al dominio o hosting, la Fase 0 puede retrasarse aunque la pagina temporal sea simple.
-- La Fase 0 es temporal; no debe evaluarse como reemplazo de la landing completa.
-- La falta de contenido final puede retrasar la publicacion de Fase 1 o requerir trabajar con textos preliminares sujetos a aprobacion.
-- La falta de testimonios reales puede impedir publicar la seccion de testimonios en la primera version visible.
-- La falta de referencias visuales puede requerir una propuesta inicial basada solamente en los atributos de marca definidos en discovery.
-- La app privada involucra informacion sensible de salud mental; no debe implementarse sin una etapa especifica de seguridad, privacidad y definicion tecnica.
-- La integracion de agenda puede mantenerse como solicitud de cita en Fase 1 para evitar complejidad prematura.
-- La integracion de pagos no forma parte de la primera etapa.
+- Publicar insumos reales sin validacion puede exponer informacion incorrecta.
+- Staging debe mantenerse fuera de indexacion.
+- La landing publica no debe mezclar workflows privados.
+- La app privada involucra informacion sensible de salud mental y requiere una fase separada.
+- Los pagos online y finanzas internas no forman parte de Phase 3.
+- Phase 4 puede afectar despliegue si se cambia Root Directory sin QA y rollback.
 
 ## Criterios de aceptacion
 
-### Fase 0 - Pagina temporal
+### Phase 3 - Fine tuning publico
 
-- La pagina temporal esta disponible en `www.balancepsicologia.com` o en un entorno de revision equivalente si el dominio aun no esta listo.
-- La pagina comunica claramente que Balance Psicologia esta en construccion.
-- La estetica se percibe sencilla, limpia, calida y confiable.
-- Se valida de forma basica el dominio y/o despliegue inicial.
-- No hay formulario.
-- No hay agenda funcional.
-- No hay captura de datos.
-- No hay base de datos.
-- No hay app privada.
-- No hay almacenamiento de informacion.
+- Logos, WhatsApp, redes, ubicacion, costos y servicios aprobados quedan integrados.
+- CTA publico principal queda claro y, por defecto, dirigido a WhatsApp.
+- Metadata, SEO, Open Graph y favicon quedan revisados.
+- Staging queda `noindex,nofollow`.
+- No se implementa app privada, login, Firebase, base de datos ni IA.
+- No se almacenan datos sensibles.
+- QA desktop/mobile, accesibilidad, enlaces y contenido no presenta bloqueadores.
+- Promocion a produccion se realiza solo con aprobacion.
 
-### Fase 1 - Landing publica completa
+### Phase 4 - Monorepo futuro
 
-- La landing esta disponible para representar a Balance Psicologia en `www.balancepsicologia.com` o en un entorno de revision previo a publicacion.
-- La pagina comunica de forma clara servicios, costos, ubicacion, contacto y solicitud de cita.
-- El contacto principal por WhatsApp esta visible y funcional.
-- El formulario de contacto o solicitud de cita funciona segun el canal definido.
-- El mapa o enlace de ubicacion dirige correctamente al consultorio aprobado.
-- La seccion de testimonios solo muestra testimonios reales y autorizados, o queda preparada/oculta si el cliente no los entrega.
-- La FAQ y el footer incluyen informacion aprobada.
-- La medicion basica con Google Analytics queda instalada o documentada como pendiente si faltan accesos.
-- El sitio mantiene una apariencia profesional, calida, humana, confiable, limpia y tranquila.
-- No se implementa ni simula una app privada funcional dentro de la Fase 1.
-- No se almacenan datos sensibles de pacientes.
-- El build, la validacion basica y la revision final no presentan bloqueadores criticos.
+- El repositorio queda privado antes de trabajo privado real.
+- La landing se mueve a `apps/marketing` sin cambios funcionales.
+- Vercel usa Root Directory correcto.
+- No se crea app clinica funcional.
+- Rollback queda documentado.
 
-### Fase 2 - Vision futura
+### Phases 5-7 futuras
 
-- La vision de `app.balancepsicologia.com` queda documentada como fase futura.
-- La fase futura no se cotiza ni se trata como implementacion inmediata en este documento.
-- Cualquier avance posterior de app privada requiere nuevo alcance, criterios de seguridad y aprobacion independiente.
+- Cada fase futura requiere nuevo scope, cotizacion, seguridad, privacidad, aprobacion, criterios legales y diseno tecnico antes de implementarse.
 
 ## Aprobacion
 
