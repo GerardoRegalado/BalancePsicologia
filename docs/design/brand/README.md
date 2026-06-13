@@ -7,10 +7,10 @@ Esta carpeta prepara la recepcion de archivos oficiales de identidad visual prop
 - `source/` contiene archivos originales recibidos del cliente.
 - Los archivos originales todavia no se consideran optimizados ni integrados.
 - Los assets se validaran durante Phase 3.2.
-- Los assets aprobados para web podran exportarse despues a `public/brand/`.
+- Los assets preparados para web se exportan a `public/brand/` despues de auditoria, sin integrarlos automaticamente.
 - Los assets para Open Graph podran exportarse despues a `public/media/`.
 
-No se debe crear `public/brand/` ni reemplazar assets de produccion hasta una fase aprobada.
+No se deben reemplazar assets de produccion hasta una fase aprobada.
 
 ## Reglas
 
@@ -27,6 +27,8 @@ No se debe crear `public/brand/` ni reemplazar assets de produccion hasta una fa
 ```text
 docs/design/brand/
 ├── README.md
+├── asset-audit.md
+├── asset-review-sheet.png
 └── source/
     ├── favicon.png
     ├── logo_horizontal.png
@@ -46,7 +48,26 @@ Nota:
 - `favicon.png` es candidato fuente, no favicon de produccion final.
 - `logo_horizontal.png` debe revisarse visualmente para confirmar que su composicion y recorte funcionan realmente como variante horizontal.
 - Los derivados para produccion deberan optimizar peso y eliminar metadata innecesaria cuando aplique.
-- No crear todavia `public/brand/`.
+- `public/brand/` contiene derivados web preparados en Phase 3.2, pero no integrados.
+
+## Derivados web creados
+
+```text
+public/brand/
+├── balance-favicon-candidate.png
+├── balance-logo-horizontal-color.png
+├── balance-logo-stacked-black.png
+├── balance-logo-stacked-color.png
+└── balance-logo-stacked-white.png
+```
+
+Reglas de separacion:
+
+- `docs/design/brand/source/` conserva originales recibidos del cliente.
+- `docs/design/brand/asset-audit.md` documenta auditoria, limitaciones y recomendaciones.
+- `docs/design/brand/asset-review-sheet.png` es solo ayuda visual de revision.
+- `public/brand/` contiene derivados web optimizados, sin integracion activa todavia.
+- La landing, el favicon activo y Open Graph no deben consumir estos derivados hasta una fase aprobada.
 
 ## Estructura orientativa para archivos recibidos
 
