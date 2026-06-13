@@ -39,17 +39,18 @@ El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Logos y variantes de Balance Psicologia |
-| Estado de disponibilidad | Disponible externamente segun estrategia de Phase 3; no se encontro archivo de logo nombrado como tal dentro del repositorio |
-| Fuente | Cliente / insumos externos pendientes de captura; `docs/project-scope.md`; `docs/development-strategy.md` |
-| Formato recibido | Pendiente de captura. En el repositorio solo se detectaron `app/favicon.ico`, `public/media/og-default.svg` y media visual no identificada como logo |
+| Estado de disponibilidad | Archivos fuente capturados dentro del repositorio |
+| Fuente | Cliente / archivos fuente en `docs/design/brand/source/`; `docs/project-scope.md`; `docs/development-strategy.md` |
+| Formato recibido | PNG: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png` |
 | Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de validacion | `En revision` |
 | Destino futuro | 3.2 Preparacion y validacion de logos/assets; 3.3 Integracion de identidad visual real; 3.9 validacion final de favicon/imagen OG |
-| Observaciones o pendientes | Subir archivos originales a `docs/design/brand/source/`. Confirmar logo principal, variantes, formatos fuente, version para fondo claro/oscuro si aplica, candidato para favicon y candidato para Open Graph. No optimizar, convertir ni redisenar todavia |
+| Observaciones o pendientes | Identificar logo principal; confirmar variante horizontal; confirmar versiones para fondos claros/oscuros; revisar transparencia; confirmar favicon; confirmar si existe archivo vectorial SVG/PDF/AI; preparar derivados web en Phase 3.2; preparar integracion en Phase 3.3; reemplazar el Open Graph del template en Phase 3.9. No optimizar, convertir, renombrar ni redisenar todavia |
 
 Notas:
 
-- No hay logo principal aprobado dentro del repositorio al momento de este inventario.
+- Los archivos fuente existen en `docs/design/brand/source/`, pero todavia no estan aprobados para produccion.
+- Los logos estan listos para entrar a auditoria de Phase 3.2.
 - `app/favicon.ico` se considera favicon existente del proyecto, no necesariamente favicon final aprobado.
 - `public/media/og-default.svg` se considera asset OG actual/generico, no necesariamente Open Graph final aprobado.
 - `public/media/og-default.svg` contiene identidad del template base. Debe considerarse rechazado como asset final. Su reemplazo se atendera en Phase 3.2 y Phase 3.9.
@@ -60,18 +61,18 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Ubicacion publica del consultorio |
-| Estado de disponibilidad | Disponible externamente; pendiente de captura y validacion |
-| Fuente | Cliente / insumo externo mencionado en estrategia; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `content/contact.ts` |
-| Formato recibido | Direccion concreta no incluida en esta tarea ni encontrada en documentos publicos del repositorio |
+| Estado de disponibilidad | Parcialmente capturada dentro del repositorio |
+| Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `content/contact.ts` |
+| Formato recibido | Nombre publico del consultorio, ciudad, estado, pais y URL oficial de Google Maps capturados; calle, numero, colonia, codigo postal, direccion visible completa y texto breve para llegar siguen pendientes |
 | Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de validacion | `En revision` |
 | Destino futuro | 3.6 Integracion de ubicacion real; 3.9 SEO local y metadata |
-| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar direccion exacta apta para publicacion, texto publico para llegar, enlace de mapa oficial si aplica y nivel minimo de detalle. No publicar informacion privada o adicional innecesaria |
+| Observaciones o pendientes | El nombre publico del consultorio y el enlace de Google Maps estan aprobados. Confirmar direccion exacta apta para publicacion, texto publico para llegar y nivel minimo de detalle antes de integrar. No publicar informacion privada o adicional innecesaria |
 
 Notas:
 
 - La landing actual usa referencia general: Aguascalientes, Mexico.
-- No existe enlace de mapa validado dentro del repositorio.
+- Existe enlace de mapa validado en `docs/phase-3-public-inputs.md`, pero todavia no esta integrado.
 - La direccion publica debe aprobarse antes de integrarse en UI, metadata o SEO local.
 
 ### 3. WhatsApp publico
@@ -79,17 +80,17 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | WhatsApp publico de la psicologa |
-| Estado de disponibilidad | Disponible externamente; pendiente de captura y validacion |
-| Fuente | Cliente / insumo externo mencionado en estrategia; `docs/project-scope.md`; `docs/quote-addendum-phase-3.md`; placeholder actual en `content/contact.ts` |
-| Formato recibido | Numero concreto no incluido en esta tarea ni encontrado en documentos publicos del repositorio |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de disponibilidad | Capturado dentro del repositorio |
+| Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/quote-addendum-phase-3.md`; placeholder actual en `content/contact.ts` |
+| Formato recibido | Numero nacional, codigo de pais, numero internacional sin espacios y numero visible capturados; mensaje prellenado pendiente |
+| Clasificacion | `Publico y aprobado` |
+| Estado de validacion | `Aprobado` |
 | Destino futuro | 3.4 Integracion de WhatsApp y contacto real; 3.8 flujo publico final de solicitud de cita |
-| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Capturar numero aprobado, confirmar formato internacional, decidir si habra mensaje prellenado y revisar copy del CTA. No crear enlaces `wa.me` todavia |
+| Observaciones o pendientes | El numero esta aprobado y documentado. Decidir si habra mensaje prellenado y revisar copy del CTA antes de integrar. No crear enlaces `wa.me` todavia |
 
 Notas:
 
-- No se inventa ni se publica el numero.
+- No se publica el numero en UI, codigo o configuracion durante Phase 3.1.
 - No se agrega enlace de WhatsApp a codigo o configuracion.
 - El mensaje prellenado queda pendiente de aprobacion posterior.
 
@@ -98,18 +99,18 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Redes sociales publicas |
-| Estado de disponibilidad | Disponibles externamente; pendientes de captura y validacion |
-| Fuente | Cliente / insumo externo mencionado en estrategia; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `config/brand.ts` y `content/contact.ts` |
-| Formato recibido | Plataformas concretas y URLs publicas no incluidas en esta tarea ni encontradas como valores aprobados en el repositorio |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de disponibilidad | Capturadas dentro del repositorio |
+| Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `config/brand.ts` y `content/contact.ts` |
+| Formato recibido | Facebook e Instagram oficiales capturados; otras redes marcadas como `No aplica` |
+| Clasificacion | `Publico y aprobado` |
+| Estado de validacion | `Aprobado` |
 | Destino futuro | 3.5 Integracion de redes sociales; 3.9 enlaces sociales y metadata cuando aplique |
-| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar plataformas aprobadas, URLs oficiales, labels accesibles y ubicacion futura en header, footer o contacto |
+| Observaciones o pendientes | Facebook e Instagram estan aprobados y documentados. Confirmar labels accesibles y ubicacion futura en header, footer o contacto antes de integrar |
 
 Notas:
 
-- `config/brand.ts` contempla `instagram` y `linkedin` como campos vacios mediante variables publicas, pero no hay URLs validadas.
-- No se inventan perfiles, usuarios ni enlaces.
+- `config/brand.ts` contempla `instagram` y `linkedin` como campos vacios mediante variables publicas; no se modifican durante Phase 3.1.
+- No se integran perfiles, usuarios ni enlaces durante Phase 3.1.
 - No deben publicarse redes no aprobadas o enlaces vacios.
 
 ### 5. Costos de sesiones
@@ -117,13 +118,13 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Costos de sesiones |
-| Estado de disponibilidad | Disponibles externamente; pendientes de captura y validacion |
-| Fuente | Cliente / insumo externo mencionado en estrategia; `docs/project-scope.md`; `docs/quote-addendum-phase-3.md`; placeholders actuales en `content/pricing.ts` |
-| Formato recibido | Valores concretos no incluidos en esta tarea ni encontrados en documentos publicos del repositorio |
+| Estado de disponibilidad | Parcialmente capturados dentro del repositorio |
+| Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/quote-addendum-phase-3.md`; placeholders actuales en `content/pricing.ts` |
+| Formato recibido | Costos publicos para sesion individual, sesion de pareja y sesion familiar capturados; duracion y condiciones pendientes |
 | Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de validacion | `En revision` |
 | Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 consistencia de CTAs; 3.9 revision de contenido sensible/SEO |
-| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Capturar costos aprobados, modalidad relacionada, texto comercial, condiciones publicas y exclusiones. No inventar promociones, duracion, descuentos, paquetes, condiciones ni resultados clinicos |
+| Observaciones o pendientes | Los costos y nombres de modalidades estan aprobados y documentados. Confirmar duracion, condiciones publicas, texto comercial y exclusiones antes de integrar. No inventar promociones, duracion, descuentos, paquetes, condiciones ni resultados clinicos |
 
 Notas:
 
@@ -136,13 +137,13 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Servicios/modalidades relacionados con costos y oferta publica |
-| Estado de disponibilidad | Parcialmente disponible como copy editorial; servicios/modalidades finales pendientes de validacion |
-| Fuente | `docs/client-discovery.md`; `docs/project-scope.md`; `content/services.ts`; cliente para confirmacion final |
-| Formato recibido | Copy editorial actual para acompanamiento individual, parejas y familiar; no se recibieron condiciones finales nuevas en esta tarea |
+| Estado de disponibilidad | Modalidades publicas capturadas; copy editorial y condiciones finales pendientes de validacion |
+| Fuente | Valores capturados en `docs/phase-3-public-inputs.md`; `docs/client-discovery.md`; `docs/project-scope.md`; `content/services.ts`; cliente para confirmacion final |
+| Formato recibido | Sesion individual, sesion de pareja y sesion familiar capturadas; condiciones y duracion pendientes |
 | Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `Pendiente` |
+| Estado de validacion | `En revision` |
 | Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 flujo publico de solicitud de cita |
-| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar nombres finales de servicios, modalidades publicas, relacion con costos y copy aprobado. No inventar especialidades, duraciones, promesas clinicas ni resultados |
+| Observaciones o pendientes | Los nombres de modalidades estan aprobados y documentados. Confirmar relacion final con costos, duracion, condiciones y copy aprobado antes de integrar. No inventar especialidades, duraciones, promesas clinicas ni resultados |
 
 Notas:
 
@@ -179,7 +180,8 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 
 ### Listos para 3.2
 
-- Logos/assets: pueden avanzar a 3.2 solo despues de capturar archivos reales aprobables y confirmar que son publicables. Al momento del inventario, no hay archivo de logo identificado dentro del repositorio.
+- Archivos fuente de marca capturados: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png`.
+- Logos/assets: listos para entrar a auditoria de Phase 3.2, pero todavia no aprobados para produccion.
 - Favicon actual: puede revisarse como artefacto existente, pero no debe asumirse como final aprobado.
 
 ### Pendientes de validacion
@@ -188,23 +190,18 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Favicon candidato.
 - Imagen o asset para Open Graph.
 - Direccion publica del consultorio.
-- Enlace de mapa, si aplica.
-- WhatsApp publico.
-- Redes sociales y URLs oficiales.
-- Costos de sesiones.
+- Mensaje prellenado de WhatsApp.
+- Duracion y condiciones de sesiones.
 - Servicios/modalidades y copy comercial.
 
 ### Pendientes de captura
 
-- Archivos fuente de logos y variantes.
-- Subida de archivos originales a `docs/design/brand/source/`.
-- Numero de WhatsApp aprobado.
-- URLs oficiales de redes sociales.
-- Direccion publica aprobada.
-- Enlace oficial de mapa, si aplica.
-- Costos finales.
+- Direccion visible completa aprobada.
+- Correo publico aprobado.
+- Horarios aprobados.
+- Mensaje prellenado de WhatsApp aprobado.
+- Duracion de sesiones.
 - Condiciones comerciales publicas.
-- Nombres finales de servicios/modalidades.
 
 ### Reservados para fases privadas
 

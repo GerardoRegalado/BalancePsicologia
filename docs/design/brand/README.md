@@ -28,8 +28,25 @@ No se debe crear `public/brand/` ni reemplazar assets de produccion hasta una fa
 docs/design/brand/
 ├── README.md
 └── source/
-    └── .gitkeep
+    ├── favicon.png
+    ├── logo_horizontal.png
+    ├── logo_monochrome_blanco.png
+    ├── logo_monochrome_color.png
+    └── logo_monochrome_negro.png
 ```
+
+Nota:
+
+- Estos son archivos fuente originales en PNG.
+- Todavia no son derivados optimizados de produccion.
+- No deben renombrarse ni modificarse directamente.
+- Phase 3.2 debera auditar dimensiones, recortes, transparencia, contraste, legibilidad y uso previsto.
+- Debe confirmarse si existe una fuente vectorial SVG/PDF/AI.
+- Los derivados futuros deberan usar nombres en kebab-case.
+- `favicon.png` es candidato fuente, no favicon de produccion final.
+- `logo_horizontal.png` debe revisarse visualmente para confirmar que su composicion y recorte funcionan realmente como variante horizontal.
+- Los derivados para produccion deberan optimizar peso y eliminar metadata innecesaria cuando aplique.
+- No crear todavia `public/brand/`.
 
 ## Estructura orientativa para archivos recibidos
 
@@ -51,4 +68,3 @@ docs/design/brand/
 - Phase 3.2: revisar formatos, seleccionar variantes, validar contraste/legibilidad y preparar derivados.
 - Phase 3.3: integrar identidad visual aprobada en UI/configuracion de marca.
 - Phase 3.9: validar favicon, Open Graph y metadata final.
-

@@ -8,20 +8,21 @@ Este documento no integra datos en la landing. Ningun valor debe implementarse m
 
 | Campo | Valor |
 | --- | --- |
-| Responsable de validacion | PENDIENTE |
-| Estado general | Pendiente |
-| Fecha de ultima validacion | PENDIENTE |
+| Responsable de captura | Gerardo Regalado |
+| Responsable de validacion final | Fernanda Regalado |
+| Estado general | En revision |
+| Fecha de ultima actualizacion | 2026-06-13 |
 
 ## WhatsApp
 
 | Campo | Valor |
 | --- | --- |
-| Numero nacional | PENDIENTE |
-| Codigo de pais | PENDIENTE |
-| Numero internacional sin espacios | PENDIENTE |
-| Numero visible en landing | PENDIENTE |
+| Numero nacional | 449 555 6035 |
+| Codigo de pais | +52 |
+| Numero internacional sin espacios | 524495556035 |
+| Numero visible en landing | 449 555 6035 |
 | Mensaje prellenado aprobado | PENDIENTE |
-| Estado de validacion | Pendiente |
+| Estado de validacion | Aprobado |
 
 Nota: no crear todavia el enlace `wa.me`.
 
@@ -31,49 +32,51 @@ Nota: no crear todavia el enlace `wa.me`.
 
 | Campo | Valor |
 | --- | --- |
-| Nombre publico o usuario | PENDIENTE |
-| URL oficial | PENDIENTE |
-| Estado de validacion | Pendiente |
+| Nombre publico o usuario | Psic. Fernanda Regalado - Terapia Cognitivo Conductual |
+| URL oficial | https://www.facebook.com/people/Psic-Fernanda-Regalado-Terapia-Cognitivo-Conductual/61590600875459/ |
+| Estado de validacion | Aprobado |
 
 ### Instagram
 
 | Campo | Valor |
 | --- | --- |
-| Nombre publico o usuario | PENDIENTE |
-| URL oficial | PENDIENTE |
-| Estado de validacion | Pendiente |
+| Nombre publico o usuario | @psic.fernandaregalado |
+| URL oficial | https://www.instagram.com/psic.fernandaregalado/ |
+| Estado de validacion | Aprobado |
 
 ### Otras redes
 
 | Red | Nombre publico o usuario | URL oficial | Estado de validacion |
 | --- | --- | --- | --- |
-| PENDIENTE | PENDIENTE | PENDIENTE | Pendiente |
+| No aplica | No aplica | No aplica | No aplica |
 
 ## Ubicacion
 
 | Campo | Valor |
 | --- | --- |
-| Nombre publico del consultorio | PENDIENTE |
+| Nombre publico del consultorio | Clinica MIND |
 | Calle y numero | PENDIENTE |
 | Colonia | PENDIENTE |
 | Codigo postal | PENDIENTE |
-| Ciudad | PENDIENTE |
-| Estado | PENDIENTE |
-| Pais | PENDIENTE |
+| Ciudad | Aguascalientes |
+| Estado | Aguascalientes |
+| Pais | Mexico |
 | Direccion visible completa | PENDIENTE |
-| URL oficial de Google Maps | PENDIENTE |
+| URL oficial de Google Maps | https://maps.app.goo.gl/yeoxjHcLFUmbPkCm7 |
 | Texto breve para llegar | PENDIENTE |
-| Estado de validacion | Pendiente |
+| Estado de validacion | En revision |
+
+Nota: El nombre Clinica MIND y el enlace de Google Maps estan aprobados. La forma exacta de mostrar la direccion y el texto para llegar queda pendiente para Phase 3.6.
 
 ## Costos y sesiones
 
 | Servicio o modalidad | Costo publico | Duracion | Condiciones | Estado |
 | --- | --- | --- | --- | --- |
-| Sesion individual | PENDIENTE | PENDIENTE | PENDIENTE | Pendiente |
-| Sesion de pareja | PENDIENTE | PENDIENTE | PENDIENTE | Pendiente |
-| Sesion familiar | PENDIENTE | PENDIENTE | PENDIENTE | Pendiente |
+| Sesion individual | $450 MXN | PENDIENTE | PENDIENTE | En revision |
+| Sesion de pareja | $700 MXN | PENDIENTE | PENDIENTE | En revision |
+| Sesion familiar | $900 MXN | PENDIENTE | PENDIENTE | En revision |
 
-Nota: si una modalidad no aplica, marcar `No aplica` en la fila correspondiente.
+Nota: Los costos y nombres de modalidades estan aprobados. La duracion y condiciones publicas siguen pendientes. No inventar paquetes, descuentos, promociones ni politicas de cancelacion.
 
 ## Datos publicos adicionales
 
@@ -87,14 +90,15 @@ Nota: si una modalidad no aplica, marcar `No aplica` en la fila correspondiente.
 
 ## Checklist de aprobacion
 
-- [ ] WhatsApp aprobado.
-- [ ] Redes sociales aprobadas.
-- [ ] Ubicacion aprobada.
-- [ ] Enlace de mapa aprobado.
-- [ ] Costos aprobados.
-- [ ] Servicios/modalidades aprobados.
+- [x] WhatsApp aprobado.
+- [x] Redes sociales aprobadas.
+- [ ] Ubicacion visible completa aprobada.
+- [x] Enlace de mapa aprobado.
+- [x] Costos aprobados.
+- [x] Servicios/modalidades aprobados.
 - [ ] Correo publico aprobado.
 - [ ] Horarios aprobados.
+- [ ] Mensaje prellenado de WhatsApp aprobado.
 - [ ] Aptitud general para publicacion confirmada.
 
 ## Reglas del documento
@@ -109,4 +113,3 @@ Nota: si una modalidad no aplica, marcar `No aplica` en la fila correspondiente.
 - No incluir credenciales ni secretos.
 - No incluir telefonos, direcciones o perfiles que no hayan sido aprobados para exposicion publica.
 - No inventar valores concretos.
-
