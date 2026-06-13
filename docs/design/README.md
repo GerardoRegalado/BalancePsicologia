@@ -8,9 +8,27 @@ Este contenido se llena manualmente una vez que exista un diseño aprobado en St
 
 - `DESIGN.md`: design system / visual system exportado por Stitch. Debe concentrar paleta, tipografía, lineamientos visuales, tono de UI y reglas del sistema visual aprobado.
 - Carpetas por vista: una carpeta por cada pantalla o vista exportada desde Stitch.
+- `brand/`: assets oficiales de identidad proporcionados por el cliente. Es distinto de las carpetas de vistas exportadas desde Stitch.
 - Dentro de cada carpeta de vista normalmente pueden existir:
   - `screen.png`
   - `code.html`
+
+## Assets oficiales de marca
+
+`docs/design/brand/` contiene assets oficiales de identidad proporcionados por el cliente.
+
+- Los originales se conservan en `docs/design/brand/source/`.
+- La carpeta `brand/` no reemplaza a `DESIGN.md` ni a las vistas exportadas desde Stitch.
+- La validacion y preparacion de assets se realiza en Phase 3.2.
+- La integracion en UI/configuracion de marca se realiza en Phase 3.3.
+- `public/brand/` queda reservado para futuros assets optimizados de produccion, pero todavia no debe crearse.
+
+Separacion de responsabilidades:
+
+- `docs/phase-3-input-inventory.md`: clasificacion, estado y readiness de insumos.
+- `docs/phase-3-public-inputs.md`: valores exactos publicos para llenar manualmente y aprobar antes de integracion.
+- `docs/design/brand/source/`: archivos originales de marca.
+- `public/brand/`: futuros assets optimizados de produccion, todavia no crear.
 
 ## Estructura esperada
 
@@ -18,6 +36,9 @@ Este contenido se llena manualmente una vez que exista un diseño aprobado en St
 docs/design/
   README.md
   DESIGN.md
+  brand/
+    README.md
+    source/
   home/
     screen.png
     code.html

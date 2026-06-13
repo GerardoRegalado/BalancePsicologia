@@ -10,6 +10,12 @@ Registrar y clasificar los insumos disponibles antes de cualquier integracion en
 
 El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que requiere validacion, que debe capturarse todavia y que pertenece a fases privadas.
 
+## Relacion con valores publicos exactos
+
+- Este inventario clasifica disponibilidad, estado y readiness de los insumos.
+- `docs/phase-3-public-inputs.md` almacena los valores exactos aprobados para publicacion antes de trasladarlos a `content/` o `config/`.
+- Ningun valor publico debe integrarse en codigo mientras no este capturado y marcado como aprobado en `docs/phase-3-public-inputs.md`.
+
 ## Clasificaciones usadas
 
 - `Publico y aprobado`
@@ -39,13 +45,14 @@ El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.2 Preparacion y validacion de logos/assets; 3.3 Integracion de identidad visual real; 3.9 validacion final de favicon/imagen OG |
-| Observaciones o pendientes | Confirmar logo principal, variantes, formatos fuente, version para fondo claro/oscuro si aplica, candidato para favicon y candidato para Open Graph. No optimizar, convertir ni redisenar todavia |
+| Observaciones o pendientes | Subir archivos originales a `docs/design/brand/source/`. Confirmar logo principal, variantes, formatos fuente, version para fondo claro/oscuro si aplica, candidato para favicon y candidato para Open Graph. No optimizar, convertir ni redisenar todavia |
 
 Notas:
 
 - No hay logo principal aprobado dentro del repositorio al momento de este inventario.
 - `app/favicon.ico` se considera favicon existente del proyecto, no necesariamente favicon final aprobado.
 - `public/media/og-default.svg` se considera asset OG actual/generico, no necesariamente Open Graph final aprobado.
+- `public/media/og-default.svg` contiene identidad del template base. Debe considerarse rechazado como asset final. Su reemplazo se atendera en Phase 3.2 y Phase 3.9.
 - No se debe redisenar el logo sin aprobacion expresa.
 
 ### 2. Ubicacion publica del consultorio
@@ -59,7 +66,7 @@ Notas:
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.6 Integracion de ubicacion real; 3.9 SEO local y metadata |
-| Observaciones o pendientes | Confirmar direccion exacta apta para publicacion, texto publico para llegar, enlace de mapa oficial si aplica y nivel minimo de detalle. No publicar informacion privada o adicional innecesaria |
+| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar direccion exacta apta para publicacion, texto publico para llegar, enlace de mapa oficial si aplica y nivel minimo de detalle. No publicar informacion privada o adicional innecesaria |
 
 Notas:
 
@@ -78,7 +85,7 @@ Notas:
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.4 Integracion de WhatsApp y contacto real; 3.8 flujo publico final de solicitud de cita |
-| Observaciones o pendientes | Capturar numero aprobado, confirmar formato internacional, decidir si habra mensaje prellenado y revisar copy del CTA. No crear enlaces `wa.me` todavia |
+| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Capturar numero aprobado, confirmar formato internacional, decidir si habra mensaje prellenado y revisar copy del CTA. No crear enlaces `wa.me` todavia |
 
 Notas:
 
@@ -97,7 +104,7 @@ Notas:
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.5 Integracion de redes sociales; 3.9 enlaces sociales y metadata cuando aplique |
-| Observaciones o pendientes | Confirmar plataformas aprobadas, URLs oficiales, labels accesibles y ubicacion futura en header, footer o contacto |
+| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar plataformas aprobadas, URLs oficiales, labels accesibles y ubicacion futura en header, footer o contacto |
 
 Notas:
 
@@ -116,7 +123,7 @@ Notas:
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 consistencia de CTAs; 3.9 revision de contenido sensible/SEO |
-| Observaciones o pendientes | Capturar costos aprobados, modalidad relacionada, texto comercial, condiciones publicas y exclusiones. No inventar promociones, duracion, descuentos, paquetes, condiciones ni resultados clinicos |
+| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Capturar costos aprobados, modalidad relacionada, texto comercial, condiciones publicas y exclusiones. No inventar promociones, duracion, descuentos, paquetes, condiciones ni resultados clinicos |
 
 Notas:
 
@@ -135,7 +142,7 @@ Notas:
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `Pendiente` |
 | Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 flujo publico de solicitud de cita |
-| Observaciones o pendientes | Confirmar nombres finales de servicios, modalidades publicas, relacion con costos y copy aprobado. No inventar especialidades, duraciones, promesas clinicas ni resultados |
+| Observaciones o pendientes | Completar el valor exacto en `docs/phase-3-public-inputs.md` y marcarlo como aprobado antes de integrarlo. Confirmar nombres finales de servicios, modalidades publicas, relacion con costos y copy aprobado. No inventar especialidades, duraciones, promesas clinicas ni resultados |
 
 Notas:
 
@@ -173,7 +180,7 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 ### Listos para 3.2
 
 - Logos/assets: pueden avanzar a 3.2 solo despues de capturar archivos reales aprobables y confirmar que son publicables. Al momento del inventario, no hay archivo de logo identificado dentro del repositorio.
-- Favicon/OG actuales: pueden revisarse como artefactos existentes, pero no deben asumirse como finales aprobados.
+- Favicon actual: puede revisarse como artefacto existente, pero no debe asumirse como final aprobado.
 
 ### Pendientes de validacion
 
@@ -190,6 +197,7 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 ### Pendientes de captura
 
 - Archivos fuente de logos y variantes.
+- Subida de archivos originales a `docs/design/brand/source/`.
 - Numero de WhatsApp aprobado.
 - URLs oficiales de redes sociales.
 - Direccion publica aprobada.
@@ -228,4 +236,3 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - No se publican datos clinicos.
 - La estructura clinica queda reservada para Phase 6.
 - El documento permite decidir que puede avanzar a 3.2, 3.3, 3.4, 3.5, 3.6 y 3.7.
-
