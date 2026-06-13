@@ -72,8 +72,8 @@ Reglas de separacion:
 - `docs/design/brand/source/` conserva originales recibidos del cliente.
 - `docs/design/brand/asset-audit.md` documenta auditoria, limitaciones y recomendaciones.
 - `docs/design/brand/asset-review-sheet.png` y `docs/design/brand/asset-review-sheet-transparent.png` son ayudas visuales de revision.
-- `public/brand/` contiene derivados web optimizados, sin integracion activa todavia.
-- La landing, el favicon activo y Open Graph no deben consumir estos derivados hasta una fase aprobada.
+- `public/brand/` contiene derivados web optimizados; Phase 3.3 consume solo los dos PNG transparentes definidos en `config/brand.ts` como prueba contextual.
+- La landing no debe consumir otros derivados fuera de esta prueba; el favicon activo y Open Graph no deben consumir estos derivados hasta una fase aprobada.
 - Phase 3.3 debera preferir PNG transparente aprobado si no existe SVG candidato fiel y aprobado.
 - No existen candidatos SVG creados en esta fase; la fuente vectorial oficial sigue pendiente del cliente.
 

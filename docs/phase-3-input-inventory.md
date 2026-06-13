@@ -52,7 +52,7 @@ Notas:
 - Los archivos fuente existen en `docs/design/brand/source/`, pero todavia no estan aprobados para produccion.
 - La auditoria de Phase 3.2 esta documentada en `docs/design/brand/asset-audit.md`.
 - La correccion Phase 3.2A de transparencia y evaluacion vectorial tambien esta documentada en `docs/design/brand/asset-audit.md`.
-- Los derivados web opacos y transparentes estan en `public/brand/`, pero todavia no estan integrados en la landing.
+- Los derivados web opacos y transparentes estan en `public/brand/`; Phase 3.3 integra solo dos PNG transparentes como prueba contextual.
 - Phase 3.3 integra de forma contextual solo el logo horizontal transparente en header y el logo apilado transparente a color en footer.
 - La integracion es reversible desde `config/brand.ts` y no implica aprobacion definitiva.
 - Ningun fuente tiene transparencia real; todos son PNG RGB con fondo opaco.
