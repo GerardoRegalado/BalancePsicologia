@@ -22,6 +22,12 @@ describe("project readiness", () => {
   it("keeps public site config aligned with Balance Psicología", () => {
     expect(brandConfig.name).toBe("Balance Psicología");
     expect(brandConfig.location).toBe("Aguascalientes, México");
+    expect(brandConfig.address.display).toBe(
+      "Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.",
+    );
+    expect(brandConfig.address.mapsUrl).toBe(
+      "https://maps.app.goo.gl/yeoxjHcLFUmbPkCm7",
+    );
     expect(siteConfig.url).toBe("https://www.balancepsicologia.com");
     expect(siteConfig.locale).toBe("es_MX");
     expect(siteConfig.navigation).not.toContainEqual(
@@ -48,6 +54,11 @@ describe("project readiness", () => {
     expect(footerContent.navigation).not.toContainEqual(
       expect.objectContaining({ href: expect.stringContaining("app.") }),
     );
+    expect(footerContent.credit.prefix).toContain(
+      "Desarrollado con mucha cafeína",
+    );
+    expect(footerContent.credit.label).toBe("Gerardo Regalado");
+    expect(footerContent.credit.href).toBe("https://www.gerardoregalado.dev/");
     expect(leadFormContent.fields.map((field) => field.name)).toEqual(
       expect.arrayContaining([
         "name",
@@ -164,6 +175,12 @@ describe("project readiness", () => {
     );
     expect(locationSectionContent.description).toMatch(
       /ubicación exacta se integrará/i,
+    );
+    expect(JSON.stringify(locationSectionContent)).not.toContain(
+      brandConfig.address.display,
+    );
+    expect(JSON.stringify(locationSectionContent)).not.toContain(
+      brandConfig.address.mapsUrl,
     );
     expect(packagePreviews.map((item) => item.detail).join(" ")).not.toContain(
       "$450",

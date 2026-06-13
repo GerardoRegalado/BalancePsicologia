@@ -7,6 +7,10 @@ export const brandConfig = {
     "Acompañamiento psicológico cálido y profesional en Aguascalientes.",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "",
   location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Aguascalientes, México",
+  address: {
+    display: "Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.",
+    mapsUrl: "https://maps.app.goo.gl/yeoxjHcLFUmbPkCm7",
+  },
   contact: {
     whatsappDisplay: "449 555 6035",
     whatsappInternational: "524495556035",

@@ -60,25 +60,25 @@ Superficies integradas en Phase 3.4:
 | --- | --- | --- | --- |
 | No aplica | No aplica | No aplica | No aplica |
 
-Nota Phase 3.5: Facebook e Instagram se integran en seccion de contacto, footer, navegacion mobile y header desktop grande cuando el breakpoint tiene espacio suficiente. Solo aparecen redes aprobadas. LinkedIn no se integra. Las URLs se mantienen canonicas y sin parametros de tracking. No se habilita correo publico. La revision final de enlaces sociales y metadata queda para Phase 3.9.
+Nota Phase 3.5A: Facebook e Instagram se mantienen en seccion de contacto, footer y navegacion mobile. Se retiraron del header desktop por decision visual del cliente y no aparecen en el header en ningun breakpoint. Solo aparecen redes aprobadas. LinkedIn no se integra. Las URLs se mantienen canonicas y sin parametros de tracking. No se habilita correo publico. La revision final de enlaces sociales y metadata queda para Phase 3.9.
 
 ## Ubicacion
 
 | Campo | Valor |
 | --- | --- |
-| Nombre publico del consultorio | Clinica MIND |
-| Calle y numero | PENDIENTE |
-| Colonia | PENDIENTE |
-| Codigo postal | PENDIENTE |
+| Nombre publico del consultorio | Clínica MIND |
+| Calle y numero | Jacaranda 552 |
+| Colonia | Las Arboledas |
+| Codigo postal | 20020 |
 | Ciudad | Aguascalientes |
 | Estado | Aguascalientes |
-| Pais | Mexico |
-| Direccion visible completa | PENDIENTE |
+| Pais | México |
+| Direccion visible completa | Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags. |
 | URL oficial de Google Maps | https://maps.app.goo.gl/yeoxjHcLFUmbPkCm7 |
 | Texto breve para llegar | PENDIENTE |
-| Estado de validacion | En revision |
+| Estado de validacion | Aprobado para publicacion |
 
-Nota: El nombre Clinica MIND y el enlace de Google Maps estan aprobados. La forma exacta de mostrar la direccion y el texto para llegar queda pendiente para Phase 3.6.
+Nota: La direccion visible completa y el enlace de Google Maps se integran primero en el footer durante Phase 3.5A. La seccion de ubicacion y mapa se atendera en Phase 3.6. El texto breve para llegar sigue pendiente.
 
 ## Costos y sesiones
 
@@ -104,7 +104,7 @@ Nota: Los costos y nombres de modalidades estan aprobados. La duracion y condici
 
 - [x] WhatsApp aprobado.
 - [x] Redes sociales aprobadas.
-- [ ] Ubicacion visible completa aprobada.
+- [x] Ubicacion visible completa aprobada.
 - [x] Enlace de mapa aprobado.
 - [x] Costos aprobados.
 - [x] Servicios/modalidades aprobados.

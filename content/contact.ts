@@ -67,4 +67,9 @@ export const footerContent: FooterContent = {
     { label: "Aviso de privacidad" },
     { label: "Términos y condiciones" },
   ],
+  credit: {
+    prefix: "Desarrollado con mucha cafeína ☕️ por:",
+    label: "Gerardo Regalado",
+    href: "https://www.gerardoregalado.dev/",
+  },
 };

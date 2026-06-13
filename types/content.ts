@@ -171,6 +171,11 @@ export type FooterLinkItem = {
 export type FooterContent = {
   navigation: FooterLinkItem[];
   legal: FooterLinkItem[];
+  credit: {
+    prefix: string;
+    label: string;
+    href: string;
+  };
 };
 
 export type LeadFormField = {

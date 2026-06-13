@@ -3,7 +3,6 @@ import Link from "next/link";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Container } from "@/components/ui/container";
 import { ctaClass } from "@/components/ui/cta-styles";
-import { SocialLinks } from "@/components/ui/social-links";
 import { brandConfig } from "@/config/brand";
 import { siteConfig } from "@/config/site";
 import { heroContent } from "@/content/hero";
@@ -50,11 +49,6 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-
-        <SocialLinks
-          className="hidden items-center gap-4 text-xs font-medium text-on-surface-variant xl:flex"
-          linkClassName="transition-colors hover:text-primary focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
-        />
 
         <a
           href={primaryAction.href}

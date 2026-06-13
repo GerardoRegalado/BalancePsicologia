@@ -70,17 +70,18 @@ Notas:
 | Nombre o categoria | Ubicacion publica del consultorio |
 | Estado de disponibilidad | Parcialmente capturada dentro del repositorio |
 | Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `content/contact.ts` |
-| Formato recibido | Nombre publico del consultorio, ciudad, estado, pais y URL oficial de Google Maps capturados; calle, numero, colonia, codigo postal, direccion visible completa y texto breve para llegar siguen pendientes |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `En revision` |
+| Formato recibido | Nombre publico del consultorio, calle y numero, colonia, codigo postal, ciudad, estado, pais, direccion visible completa y URL oficial de Google Maps capturados; texto breve para llegar sigue pendiente |
+| Clasificacion | `Publico y aprobado` para direccion visible y Google Maps; `Publico, pendiente de validacion` para texto breve para llegar |
+| Estado de validacion | `Aprobado` para direccion visible y Google Maps; `En revision` para texto breve para llegar |
 | Destino futuro | 3.6 Integracion de ubicacion real; 3.9 SEO local y metadata |
-| Observaciones o pendientes | El nombre publico del consultorio y el enlace de Google Maps estan aprobados. Confirmar direccion exacta apta para publicacion, texto publico para llegar y nivel minimo de detalle antes de integrar. No publicar informacion privada o adicional innecesaria |
+| Observaciones o pendientes | La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.` y el enlace de Google Maps estan aprobados. Phase 3.5A integra la direccion primero en el footer mediante `config/brand.ts`. La seccion de ubicacion y mapa sigue pendiente para Phase 3.6. El texto breve para llegar sigue pendiente. No publicar informacion privada o adicional innecesaria |
 
 Notas:
 
-- La landing actual usa referencia general: Aguascalientes, Mexico.
-- Existe enlace de mapa validado en `docs/phase-3-public-inputs.md`, pero todavia no esta integrado.
-- La direccion publica debe aprobarse antes de integrarse en UI, metadata o SEO local.
+- La landing mantiene referencia general en `locationSectionContent`: Aguascalientes, Mexico.
+- El footer usa la direccion completa y el enlace de Google Maps aprobados.
+- La seccion de ubicacion/mapa todavia no integra la direccion exacta; queda para Phase 3.6.
+- No se agregan referencias para llegar, entrecalles, piso, numero interior, horarios, estacionamiento ni indicaciones privadas.
 
 ### 3. WhatsApp publico
 
@@ -112,15 +113,15 @@ Notas:
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
 | Destino futuro | 3.5 Integracion de redes sociales; 3.9 enlaces sociales y metadata cuando aplique |
-| Observaciones o pendientes | Phase 3.5 integra Facebook e Instagram aprobados en seccion de contacto, footer, navegacion mobile y header desktop grande (`xl`) cuando hay espacio suficiente. Solo se integran redes aprobadas; LinkedIn no aplica y no se integra. Las URLs no usan `?ref=1`, `igsh`, `utm_source`, UTM, QR ni tracking adicional. No se habilito correo publico porque sigue pendiente. La revision final de enlaces sociales y metadata queda para Phase 3.9 |
+| Observaciones o pendientes | Phase 3.5A mantiene Facebook e Instagram aprobados en seccion de contacto, footer y navegacion mobile. Se retiraron del header desktop por decision visual del cliente y no aparecen en el header en ningun breakpoint. Solo se integran redes aprobadas; LinkedIn no aplica y no se integra. Las URLs no usan `?ref=1`, `igsh`, `utm_source`, UTM, QR ni tracking adicional. No se habilito correo publico porque sigue pendiente. La revision final de enlaces sociales y metadata queda para Phase 3.9 |
 
 Notas:
 
 - `config/brand.ts` contiene solo `facebook` e `instagram` dentro de `social`.
 - La seccion de contacto muestra exactamente WhatsApp, Facebook, Instagram y ubicacion general.
-- El footer conserva WhatsApp y agrega Facebook e Instagram como enlaces discretos.
+- El footer conserva WhatsApp y Facebook/Instagram como enlaces discretos junto con la direccion aprobada.
 - El menu mobile incluye Facebook e Instagram antes del CTA principal y cierra al activar cada enlace.
-- El header desktop muestra Facebook e Instagram solo en breakpoint grande para evitar colisiones con logo, navegacion y CTA.
+- El header ya no muestra Facebook ni Instagram en ningun breakpoint.
 - El panel mobile usa `top-16` para alinearse con el header `min-h-16`.
 - No se agregan redes no aprobadas, LinkedIn, correo publico ni enlaces vacios.
 - Phase 3.9 revisara enlaces sociales dentro del QA final y cualquier impacto en metadata/SEO.
@@ -214,14 +215,12 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Fuente vectorial SVG/PDF/AI/EPS, si existe.
 - Aprobacion humana de `balance-logo-stacked-white-transparent.png` si se usa sobre footer oscuro.
 - Variantes transparentes oficiales del cliente para fondos de color u oscuros, si existen.
-- Direccion publica del consultorio.
 - Mensaje prellenado de WhatsApp.
 - Duracion y condiciones de sesiones.
 - Servicios/modalidades y copy comercial.
 
 ### Pendientes de captura
 
-- Direccion visible completa aprobada.
 - Correo publico aprobado.
 - Horarios aprobados.
 - Mensaje prellenado de WhatsApp aprobado.
