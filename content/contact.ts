@@ -10,7 +10,7 @@ export const contactSectionContent: ContactSectionContent = {
   eyebrow: "Contacto",
   title: "Canales oficiales de contacto",
   description:
-    "Esta sección reunirá los medios oficiales para solicitar información o iniciar una conversación con Balance Psicología.",
+    "Encuentra los canales oficiales para solicitar información y conocer más sobre Balance Psicología.",
   channels: [
     {
       label: "WhatsApp",
@@ -20,19 +20,20 @@ export const contactSectionContent: ContactSectionContent = {
       kind: "whatsapp",
     },
     {
-      label: "Correo",
-      description: "Medio de contacto para dudas generales e información inicial.",
-      status: "Disponible próximamente",
-      kind: "email",
+      label: "Facebook",
+      description:
+        "Conoce contenido y actualizaciones sobre terapia cognitivo-conductual.",
+      status: "Psic. Fernanda Regalado",
+      kind: "facebook",
     },
     {
       label: "Instagram",
-      description: "Espacio para futuras actualizaciones de Balance Psicología.",
-      status: "Disponible próximamente",
+      description: "Encuentra contenido y actualizaciones de Balance Psicología.",
+      status: "@psic.fernandaregalado",
       kind: "instagram",
     },
     {
-      label: "Ubicación",
+      label: "Ubicación general",
       description: "Información general de atención en Aguascalientes.",
       status: "Aguascalientes, México",
       kind: "general",

@@ -26,7 +26,11 @@ export const brandConfig = {
     },
   },
   social: {
-    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
-    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "",
+    facebook:
+      process.env.NEXT_PUBLIC_FACEBOOK_URL ??
+      "https://www.facebook.com/people/Psic-Fernanda-Regalado-Terapia-Cognitivo-Conductual/61590600875459/",
+    instagram:
+      process.env.NEXT_PUBLIC_INSTAGRAM_URL ??
+      "https://www.instagram.com/psic.fernandaregalado/",
   },
 } as const;

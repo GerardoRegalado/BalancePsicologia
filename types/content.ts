@@ -139,7 +139,7 @@ export type ContactChannel = {
   label: string;
   description: string;
   status: string;
-  kind: "whatsapp" | "email" | "instagram" | "general";
+  kind: "whatsapp" | "facebook" | "instagram" | "general";
 };
 
 export type ContactSectionContent = {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { SocialLinks } from "@/components/ui/social-links";
 import { brandConfig } from "@/config/brand";
 import { footerContent } from "@/content/contact";
 
@@ -45,6 +46,10 @@ export function SiteFooter() {
               </span>
             ))}
           </div>
+          <SocialLinks
+            className="flex flex-wrap justify-center gap-x-5 gap-y-3"
+            linkClassName="transition-colors hover:text-primary focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
+          />
         </div>
 
         <div className="flex max-w-sm flex-col items-center gap-3 text-center md:items-start md:text-left">

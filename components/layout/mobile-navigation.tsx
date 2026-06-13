@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ctaClass } from "@/components/ui/cta-styles";
+import { SocialLinks } from "@/components/ui/social-links";
 import type { NavigationItem } from "@/config/site";
 import type { ContentAction } from "@/types/content";
 
@@ -41,7 +42,7 @@ export function MobileNavigation({
       {isOpen ? (
         <div
           id="mobile-navigation"
-          className="fixed inset-x-0 top-14 bottom-0 z-40 overflow-y-auto border-t border-outline-variant/55 bg-surface px-margin-mobile py-8 shadow-atmospheric-sm"
+          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-outline-variant/55 bg-surface px-margin-mobile py-8 shadow-atmospheric-sm"
         >
           <nav
             aria-label="Navegación móvil"
@@ -57,6 +58,11 @@ export function MobileNavigation({
                 {item.label}
               </a>
             ))}
+            <SocialLinks
+              className="mt-2 flex flex-col gap-3 border-t border-outline-variant/55 pt-5"
+              linkClassName="rounded-md px-2 py-2 text-sm font-semibold tracking-[0.08em] text-on-surface-variant uppercase transition-colors hover:text-primary focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
+              onLinkClick={closeMenu}
+            />
             <a
               href={primaryAction.href}
               target={primaryAction.external ? "_blank" : undefined}

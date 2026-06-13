@@ -8,8 +8,8 @@ function getChannelHref(channel: ContactChannel) {
     return brandConfig.contact.whatsappUrl || undefined;
   }
 
-  if (channel.kind === "email" && brandConfig.supportEmail) {
-    return `mailto:${brandConfig.supportEmail}`;
+  if (channel.kind === "facebook") {
+    return brandConfig.social.facebook || undefined;
   }
 
   if (channel.kind === "instagram") {
@@ -31,6 +31,13 @@ export function ContactSection() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {contactSectionContent.channels.map((channel) => {
           const href = getChannelHref(channel);
+          if (
+            (channel.kind === "facebook" || channel.kind === "instagram") &&
+            !href
+          ) {
+            return null;
+          }
+
           const content = (
             <>
               <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">

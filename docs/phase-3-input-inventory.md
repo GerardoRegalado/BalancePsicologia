@@ -112,13 +112,18 @@ Notas:
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
 | Destino futuro | 3.5 Integracion de redes sociales; 3.9 enlaces sociales y metadata cuando aplique |
-| Observaciones o pendientes | Facebook e Instagram estan aprobados y documentados. Confirmar labels accesibles y ubicacion futura en header, footer o contacto antes de integrar |
+| Observaciones o pendientes | Phase 3.5 integra Facebook e Instagram aprobados en seccion de contacto, footer, navegacion mobile y header desktop grande (`xl`) cuando hay espacio suficiente. Solo se integran redes aprobadas; LinkedIn no aplica y no se integra. Las URLs no usan `?ref=1`, `igsh`, `utm_source`, UTM, QR ni tracking adicional. No se habilito correo publico porque sigue pendiente. La revision final de enlaces sociales y metadata queda para Phase 3.9 |
 
 Notas:
 
-- `config/brand.ts` contempla `instagram` y `linkedin` como campos vacios mediante variables publicas; no se modifican durante Phase 3.1.
-- No se integran perfiles, usuarios ni enlaces durante Phase 3.1.
-- No deben publicarse redes no aprobadas o enlaces vacios.
+- `config/brand.ts` contiene solo `facebook` e `instagram` dentro de `social`.
+- La seccion de contacto muestra exactamente WhatsApp, Facebook, Instagram y ubicacion general.
+- El footer conserva WhatsApp y agrega Facebook e Instagram como enlaces discretos.
+- El menu mobile incluye Facebook e Instagram antes del CTA principal y cierra al activar cada enlace.
+- El header desktop muestra Facebook e Instagram solo en breakpoint grande para evitar colisiones con logo, navegacion y CTA.
+- El panel mobile usa `top-16` para alinearse con el header `min-h-16`.
+- No se agregan redes no aprobadas, LinkedIn, correo publico ni enlaces vacios.
+- Phase 3.9 revisara enlaces sociales dentro del QA final y cualquier impacto en metadata/SEO.
 
 ### 5. Costos de sesiones
 

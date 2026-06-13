@@ -60,6 +60,8 @@ Superficies integradas en Phase 3.4:
 | --- | --- | --- | --- |
 | No aplica | No aplica | No aplica | No aplica |
 
+Nota Phase 3.5: Facebook e Instagram se integran en seccion de contacto, footer, navegacion mobile y header desktop grande cuando el breakpoint tiene espacio suficiente. Solo aparecen redes aprobadas. LinkedIn no se integra. Las URLs se mantienen canonicas y sin parametros de tracking. No se habilita correo publico. La revision final de enlaces sociales y metadata queda para Phase 3.9.
+
 ## Ubicacion
 
 | Campo | Valor |

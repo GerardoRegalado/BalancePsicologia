@@ -1,7 +1,11 @@
 import { adminConfig } from "@/config/admin";
 import { brandConfig } from "@/config/brand";
 import { siteConfig } from "@/config/site";
-import { contactSectionContent, footerContent } from "@/content/contact";
+import {
+  contactSectionContent,
+  footerContent,
+  locationSectionContent,
+} from "@/content/contact";
 import { faqSectionContent } from "@/content/faq";
 import { featureSectionContent } from "@/content/features";
 import { heroContent } from "@/content/hero";
@@ -90,6 +94,79 @@ describe("project readiness", () => {
         label: "WhatsApp",
         status: brandConfig.contact.whatsappDisplay,
       }),
+    );
+  });
+
+  it("uses only the approved social profiles without tracking parameters", () => {
+    expect(brandConfig.social.facebook).toBe(
+      "https://www.facebook.com/people/Psic-Fernanda-Regalado-Terapia-Cognitivo-Conductual/61590600875459/",
+    );
+    expect(brandConfig.social.instagram).toBe(
+      "https://www.instagram.com/psic.fernandaregalado/",
+    );
+    expect("linkedin" in brandConfig.social).toBe(false);
+
+    for (const url of [
+      brandConfig.social.facebook,
+      brandConfig.social.instagram,
+    ]) {
+      expect(url).not.toContain("utm_");
+      expect(url).not.toContain("igsh");
+      expect(url).not.toContain("ref=");
+    }
+
+    expect(contactSectionContent.channels.map((channel) => channel.kind)).toEqual(
+      ["whatsapp", "facebook", "instagram", "general"],
+    );
+    expect(
+      contactSectionContent.channels.find(
+        (channel) => channel.kind === "facebook",
+      ),
+    ).toEqual(
+      expect.objectContaining({
+        label: "Facebook",
+        status: "Psic. Fernanda Regalado",
+      }),
+    );
+    expect(
+      contactSectionContent.channels.find(
+        (channel) => channel.kind === "instagram",
+      ),
+    ).toEqual(
+      expect.objectContaining({
+        label: "Instagram",
+        status: "@psic.fernandaregalado",
+      }),
+    );
+    expect(
+      contactSectionContent.channels.some(
+        (channel) =>
+          channel.kind === "facebook" &&
+          channel.status === "Disponible próximamente",
+      ),
+    ).toBe(false);
+    expect(
+      contactSectionContent.channels.some(
+        (channel) =>
+          channel.kind === "instagram" &&
+          channel.status === "Disponible próximamente",
+      ),
+    ).toBe(false);
+    expect(
+      contactSectionContent.channels.some(
+        (channel) => channel.label === "Correo",
+      ),
+    ).toBe(false);
+
+    expect(brandConfig.contact.whatsappDisplay).toBe("449 555 6035");
+    expect(brandConfig.contact.whatsappUrl).toBe(
+      "https://wa.me/524495556035",
+    );
+    expect(locationSectionContent.description).toMatch(
+      /ubicación exacta se integrará/i,
+    );
+    expect(packagePreviews.map((item) => item.detail).join(" ")).not.toContain(
+      "$450",
     );
   });
 
