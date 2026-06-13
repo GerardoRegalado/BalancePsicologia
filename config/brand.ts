@@ -8,6 +8,7 @@ export const brandConfig = {
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "",
   location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Aguascalientes, México",
   address: {
+    clinicName: "Clínica MIND",
     display: "Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.",
     mapsUrl: "https://maps.app.goo.gl/yeoxjHcLFUmbPkCm7",
   },

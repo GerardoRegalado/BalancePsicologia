@@ -22,6 +22,7 @@ describe("project readiness", () => {
   it("keeps public site config aligned with Balance Psicología", () => {
     expect(brandConfig.name).toBe("Balance Psicología");
     expect(brandConfig.location).toBe("Aguascalientes, México");
+    expect(brandConfig.address.clinicName).toBe("Clínica MIND");
     expect(brandConfig.address.display).toBe(
       "Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.",
     );
@@ -127,7 +128,7 @@ describe("project readiness", () => {
     }
 
     expect(contactSectionContent.channels.map((channel) => channel.kind)).toEqual(
-      ["whatsapp", "facebook", "instagram", "general"],
+      ["whatsapp", "facebook", "instagram", "location"],
     );
     expect(
       contactSectionContent.channels.find(
@@ -173,17 +174,32 @@ describe("project readiness", () => {
     expect(brandConfig.contact.whatsappUrl).toBe(
       "https://wa.me/524495556035",
     );
-    expect(locationSectionContent.description).toMatch(
-      /ubicación exacta se integrará/i,
+    expect(
+      contactSectionContent.channels.find(
+        (channel) => channel.kind === "location",
+      ),
+    ).toEqual(
+      expect.objectContaining({
+        label: "Ubicación",
+        status: brandConfig.address.clinicName,
+        description: brandConfig.address.display,
+      }),
     );
-    expect(JSON.stringify(locationSectionContent)).not.toContain(
-      brandConfig.address.display,
+    expect(JSON.stringify(contactSectionContent.channels)).not.toContain(
+      '"kind":"general"',
     );
-    expect(JSON.stringify(locationSectionContent)).not.toContain(
-      brandConfig.address.mapsUrl,
+
+    expect(locationSectionContent.clinicName).toBe("Clínica MIND");
+    expect(locationSectionContent.address).toBe(brandConfig.address.display);
+    expect(locationSectionContent.mapsUrl).toBe(brandConfig.address.mapsUrl);
+    expect(JSON.stringify(locationSectionContent)).not.toMatch(
+      /ubicación exacta se integrará|Referencia general|Área general de atención/i,
     );
     expect(packagePreviews.map((item) => item.detail).join(" ")).not.toContain(
       "$450",
+    );
+    expect(JSON.stringify(locationSectionContent)).not.toMatch(
+      /entrecalles|estacionamiento|horarios|piso|interior|referencia para llegar/i,
     );
   });
 

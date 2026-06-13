@@ -16,6 +16,10 @@ function getChannelHref(channel: ContactChannel) {
     return brandConfig.social.instagram || undefined;
   }
 
+  if (channel.kind === "location") {
+    return brandConfig.address.mapsUrl || undefined;
+  }
+
   return undefined;
 }
 
@@ -31,10 +35,7 @@ export function ContactSection() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {contactSectionContent.channels.map((channel) => {
           const href = getChannelHref(channel);
-          if (
-            (channel.kind === "facebook" || channel.kind === "instagram") &&
-            !href
-          ) {
+          if (channel.kind !== "whatsapp" && !href) {
             return null;
           }
 

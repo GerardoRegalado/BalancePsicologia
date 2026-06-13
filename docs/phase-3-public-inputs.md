@@ -78,7 +78,7 @@ Nota Phase 3.5A: Facebook e Instagram se mantienen en seccion de contacto, foote
 | Texto breve para llegar | PENDIENTE |
 | Estado de validacion | Aprobado para publicacion |
 
-Nota: La direccion visible completa y el enlace de Google Maps se integran primero en el footer durante Phase 3.5A. La seccion de ubicacion y mapa se atendera en Phase 3.6. El texto breve para llegar sigue pendiente.
+Nota: La direccion visible completa y el enlace de Google Maps se integraron primero en el footer durante Phase 3.5A. En Phase 3.6 tambien se integran en la tarjeta de contacto y en la seccion de ubicacion mediante enlace externo a Google Maps. No se usa iframe, API, scripts externos, coordenadas inferidas ni geolocalizacion. El texto breve para llegar sigue pendiente y SEO local/metadata quedan para Phase 3.9.
 
 ## Costos y sesiones
 

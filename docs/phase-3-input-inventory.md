@@ -68,19 +68,20 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Ubicacion publica del consultorio |
-| Estado de disponibilidad | Parcialmente capturada dentro del repositorio |
+| Estado de disponibilidad | Capturada dentro del repositorio e integrada en footer, tarjeta de contacto y seccion de ubicacion |
 | Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/development-strategy.md`; placeholders actuales en `content/contact.ts` |
 | Formato recibido | Nombre publico del consultorio, calle y numero, colonia, codigo postal, ciudad, estado, pais, direccion visible completa y URL oficial de Google Maps capturados; texto breve para llegar sigue pendiente |
 | Clasificacion | `Publico y aprobado` para direccion visible y Google Maps; `Publico, pendiente de validacion` para texto breve para llegar |
 | Estado de validacion | `Aprobado` para direccion visible y Google Maps; `En revision` para texto breve para llegar |
-| Destino futuro | 3.6 Integracion de ubicacion real; 3.9 SEO local y metadata |
-| Observaciones o pendientes | La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.` y el enlace de Google Maps estan aprobados. Phase 3.5A integra la direccion primero en el footer mediante `config/brand.ts`. La seccion de ubicacion y mapa sigue pendiente para Phase 3.6. El texto breve para llegar sigue pendiente. No publicar informacion privada o adicional innecesaria |
+| Destino futuro | 3.9 SEO local y metadata; texto breve para llegar cuando sea aprobado |
+| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real y CTA a Google Maps. No se uso iframe, API, scripts externos, coordenadas inferidas ni geolocalizacion. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
 
 Notas:
 
-- La landing mantiene referencia general en `locationSectionContent`: Aguascalientes, Mexico.
+- `locationSectionContent` ya muestra Clínica MIND, direccion real y CTA a Google Maps.
 - El footer usa la direccion completa y el enlace de Google Maps aprobados.
-- La seccion de ubicacion/mapa todavia no integra la direccion exacta; queda para Phase 3.6.
+- La tarjeta de contacto de ubicacion usa `kind: location` y abre Google Maps.
+- La composicion visual de la seccion de ubicacion es abstracta; no es un mapa cartografico real.
 - No se agregan referencias para llegar, entrecalles, piso, numero interior, horarios, estacionamiento ni indicaciones privadas.
 
 ### 3. WhatsApp publico
@@ -118,7 +119,7 @@ Notas:
 Notas:
 
 - `config/brand.ts` contiene solo `facebook` e `instagram` dentro de `social`.
-- La seccion de contacto muestra exactamente WhatsApp, Facebook, Instagram y ubicacion general.
+- La seccion de contacto muestra exactamente WhatsApp, Facebook, Instagram y ubicacion.
 - El footer conserva WhatsApp y Facebook/Instagram como enlaces discretos junto con la direccion aprobada.
 - El menu mobile incluye Facebook e Instagram antes del CTA principal y cierra al activar cada enlace.
 - El header ya no muestra Facebook ni Instagram en ningun breakpoint.
@@ -226,6 +227,7 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Mensaje prellenado de WhatsApp aprobado.
 - Duracion de sesiones.
 - Condiciones comerciales publicas.
+- Texto breve para llegar.
 
 ### Reservados para fases privadas
 

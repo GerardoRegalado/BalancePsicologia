@@ -139,7 +139,7 @@ export type ContactChannel = {
   label: string;
   description: string;
   status: string;
-  kind: "whatsapp" | "facebook" | "instagram" | "general";
+  kind: "whatsapp" | "facebook" | "instagram" | "location";
 };
 
 export type ContactSectionContent = {
@@ -155,12 +155,10 @@ export type LocationSectionContent = {
   eyebrow: string;
   title: string;
   description: string;
-  mapLabel: string;
-  areaLabel: string;
-  note: {
-    title: string;
-    description: string;
-  };
+  clinicName: string;
+  address: string;
+  mapsUrl: string;
+  ctaLabel: string;
 };
 
 export type FooterLinkItem = {

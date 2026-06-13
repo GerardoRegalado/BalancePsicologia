@@ -33,27 +33,24 @@ export const contactSectionContent: ContactSectionContent = {
       kind: "instagram",
     },
     {
-      label: "Ubicación general",
-      description: "Información general de atención en Aguascalientes.",
-      status: "Aguascalientes, México",
-      kind: "general",
+      label: "Ubicación",
+      description: brandConfig.address.display,
+      status: brandConfig.address.clinicName,
+      kind: "location",
     },
   ],
 };
 
 export const locationSectionContent: LocationSectionContent = {
   id: "ubicacion",
-  eyebrow: "Mapa / ubicación",
-  title: "Ubicación en Aguascalientes",
+  eyebrow: "Ubicación",
+  title: `Encuéntranos en ${brandConfig.address.clinicName}`,
   description:
-    "La ubicación exacta se integrará cuando exista información aprobada para publicación.",
-  mapLabel: "Área general de atención",
-  areaLabel: "Aguascalientes, México",
-  note: {
-    title: "Referencia general",
-    description:
-      "Este bloque representa una ubicación general en Aguascalientes sin marcar una dirección exacta.",
-  },
+    "Consulta la dirección del consultorio y abre la ubicación en Google Maps.",
+  clinicName: brandConfig.address.clinicName,
+  address: brandConfig.address.display,
+  mapsUrl: brandConfig.address.mapsUrl,
+  ctaLabel: "Abrir en Google Maps",
 };
 
 export const footerContent: FooterContent = {
