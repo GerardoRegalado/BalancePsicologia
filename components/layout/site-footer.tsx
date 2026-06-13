@@ -47,10 +47,20 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <p className="max-w-sm text-center text-sm leading-6 text-primary md:text-left">
-          © {currentYear} {brandConfig.name}. Todos los derechos reservados.{" "}
-          {brandConfig.location}.
-        </p>
+        <div className="flex max-w-sm flex-col items-center gap-3 text-center md:items-start md:text-left">
+          <p className="text-sm leading-6 text-primary">
+            © {currentYear} {brandConfig.name}. Todos los derechos reservados.{" "}
+            {brandConfig.location}.
+          </p>
+          <a
+            href={brandConfig.contact.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-on-secondary-container transition-colors hover:text-primary focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none"
+          >
+            WhatsApp: {brandConfig.contact.whatsappDisplay}
+          </a>
+        </div>
       </Container>
     </footer>
   );

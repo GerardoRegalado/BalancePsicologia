@@ -51,7 +51,7 @@ export function ContactSection() {
               href={href}
               className="rounded-lg border border-primary/20 bg-surface-container-lowest p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-atmospheric-sm focus-visible:ring-4 focus-visible:ring-primary/20 focus-visible:outline-none md:p-6"
               target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noreferrer" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
             >
               {content}
             </a>

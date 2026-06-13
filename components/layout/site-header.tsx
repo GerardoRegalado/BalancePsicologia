@@ -52,6 +52,8 @@ export function SiteHeader() {
 
         <a
           href={primaryAction.href}
+          target={primaryAction.external ? "_blank" : undefined}
+          rel={primaryAction.external ? "noopener noreferrer" : undefined}
           className={ctaClass({
             variant: "primary",
             size: "sm",

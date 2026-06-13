@@ -72,26 +72,30 @@ Reglas de separacion:
 - `docs/design/brand/source/` conserva originales recibidos del cliente.
 - `docs/design/brand/asset-audit.md` documenta auditoria, limitaciones y recomendaciones.
 - `docs/design/brand/asset-review-sheet.png` y `docs/design/brand/asset-review-sheet-transparent.png` son ayudas visuales de revision.
-- `public/brand/` contiene derivados web optimizados; Phase 3.3 consume solo los dos PNG transparentes definidos en `config/brand.ts` como prueba contextual.
+- `public/brand/` contiene derivados web optimizados; Phase 3.3 consume solo los dos PNG transparentes definidos en `config/brand.ts` y fueron aprobados visualmente en contexto el 2026-06-13.
 - La landing no debe consumir otros derivados fuera de esta prueba; el favicon activo y Open Graph no deben consumir estos derivados hasta una fase aprobada.
 - Phase 3.3 debera preferir PNG transparente aprobado si no existe SVG candidato fiel y aprobado.
 - No existen candidatos SVG creados en esta fase; la fuente vectorial oficial sigue pendiente del cliente.
 
-## Prueba contextual Phase 3.3
+## Cierre contextual Phase 3.3
 
-La integracion actual de marca es una prueba visual reversible, no aprobacion final de assets.
+El cliente reviso y aprobo visualmente en la landing los dos PNG transparentes integrados en header y footer el 2026-06-13.
+
+La aprobacion aplica solo a estas superficies y tamanos dentro de la landing actual. Favicon, Open Graph, fuente vectorial oficial y variantes no utilizadas siguen pendientes.
 
 | Superficie | Asset en prueba | Tamano aplicado | Estado |
 | --- | --- | --- | --- |
-| Header | `/brand/balance-logo-horizontal-color-transparent.png` | 145px mobile, 185px desktop | En prueba contextual / pendiente de aprobacion humana |
-| Footer | `/brand/balance-logo-stacked-color-transparent.png` | 165px mobile, 145px desktop | En prueba contextual / pendiente de aprobacion humana |
+| Header | `/brand/balance-logo-horizontal-color-transparent.png` | 145px mobile, 185px desktop | Aprobado visualmente en contexto |
+| Footer | `/brand/balance-logo-stacked-color-transparent.png` | 165px mobile, 145px desktop | Aprobado visualmente en contexto |
 
 Notas:
 
 - Las rutas y dimensiones intrinsecas se centralizan en `config/brand.ts`.
 - Si el logo requiere reemplazo manual, Phase 3.3 debe poder cambiar el archivo desde `config/brand.ts` sin tocar la estructura de header/footer.
-- No se integro favicon candidato.
-- No se reemplazo Open Graph.
+- No se integro favicon candidato; queda pendiente para Phase 3.9.
+- No se reemplazo Open Graph; queda pendiente para Phase 3.9.
+- No existe fuente vectorial oficial SVG/PDF/AI/EPS dentro del repositorio.
+- Las variantes transparentes no utilizadas siguen pendientes de validacion humana si se desean integrar despues.
 - No se usaron filtros, fondos artificiales, blend modes, mascaras ni wrappers blancos.
 
 ## Estructura orientativa para archivos recibidos

@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { contactSectionContent, footerContent } from "@/content/contact";
 import { faqSectionContent } from "@/content/faq";
 import { featureSectionContent } from "@/content/features";
+import { heroContent } from "@/content/hero";
 import { leadFormContent } from "@/content/lead-form";
 import { packagePreviews } from "@/content/packages";
 import { serviceItems } from "@/content/services";
@@ -51,6 +52,44 @@ describe("project readiness", () => {
         "serviceInterest",
         "message",
       ]),
+    );
+  });
+
+  it("uses the approved WhatsApp contact without a prefilled message", () => {
+    expect(brandConfig.contact.whatsappDisplay).toBe("449 555 6035");
+    expect(brandConfig.contact.whatsappInternational).toBe("524495556035");
+    expect(brandConfig.contact.whatsappUrl).toBe(
+      "https://wa.me/524495556035",
+    );
+    expect(brandConfig.contact.whatsappUrl).not.toContain("text=");
+
+    expect(heroContent.actions[0]).toEqual(
+      expect.objectContaining({
+        label: "Solicitar cita",
+        mobileLabel: "Solicitar primera sesión",
+        href: brandConfig.contact.whatsappUrl,
+        variant: "primary",
+        external: true,
+      }),
+    );
+    expect(heroContent.actions[0]).not.toHaveProperty("disabled");
+    expect(heroContent.actions[1]).toEqual(
+      expect.objectContaining({
+        label: "Conocer opciones",
+        href: "#agenda",
+        variant: "secondary",
+      }),
+    );
+
+    expect(
+      contactSectionContent.channels.find(
+        (channel) => channel.kind === "whatsapp",
+      ),
+    ).toEqual(
+      expect.objectContaining({
+        label: "WhatsApp",
+        status: brandConfig.contact.whatsappDisplay,
+      }),
     );
   });
 

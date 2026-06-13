@@ -46,7 +46,7 @@ Esta auditoria revisa archivos fuente de marca para preparar derivados web sin m
 - El lienzo fuente no es horizontal en terminos de archivo: mide 1448x1086 y contiene mucho fondo blanco vertical.
 - El contenido visual real es aproximadamente x134 y380 w1179 h312, con relacion cercana a 3.78 antes de margen.
 - El derivado `balance-logo-horizontal-color.png` conserva la composicion y elimina espacio blanco excesivo sin recortar el logo.
-- Es la mejor opcion observada para header y footer, pendiente de aprobacion humana en contexto de la landing.
+- Es la mejor opcion observada para header; su derivado transparente horizontal fue aprobado visualmente en contexto de la landing el 2026-06-13.
 
 ## Evaluacion para fondos claros y oscuros
 
@@ -190,19 +190,21 @@ Recomendacion actual:
 
 Fecha de integracion contextual: 2026-06-13
 
-Esta integracion es una prueba visual reversible dentro de la landing real. Los PNG transparentes de Phase 3.2A no quedan aprobados definitivamente por estar integrados.
+El cliente reviso y aprobo visualmente en la landing real los PNG transparentes usados en header y footer el 2026-06-13. La aprobacion aplica a la integracion contextual actual, no a favicon, Open Graph, fuente vectorial oficial ni variantes no utilizadas.
 
 ### Assets probados
 
 | Superficie | Asset | Implementacion | Tamano aplicado | Estado visual |
 | --- | --- | --- | --- | --- |
-| Header | `public/brand/balance-logo-horizontal-color-transparent.png` | `next/image`, ruta desde `config/brand.ts`, enlace a `/` conservado | 145px mobile, 185px desktop | En prueba contextual / pendiente de aprobacion humana |
-| Footer | `public/brand/balance-logo-stacked-color-transparent.png` | `next/image`, ruta desde `config/brand.ts` | 165px mobile, 145px desktop | En prueba contextual / pendiente de aprobacion humana |
+| Header | `public/brand/balance-logo-horizontal-color-transparent.png` | `next/image`, ruta desde `config/brand.ts`, enlace a `/` conservado | 145px mobile, 185px desktop | Aprobado visualmente en contexto |
+| Footer | `public/brand/balance-logo-stacked-color-transparent.png` | `next/image`, ruta desde `config/brand.ts` | 165px mobile, 145px desktop | Aprobado visualmente en contexto |
 
-### Observaciones esperadas para QA visual
+### Observaciones de cierre
 
-- Header: verificar legibilidad del descriptor, ausencia de halos sobre `bg-surface`, ausencia de clipping y relacion con navegacion/CTA.
-- Footer: verificar que el logo apilado no domine el bloque, que el descriptor siga legible y que no aparezcan bordes blancos sobre `bg-surface-container`.
+- Header: el logo horizontal transparente queda aprobado visualmente en contexto sobre `bg-surface`.
+- Footer: el logo apilado transparente a color queda aprobado visualmente en contexto sobre `bg-surface-container`.
+- La aprobacion no convierte estos PNG en fuente maestra oficial.
+- Favicon, Open Graph, fuente vectorial oficial y variantes no utilizadas siguen pendientes.
 - Los assets no deben corregirse con filtros CSS, blend modes, mascaras, wrappers blancos ni cambios de fondo.
 - Si se detectan halos, letras erosionadas, descriptor ilegible o composicion desbalanceada, se debe sustituir el PNG manualmente y conservar la estructura.
 
@@ -218,4 +220,4 @@ Esta integracion es una prueba visual reversible dentro de la landing real. Los 
 - No se reemplazo Open Graph.
 - No se modifico metadata ni SEO.
 - No se integraron WhatsApp, redes sociales, ubicacion ni costos.
-- No se declararon los logos como aprobados definitivamente.
+- No se aprobaron favicon, Open Graph, fuente vectorial oficial ni variantes no utilizadas.

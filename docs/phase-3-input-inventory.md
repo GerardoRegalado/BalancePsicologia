@@ -42,19 +42,19 @@ El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que
 | Estado de disponibilidad | Archivos fuente capturados; derivados opacos Phase 3.2 y derivados transparentes Phase 3.2A preparados |
 | Fuente | Cliente / archivos fuente en `docs/design/brand/source/`; auditoria en `docs/design/brand/asset-audit.md`; derivados en `public/brand/`; `docs/project-scope.md`; `docs/development-strategy.md` |
 | Formato recibido | PNG fuente: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png` |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `En revision` |
+| Clasificacion | `Publico y aprobado` para header/footer integrados; `Publico, pendiente de validacion` para favicon, Open Graph, fuente vectorial y variantes no utilizadas |
+| Estado de validacion | `Aprobado` para header/footer; `En revision` para pendientes restantes |
 | Destino futuro | 3.2 Preparacion y validacion de logos/assets; 3.3 Integracion de identidad visual real; 3.9 validacion final de favicon/imagen OG |
-| Observaciones o pendientes | Auditoria Phase 3.2 completada, correccion Phase 3.2A documentada e integracion contextual Phase 3.3 aplicada. Header prueba `balance-logo-horizontal-color-transparent.png` con 145px mobile y 185px desktop. Footer prueba `balance-logo-stacked-color-transparent.png` con 165px mobile y 145px desktop. Ambos quedan `En prueba contextual / pendiente de aprobacion humana`. `balance-logo-stacked-white-transparent.png` no se usa en esta fase porque el footer actual es claro. `balance-favicon-transparent-candidate.png` queda para evaluacion futura en Phase 3.9. No hay SVG candidato aprobado; confirmar fuente vectorial SVG/PDF/AI oficial con el cliente. Los SVG automaticos no se consideran maestros oficiales. Planificar reemplazo del Open Graph del template en Phase 3.9 |
+| Observaciones o pendientes | Auditoria Phase 3.2 completada, correccion Phase 3.2A documentada e integracion contextual Phase 3.3 aplicada. El cliente reviso y aprobo visualmente en la landing el 2026-06-13 el header con `balance-logo-horizontal-color-transparent.png` a 145px mobile y 185px desktop, y el footer con `balance-logo-stacked-color-transparent.png` a 165px mobile y 145px desktop. `balance-logo-stacked-white-transparent.png` no se usa en esta fase porque el footer actual es claro. `balance-favicon-transparent-candidate.png` queda para evaluacion futura en Phase 3.9. No hay SVG candidato aprobado; confirmar fuente vectorial SVG/PDF/AI oficial con el cliente. Los SVG automaticos no se consideran maestros oficiales. Planificar reemplazo del Open Graph del template en Phase 3.9 |
 
 Notas:
 
 - Los archivos fuente existen en `docs/design/brand/source/`, pero todavia no estan aprobados para produccion.
 - La auditoria de Phase 3.2 esta documentada en `docs/design/brand/asset-audit.md`.
 - La correccion Phase 3.2A de transparencia y evaluacion vectorial tambien esta documentada en `docs/design/brand/asset-audit.md`.
-- Los derivados web opacos y transparentes estan en `public/brand/`; Phase 3.3 integra solo dos PNG transparentes como prueba contextual.
+- Los derivados web opacos y transparentes estan en `public/brand/`; Phase 3.3 integra solo dos PNG transparentes.
 - Phase 3.3 integra de forma contextual solo el logo horizontal transparente en header y el logo apilado transparente a color en footer.
-- La integracion es reversible desde `config/brand.ts` y no implica aprobacion definitiva.
+- La integracion de header/footer fue aprobada visualmente en contexto el 2026-06-13 y sigue siendo reemplazable desde `config/brand.ts`.
 - Ningun fuente tiene transparencia real; todos son PNG RGB con fondo opaco.
 - Los PNG transparentes son derivados RGBA, no fuentes originales.
 - No se crearon candidatos SVG porque no hay herramienta local de trazado fiel disponible; la fuente vectorial oficial sigue pendiente del cliente.
@@ -93,12 +93,12 @@ Notas:
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
 | Destino futuro | 3.4 Integracion de WhatsApp y contacto real; 3.8 flujo publico final de solicitud de cita |
-| Observaciones o pendientes | El numero esta aprobado y documentado. Decidir si habra mensaje prellenado y revisar copy del CTA antes de integrar. No crear enlaces `wa.me` todavia |
+| Observaciones o pendientes | El numero esta aprobado y documentado. Phase 3.4 integra `https://wa.me/524495556035` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. El mensaje prellenado queda pendiente de aprobacion posterior. WhatsApp aparece en CTA del header, CTA principal del hero, menu mobile, seccion de contacto y footer |
 
 Notas:
 
-- No se publica el numero en UI, codigo o configuracion durante Phase 3.1.
-- No se agrega enlace de WhatsApp a codigo o configuracion.
+- Phase 3.4 publica el numero visible `449 555 6035` y centraliza `https://wa.me/524495556035` en `config/brand.ts`.
+- El enlace de WhatsApp no usa mensaje prellenado ni parametros adicionales.
 - El mensaje prellenado queda pendiente de aprobacion posterior.
 
 ### 4. Redes sociales
@@ -191,10 +191,10 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Auditoria de logos/assets completada en `docs/design/brand/asset-audit.md`.
 - Derivados web preparados: `balance-logo-horizontal-color.png`, `balance-logo-stacked-color.png`, `balance-logo-stacked-black.png`, `balance-logo-stacked-white.png`, `balance-favicon-candidate.png`.
 - Derivados transparentes Phase 3.2A preparados: `balance-logo-horizontal-color-transparent.png`, `balance-logo-stacked-color-transparent.png`, `balance-logo-stacked-black-transparent.png`, `balance-logo-stacked-white-transparent.png`, `balance-favicon-transparent-candidate.png`.
-- Candidato principal para Phase 3.3 header: `public/brand/balance-logo-horizontal-color-transparent.png`.
-- Variante usada en Phase 3.3 footer claro: `public/brand/balance-logo-stacked-color-transparent.png`.
+- Header Phase 3.3 aprobado visualmente en contexto: `public/brand/balance-logo-horizontal-color-transparent.png`.
+- Footer Phase 3.3 aprobado visualmente en contexto: `public/brand/balance-logo-stacked-color-transparent.png`.
 - Candidato para Phase 3.3 footer oscuro: `public/brand/balance-logo-stacked-white-transparent.png`, requiere revision humana por microbordes residuales.
-- Estado visual actual de header/footer: `En prueba contextual / pendiente de aprobacion humana`.
+- Estado visual actual de header/footer: `Aprobado visualmente en contexto` desde 2026-06-13.
 - Derivados opacos anteriores quedan como fallback documentado, no como opcion preferida.
 - No hay SVG candidato aprobado; un SVG automatico no debe tratarse como maestro oficial.
 - Favicon candidato preparado: `public/brand/balance-favicon-candidate.png`, pero su reemplazo real queda para Phase 3.9.

@@ -3,6 +3,7 @@ import type {
   FooterContent,
   LocationSectionContent,
 } from "@/types/content";
+import { brandConfig } from "@/config/brand";
 
 export const contactSectionContent: ContactSectionContent = {
   id: "contacto",
@@ -13,8 +14,9 @@ export const contactSectionContent: ContactSectionContent = {
   channels: [
     {
       label: "WhatsApp",
-      description: "Canal principal para iniciar contacto cuando esté disponible.",
-      status: "Disponible próximamente",
+      description:
+        "Escríbenos para solicitar información o iniciar el proceso para agendar una sesión.",
+      status: brandConfig.contact.whatsappDisplay,
       kind: "whatsapp",
     },
     {

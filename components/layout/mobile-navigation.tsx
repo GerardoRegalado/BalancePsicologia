@@ -59,6 +59,8 @@ export function MobileNavigation({
             ))}
             <a
               href={primaryAction.href}
+              target={primaryAction.external ? "_blank" : undefined}
+              rel={primaryAction.external ? "noopener noreferrer" : undefined}
               onClick={closeMenu}
               className={ctaClass({
                 variant: "primary",

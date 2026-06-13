@@ -8,7 +8,10 @@ export const brandConfig = {
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "",
   location: process.env.NEXT_PUBLIC_BRAND_LOCATION ?? "Aguascalientes, México",
   contact: {
-    whatsappUrl: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
+    whatsappDisplay: "449 555 6035",
+    whatsappInternational: "524495556035",
+    whatsappUrl:
+      process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/524495556035",
   },
   assets: {
     logoHorizontal: {

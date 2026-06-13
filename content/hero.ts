@@ -1,7 +1,5 @@
-import type { HeroContent } from "@/types/content";
 import { brandConfig } from "@/config/brand";
-
-const whatsappUrl = brandConfig.contact.whatsappUrl;
+import type { HeroContent } from "@/types/content";
 
 export const heroContent: HeroContent = {
   eyebrow: brandConfig.location,
@@ -14,15 +12,14 @@ export const heroContent: HeroContent = {
     {
       label: "Solicitar cita",
       mobileLabel: "Solicitar primera sesión",
-      href: "#agenda",
+      href: brandConfig.contact.whatsappUrl,
       variant: "primary",
+      external: true,
     },
     {
-      label: "WhatsApp",
-      href: whatsappUrl,
+      label: "Conocer opciones",
+      href: "#agenda",
       variant: "secondary",
-      disabled: whatsappUrl.length === 0,
-      external: true,
     },
   ],
   highlights: [],

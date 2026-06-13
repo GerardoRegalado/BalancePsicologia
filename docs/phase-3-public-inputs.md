@@ -24,7 +24,17 @@ Este documento no integra datos en la landing. Ningun valor debe implementarse m
 | Mensaje prellenado aprobado | PENDIENTE |
 | Estado de validacion | Aprobado |
 
-Nota: no crear todavia el enlace `wa.me`.
+URL aprobada para Phase 3.4: `https://wa.me/524495556035`.
+
+Nota: Phase 3.4 integra el enlace `wa.me` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. El mensaje prellenado sigue `PENDIENTE`.
+
+Superficies integradas en Phase 3.4:
+
+- CTA del header.
+- CTA principal del hero.
+- Menu mobile.
+- Seccion de contacto.
+- Footer.
 
 ## Redes sociales
 
