@@ -74,14 +74,17 @@ Notas:
 | Clasificacion | `Publico y aprobado` para direccion visible y Google Maps; `Publico, pendiente de validacion` para texto breve para llegar |
 | Estado de validacion | `Aprobado` para direccion visible y Google Maps; `En revision` para texto breve para llegar |
 | Destino futuro | 3.9 SEO local y metadata; texto breve para llegar cuando sea aprobado |
-| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real y CTA a Google Maps. No se uso iframe, API, scripts externos, coordenadas inferidas ni geolocalizacion. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
+| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real, mapa embebido cuando existe `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`, fallback cuando falta configuracion y CTA a Google Maps. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
 
 Notas:
 
 - `locationSectionContent` ya muestra Clínica MIND, direccion real y CTA a Google Maps.
 - El footer usa la direccion completa y el enlace de Google Maps aprobados.
 - La tarjeta de contacto de ubicacion usa `kind: location` y abre Google Maps.
-- La composicion visual de la seccion de ubicacion es abstracta; no es un mapa cartografico real.
+- La vista abstracta anterior fue retirada.
+- La seccion de ubicacion usa Google Maps Embed API con iframe lazy cuando la variable publica restringida esta configurada.
+- Si falta configuracion, la seccion muestra fallback limpio con CTA externo.
+- No se declara el mapa aprobado visualmente hasta que el cliente lo revise funcionando con una clave valida.
 - No se agregan referencias para llegar, entrecalles, piso, numero interior, horarios, estacionamiento ni indicaciones privadas.
 
 ### 3. WhatsApp publico

@@ -46,7 +46,7 @@ export const locationSectionContent: LocationSectionContent = {
   eyebrow: "Ubicación",
   title: `Encuéntranos en ${brandConfig.address.clinicName}`,
   description:
-    "Consulta la dirección del consultorio y abre la ubicación en Google Maps.",
+    "Consulta la dirección del consultorio y explora la ubicación en Google Maps.",
   clinicName: brandConfig.address.clinicName,
   address: brandConfig.address.display,
   mapsUrl: brandConfig.address.mapsUrl,

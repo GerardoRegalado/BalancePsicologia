@@ -193,7 +193,7 @@ describe("project readiness", () => {
     expect(locationSectionContent.address).toBe(brandConfig.address.display);
     expect(locationSectionContent.mapsUrl).toBe(brandConfig.address.mapsUrl);
     expect(JSON.stringify(locationSectionContent)).not.toMatch(
-      /ubicación exacta se integrará|Referencia general|Área general de atención/i,
+      /ubicación exacta se integrará|Referencia general|Área general de atención|vista abstracta|ayuda visual|mapa aproximado/i,
     );
     expect(packagePreviews.map((item) => item.detail).join(" ")).not.toContain(
       "$450",
