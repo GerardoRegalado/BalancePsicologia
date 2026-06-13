@@ -29,6 +29,7 @@ docs/design/brand/
 ├── README.md
 ├── asset-audit.md
 ├── asset-review-sheet.png
+├── asset-review-sheet-transparent.png
 └── source/
     ├── favicon.png
     ├── logo_horizontal.png
@@ -55,19 +56,26 @@ Nota:
 ```text
 public/brand/
 ├── balance-favicon-candidate.png
+├── balance-favicon-transparent-candidate.png
 ├── balance-logo-horizontal-color.png
+├── balance-logo-horizontal-color-transparent.png
 ├── balance-logo-stacked-black.png
+├── balance-logo-stacked-black-transparent.png
 ├── balance-logo-stacked-color.png
-└── balance-logo-stacked-white.png
+├── balance-logo-stacked-color-transparent.png
+├── balance-logo-stacked-white.png
+└── balance-logo-stacked-white-transparent.png
 ```
 
 Reglas de separacion:
 
 - `docs/design/brand/source/` conserva originales recibidos del cliente.
 - `docs/design/brand/asset-audit.md` documenta auditoria, limitaciones y recomendaciones.
-- `docs/design/brand/asset-review-sheet.png` es solo ayuda visual de revision.
+- `docs/design/brand/asset-review-sheet.png` y `docs/design/brand/asset-review-sheet-transparent.png` son ayudas visuales de revision.
 - `public/brand/` contiene derivados web optimizados, sin integracion activa todavia.
 - La landing, el favicon activo y Open Graph no deben consumir estos derivados hasta una fase aprobada.
+- Phase 3.3 debera preferir PNG transparente aprobado si no existe SVG candidato fiel y aprobado.
+- No existen candidatos SVG creados en esta fase; la fuente vectorial oficial sigue pendiente del cliente.
 
 ## Estructura orientativa para archivos recibidos
 

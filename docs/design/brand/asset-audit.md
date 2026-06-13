@@ -112,3 +112,76 @@ Hashes SHA-256 registrados antes y despues de generar derivados:
 | `logo_monochrome_negro.png` | `2f55fcffbcade8c6274a99802ca22fe4c1272862470346964b184e4e387fcb18` |
 
 Los hashes permanecen iguales. Los archivos originales dentro de `docs/design/brand/source/` no fueron modificados, renombrados ni reemplazados.
+
+## Phase 3.2A - Transparencia y evaluacion vectorial
+
+Fecha de auditoria complementaria: 2026-06-13
+
+Objetivo: preparar variantes PNG con transparencia real antes de Phase 3.3, sin redisenar, regenerar, vectorizar automaticamente ni integrar la marca en UI.
+
+### Metodo utilizado
+
+- Metodo: eliminacion deterministica de fondo por color detectado.
+- Herramienta: script local temporal con Swift/CoreGraphics; no se agregaron dependencias al proyecto.
+- Fondos blancos: deteccion de blanco/casi blanco, generacion de canal alpha y desmate contra el fondo detectado.
+- Fondo negro: deteccion de negro/casi negro, generacion de canal alpha y desmate contra el fondo detectado.
+- Recorte: bounding box por alpha con margen seguro.
+- Exportacion: PNG RGBA, sin metadata innecesaria, sin modificar los originales.
+- Fondo de landing usado para validacion: `#fcf9f8`.
+
+### Resultados PNG transparentes
+
+| Fuente | PNG transparente | Fondo detectado | Criterio aplicado | Dimensiones | Tamano | Alpha | Resultado visual | Halos / perdida | Estado PNG transparente | Estado SVG candidato | Uso recomendado Phase 3.3 |
+| --- | --- | --- | --- | ---: | ---: | --- | --- | --- | --- | --- | --- |
+| `logo_horizontal.png` | `public/brand/balance-logo-horizontal-color-transparent.png` | rgb(254,254,254) | tolerancia baja 8, alta 72 | 900x297 | 112,870 bytes | Si | Fiel sobre blanco y `#fcf9f8`; conserva simbolo, wordmark, descriptor, color y composicion | Halo claro visible si se fuerza sobre negro; no se recomienda para fondos oscuros | Aprobado para integracion | No creado; sin herramienta local de trazado fiel | Header sobre fondos claros/superficie; footer claro si aplica |
+| `logo_monochrome_color.png` | `public/brand/balance-logo-stacked-color-transparent.png` | rgb(254,254,254) | tolerancia baja 8, alta 72 | 720x576 | 141,627 bytes | Si | Fiel sobre blanco y `#fcf9f8`; conserva composicion apilada a color | Pierde contraste sobre negro; no recomendado para fondos oscuros | Aprobado con observaciones | No creado; sin herramienta local de trazado fiel | Footer o bloque secundario sobre fondo claro/superficie |
+| `logo_monochrome_negro.png` | `public/brand/balance-logo-stacked-black-transparent.png` | rgb(254,254,254) | tolerancia baja 8, alta 72 | 720x586 | 136,347 bytes | Si | Fiel sobre blanco y `#fcf9f8`; util como variante monocromatica oscura | No funciona sobre negro; descriptor pierde lectura en usos pequenos | Aprobado con observaciones | No creado; sin herramienta local de trazado fiel | Variante monocromatica para fondos claros |
+| `logo_monochrome_blanco.png` | `public/brand/balance-logo-stacked-white-transparent.png` | rgb(0,0,0) | tolerancia baja 18, alta 96 | 720x592 | 119,599 bytes | Si | Conserva logo blanco y elimina fondo negro; funciona visualmente sobre negro | Pequenos bordes/ruido residuales heredados del fuente, visibles al ampliar letras y contornos | Requiere revision humana | No creado; sin herramienta local de trazado fiel | Candidato para footer oscuro solo con validacion humana |
+| `favicon.png` | `public/brand/balance-favicon-transparent-candidate.png` | rgb(253,253,253) | tolerancia baja 8, alta 72 | 512x512 | 289,696 bytes | Si | Elimina esquinas blancas y conserva tile/simbolo | Sigue perdiendo detalle a 16x16; no corresponde a Phase 3.3 | Requiere revision humana | No creado; sin herramienta local de trazado fiel | Candidato futuro para Phase 3.9, no integrar ahora |
+
+### Validacion de transparencia
+
+- Todos los PNG transparentes abren correctamente como PNG RGBA.
+- Se compusieron sobre blanco, negro y `#fcf9f8` en `docs/design/brand/asset-review-sheet-transparent.png`.
+- Se comparo cada transparente recompuesto sobre el fondo original contra su fuente recortada/redimensionada.
+- Diferencias promedio de recomposicion:
+  - `balance-favicon-transparent-candidate.png`: 0.071.
+  - `balance-logo-horizontal-color-transparent.png`: 1.002.
+  - `balance-logo-stacked-color-transparent.png`: 0.809.
+  - `balance-logo-stacked-black-transparent.png`: 0.822.
+  - `balance-logo-stacked-white-transparent.png`: 1.158.
+- No se detecta deformacion de letras, simbolo, proporciones o composicion en los PNG transparentes.
+- Las variantes generadas desde fondo blanco conservan bordes fieles sobre fondos claros; sobre negro aparecen halos/contraste insuficiente y no deben usarse ahi.
+- La variante blanca conserva lectura sobre negro, pero requiere revision humana por microbordes residuales alrededor de texto y simbolo.
+
+### Evaluacion vectorial
+
+No se crearon candidatos SVG.
+
+Herramientas locales disponibles revisadas: `python3` y `qlmanage`. No se encontro Inkscape, Potrace, VTracer, Autotrace, ImageMagick ni otra herramienta local equivalente para trazado vectorial fiel.
+
+Por restriccion de marca, no se genero:
+
+- SVG con PNG embebido en base64.
+- SVG rasterizado disfrazado de vector.
+- SVG por IA generativa.
+- Reconstruccion manual de letras, tipografia o simbolo.
+
+Estado: la fuente vectorial oficial sigue pendiente del cliente. Los SVG automaticos no se consideran archivos maestros oficiales y no hay candidato SVG aprobado para Phase 3.3.
+
+### Seleccion recomendada para Phase 3.3
+
+Prioridad:
+
+1. SVG candidato solo si en el futuro existe uno visualmente fiel y aprobado.
+2. PNG transparente aprobado.
+3. PNG opaco anterior solo como fallback documentado.
+
+Recomendacion actual:
+
+- Header: `public/brand/balance-logo-horizontal-color-transparent.png`.
+- Footer claro o superficie clara: `public/brand/balance-logo-horizontal-color-transparent.png`.
+- Footer con composicion apilada clara: `public/brand/balance-logo-stacked-color-transparent.png`.
+- Footer oscuro: `public/brand/balance-logo-stacked-white-transparent.png`, solo despues de revision humana de bordes.
+- No usar derivados opacos salvo fallback documentado.
+- No usar SVG en Phase 3.3 porque no existe candidato fiel aprobado.

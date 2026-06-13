@@ -39,20 +39,23 @@ El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Logos y variantes de Balance Psicologia |
-| Estado de disponibilidad | Archivos fuente capturados dentro del repositorio y derivados web preparados en Phase 3.2 |
+| Estado de disponibilidad | Archivos fuente capturados; derivados opacos Phase 3.2 y derivados transparentes Phase 3.2A preparados |
 | Fuente | Cliente / archivos fuente en `docs/design/brand/source/`; auditoria en `docs/design/brand/asset-audit.md`; derivados en `public/brand/`; `docs/project-scope.md`; `docs/development-strategy.md` |
 | Formato recibido | PNG fuente: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png` |
 | Clasificacion | `Publico, pendiente de validacion` |
 | Estado de validacion | `En revision` |
 | Destino futuro | 3.2 Preparacion y validacion de logos/assets; 3.3 Integracion de identidad visual real; 3.9 validacion final de favicon/imagen OG |
-| Observaciones o pendientes | Auditoria Phase 3.2 completada. Candidatos para 3.3: `balance-logo-horizontal-color.png` para header/footer en fondos claros; `balance-logo-stacked-color.png` para usos apilados; `balance-logo-stacked-black.png` para fondos claros cuando aplique monocromo; `balance-logo-stacked-white.png` solo con cautela por su fondo negro opaco. `balance-favicon-candidate.png` queda para evaluacion futura en Phase 3.9. Pendiente: aprobacion humana, confirmar fuente vectorial SVG/PDF/AI, confirmar variantes transparentes oficiales si existen y planificar reemplazo del Open Graph del template en Phase 3.9 |
+| Observaciones o pendientes | Auditoria Phase 3.2 completada y correccion Phase 3.2A documentada. Candidato transparente para 3.3 header: `balance-logo-horizontal-color-transparent.png`. Candidatos transparentes para footer claro: `balance-logo-horizontal-color-transparent.png` o `balance-logo-stacked-color-transparent.png`. Candidato para footer oscuro: `balance-logo-stacked-white-transparent.png`, requiere revision humana por microbordes residuales. `balance-favicon-transparent-candidate.png` queda para evaluacion futura en Phase 3.9. No hay SVG candidato aprobado; confirmar fuente vectorial SVG/PDF/AI oficial con el cliente. Los SVG automaticos no se consideran maestros oficiales. Planificar reemplazo del Open Graph del template en Phase 3.9 |
 
 Notas:
 
 - Los archivos fuente existen en `docs/design/brand/source/`, pero todavia no estan aprobados para produccion.
 - La auditoria de Phase 3.2 esta documentada en `docs/design/brand/asset-audit.md`.
-- Los derivados web estan en `public/brand/`, pero todavia no estan integrados en la landing.
+- La correccion Phase 3.2A de transparencia y evaluacion vectorial tambien esta documentada en `docs/design/brand/asset-audit.md`.
+- Los derivados web opacos y transparentes estan en `public/brand/`, pero todavia no estan integrados en la landing.
 - Ningun fuente tiene transparencia real; todos son PNG RGB con fondo opaco.
+- Los PNG transparentes son derivados RGBA, no fuentes originales.
+- No se crearon candidatos SVG porque no hay herramienta local de trazado fiel disponible; la fuente vectorial oficial sigue pendiente del cliente.
 - `app/favicon.ico` se considera favicon existente del proyecto, no necesariamente favicon final aprobado.
 - `public/media/og-default.svg` se considera asset OG actual/generico, no necesariamente Open Graph final aprobado.
 - `public/media/og-default.svg` contiene identidad del template base. Debe considerarse rechazado como asset final; Phase 3.2 solo documenta esta situacion y su reemplazo real se atendera en Phase 3.9.
@@ -185,9 +188,14 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Archivos fuente de marca capturados: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png`.
 - Auditoria de logos/assets completada en `docs/design/brand/asset-audit.md`.
 - Derivados web preparados: `balance-logo-horizontal-color.png`, `balance-logo-stacked-color.png`, `balance-logo-stacked-black.png`, `balance-logo-stacked-white.png`, `balance-favicon-candidate.png`.
-- Candidato principal para Phase 3.3: `public/brand/balance-logo-horizontal-color.png`, pendiente de aprobacion humana en contexto de header/footer.
-- Candidatos secundarios para Phase 3.3: `public/brand/balance-logo-stacked-color.png`, `public/brand/balance-logo-stacked-black.png` y `public/brand/balance-logo-stacked-white.png`, con limitaciones documentadas.
+- Derivados transparentes Phase 3.2A preparados: `balance-logo-horizontal-color-transparent.png`, `balance-logo-stacked-color-transparent.png`, `balance-logo-stacked-black-transparent.png`, `balance-logo-stacked-white-transparent.png`, `balance-favicon-transparent-candidate.png`.
+- Candidato principal para Phase 3.3 header: `public/brand/balance-logo-horizontal-color-transparent.png`.
+- Candidatos para Phase 3.3 footer claro: `public/brand/balance-logo-horizontal-color-transparent.png` o `public/brand/balance-logo-stacked-color-transparent.png`.
+- Candidato para Phase 3.3 footer oscuro: `public/brand/balance-logo-stacked-white-transparent.png`, requiere revision humana por microbordes residuales.
+- Derivados opacos anteriores quedan como fallback documentado, no como opcion preferida.
+- No hay SVG candidato aprobado; un SVG automatico no debe tratarse como maestro oficial.
 - Favicon candidato preparado: `public/brand/balance-favicon-candidate.png`, pero su reemplazo real queda para Phase 3.9.
+- Favicon transparente candidato preparado: `public/brand/balance-favicon-transparent-candidate.png`, tambien reservado para Phase 3.9.
 - Favicon actual: puede revisarse como artefacto existente, pero no debe asumirse como final aprobado.
 
 ### Pendientes de validacion
@@ -196,7 +204,8 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Favicon candidato.
 - Imagen o asset para Open Graph.
 - Fuente vectorial SVG/PDF/AI/EPS, si existe.
-- Variantes transparentes oficiales para fondos de color u oscuros.
+- Aprobacion humana de `balance-logo-stacked-white-transparent.png` si se usa sobre footer oscuro.
+- Variantes transparentes oficiales del cliente para fondos de color u oscuros, si existen.
 - Direccion publica del consultorio.
 - Mensaje prellenado de WhatsApp.
 - Duracion y condiciones de sesiones.
