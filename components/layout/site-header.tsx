@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { Container } from "@/components/ui/container";
 import { ctaClass } from "@/components/ui/cta-styles";
+import { brandConfig } from "@/config/brand";
 import { siteConfig } from "@/config/site";
 import { heroContent } from "@/content/hero";
 
@@ -14,13 +16,22 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 w-full bg-surface/90 backdrop-blur-md">
-      <Container className="relative flex min-h-14 items-center justify-between gap-4 py-2 md:min-h-18 md:gap-gutter md:py-4">
+      <Container className="relative flex min-h-16 items-center justify-between gap-4 py-1.5 md:min-h-18 md:gap-gutter md:py-2">
         <div className="flex min-w-0 items-center justify-between gap-gutter">
           <Link
             href="/"
-            className="truncate font-serif text-xl leading-none font-medium text-primary transition-opacity hover:opacity-80 focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:outline-none md:text-2xl"
+            className="flex shrink-0 items-center transition-opacity hover:opacity-80 focus-visible:ring-4 focus-visible:ring-primary/25 focus-visible:outline-none"
+            aria-label={brandConfig.name}
           >
-            {siteConfig.defaultTitle}
+            <Image
+              src={brandConfig.assets.logoHorizontal.src}
+              alt={brandConfig.name}
+              width={brandConfig.assets.logoHorizontal.width}
+              height={brandConfig.assets.logoHorizontal.height}
+              priority
+              sizes="(min-width: 768px) 185px, 145px"
+              className="h-auto w-[145px] md:w-[185px]"
+            />
           </Link>
         </div>
 

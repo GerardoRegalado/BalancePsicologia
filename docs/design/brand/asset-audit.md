@@ -185,3 +185,37 @@ Recomendacion actual:
 - Footer oscuro: `public/brand/balance-logo-stacked-white-transparent.png`, solo despues de revision humana de bordes.
 - No usar derivados opacos salvo fallback documentado.
 - No usar SVG en Phase 3.3 porque no existe candidato fiel aprobado.
+
+## Phase 3.3 - Integracion contextual
+
+Fecha de integracion contextual: 2026-06-13
+
+Esta integracion es una prueba visual reversible dentro de la landing real. Los PNG transparentes de Phase 3.2A no quedan aprobados definitivamente por estar integrados.
+
+### Assets probados
+
+| Superficie | Asset | Implementacion | Tamano aplicado | Estado visual |
+| --- | --- | --- | --- | --- |
+| Header | `public/brand/balance-logo-horizontal-color-transparent.png` | `next/image`, ruta desde `config/brand.ts`, enlace a `/` conservado | 145px mobile, 185px desktop | En prueba contextual / pendiente de aprobacion humana |
+| Footer | `public/brand/balance-logo-stacked-color-transparent.png` | `next/image`, ruta desde `config/brand.ts` | 165px mobile, 145px desktop | En prueba contextual / pendiente de aprobacion humana |
+
+### Observaciones esperadas para QA visual
+
+- Header: verificar legibilidad del descriptor, ausencia de halos sobre `bg-surface`, ausencia de clipping y relacion con navegacion/CTA.
+- Footer: verificar que el logo apilado no domine el bloque, que el descriptor siga legible y que no aparezcan bordes blancos sobre `bg-surface-container`.
+- Los assets no deben corregirse con filtros CSS, blend modes, mascaras, wrappers blancos ni cambios de fondo.
+- Si se detectan halos, letras erosionadas, descriptor ilegible o composicion desbalanceada, se debe sustituir el PNG manualmente y conservar la estructura.
+
+### Preview contextual
+
+- No se generaron screenshots en `docs/design/brand/context-preview/` porque no hay Playwright, Puppeteer, Chromium, `agent-browser` ni herramienta equivalente disponible en el entorno/proyecto sin instalar dependencias.
+- La revision visual en 320px, 375px, 430px, 768px, 1024px y 1440px queda pendiente para navegador manual.
+- `npm run validate` paso completo despues de permitir acceso de red para que Next descargara las fuentes requeridas durante el build.
+
+### Restricciones mantenidas
+
+- No se integro favicon.
+- No se reemplazo Open Graph.
+- No se modifico metadata ni SEO.
+- No se integraron WhatsApp, redes sociales, ubicacion ni costos.
+- No se declararon los logos como aprobados definitivamente.

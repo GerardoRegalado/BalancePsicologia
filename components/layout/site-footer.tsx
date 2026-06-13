@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { brandConfig } from "@/config/brand";
 import { footerContent } from "@/content/contact";
@@ -12,10 +13,14 @@ export function SiteFooter() {
       className="w-full bg-surface-container"
     >
       <Container className="flex flex-col items-center justify-between gap-7 py-10 md:flex-row md:gap-6 md:py-7">
-        <div className="text-center font-serif text-xl leading-7 font-medium text-primary md:text-left">
-          <span className="block">Balance</span>
-          <span className="block">Psicología</span>
-        </div>
+        <Image
+          src={brandConfig.assets.logoStacked.src}
+          alt={brandConfig.name}
+          width={brandConfig.assets.logoStacked.width}
+          height={brandConfig.assets.logoStacked.height}
+          sizes="(min-width: 768px) 145px, 165px"
+          className="h-auto w-[165px] shrink-0 md:w-[145px]"
+        />
 
         <div className="flex flex-col items-center gap-4 text-center text-xs font-medium tracking-[0.12em] text-on-secondary-container uppercase md:gap-3">
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-3">

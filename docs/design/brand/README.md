@@ -77,6 +77,23 @@ Reglas de separacion:
 - Phase 3.3 debera preferir PNG transparente aprobado si no existe SVG candidato fiel y aprobado.
 - No existen candidatos SVG creados en esta fase; la fuente vectorial oficial sigue pendiente del cliente.
 
+## Prueba contextual Phase 3.3
+
+La integracion actual de marca es una prueba visual reversible, no aprobacion final de assets.
+
+| Superficie | Asset en prueba | Tamano aplicado | Estado |
+| --- | --- | --- | --- |
+| Header | `/brand/balance-logo-horizontal-color-transparent.png` | 145px mobile, 185px desktop | En prueba contextual / pendiente de aprobacion humana |
+| Footer | `/brand/balance-logo-stacked-color-transparent.png` | 165px mobile, 145px desktop | En prueba contextual / pendiente de aprobacion humana |
+
+Notas:
+
+- Las rutas y dimensiones intrinsecas se centralizan en `config/brand.ts`.
+- Si el logo requiere reemplazo manual, Phase 3.3 debe poder cambiar el archivo desde `config/brand.ts` sin tocar la estructura de header/footer.
+- No se integro favicon candidato.
+- No se reemplazo Open Graph.
+- No se usaron filtros, fondos artificiales, blend modes, mascaras ni wrappers blancos.
+
 ## Estructura orientativa para archivos recibidos
 
 Los nombres siguientes son orientativos y dependen de los archivos realmente proporcionados por el cliente:

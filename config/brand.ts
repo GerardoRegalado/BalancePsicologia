@@ -10,6 +10,18 @@ export const brandConfig = {
   contact: {
     whatsappUrl: process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "",
   },
+  assets: {
+    logoHorizontal: {
+      src: "/brand/balance-logo-horizontal-color-transparent.png",
+      width: 900,
+      height: 297,
+    },
+    logoStacked: {
+      src: "/brand/balance-logo-stacked-color-transparent.png",
+      width: 720,
+      height: 576,
+    },
+  },
   social: {
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
     linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "",
