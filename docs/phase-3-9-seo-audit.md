@@ -4,7 +4,7 @@ Fecha: 2026-06-13
 
 Phase 3.9 cierra la configuracion tecnica publica de SEO, metadata, favicon, Open Graph, robots, sitemap y datos estructurados locales para la landing publica.
 
-No se hizo deploy, no se modifico Vercel y no se promovio ninguna rama.
+No se realizo deployment manual ni promocion a produccion. La integracion Git de Vercel genero automaticamente deployments de preview para la rama `develop`.
 
 ## Canonical
 
@@ -15,8 +15,9 @@ No se hizo deploy, no se modifico Vercel y no se promovio ninguna rama.
 
 ## Title y description
 
-- Default title: `Balance Psicología | Terapia en Aguascalientes`.
+- Fallback/default title: `Balance Psicología | Terapia en Aguascalientes`.
 - Title template: `%s | Balance Psicología`.
+- Home title renderizado: `Terapia psicológica en Aguascalientes | Balance Psicología`.
 - Description: `Terapia psicológica individual, de pareja y familiar en Aguascalientes. Conoce costos, ubicación y solicita información con Balance Psicología.`
 
 Keywords configuradas:
@@ -78,6 +79,20 @@ Entornos no indexables:
 - Sitemap vacio.
 
 No incluye anchors, staging, previews, `/admin`, app privada, redes ni Google Maps.
+
+## Preview generado automaticamente
+
+En el preview automatico de la rama `develop` se verifico:
+
+- `noindex,nofollow`.
+- Canonical de produccion.
+- Open Graph y Twitter metadata con el asset aprobado.
+- Favicon tecnico.
+- JSON-LD local.
+- `robots.txt` con `Allow: /`.
+- Sitemap vacio.
+
+No se documentan hostnames temporales, IDs de deployment, API keys, variables de entorno ni identificadores privados de Vercel.
 
 ## Politica de indexacion
 
@@ -150,6 +165,17 @@ Confirmaciones:
 ## Contenido sensible y legal
 
 No se detecto contenido clinico, datos de pacientes, historiales, diagnosticos ni notas reales en metadata, JSON-LD o assets generados.
+
+## Sanitizacion Phase 3.9A
+
+La revision posterior del deployment detecto respuestas obsoletas en FAQ sobre canales, ubicacion y costos. Phase 3.9A corrige esas respuestas para alinearlas con:
+
+- WhatsApp publicado.
+- Redes oficiales publicadas.
+- Clinica y direccion aprobadas.
+- Costos aprobados desde `pricingPlans`.
+
+No se modificaron servicios, precios, direccion, redes, WhatsApp ni datos aprobados. La FAQ conserva cuatro preguntas y elimina placeholders como `Muy pronto`, `Próximamente`, canales pendientes, direccion pendiente e informacion comercial futura.
 
 Contenido legal pendiente:
 

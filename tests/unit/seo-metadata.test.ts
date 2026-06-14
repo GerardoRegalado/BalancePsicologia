@@ -29,6 +29,12 @@ describe("seo metadata", () => {
     expect(siteConfig.defaultTitle).toBe(
       "Balance Psicología | Terapia en Aguascalientes",
     );
+    expect(
+      siteConfig.titleTemplate.replace(
+        "%s",
+        "Terapia psicológica en Aguascalientes",
+      ),
+    ).toBe("Terapia psicológica en Aguascalientes | Balance Psicología");
     expect(siteConfig.description).toBe(
       "Terapia psicológica individual, de pareja y familiar en Aguascalientes. Conoce costos, ubicación y solicita información con Balance Psicología.",
     );

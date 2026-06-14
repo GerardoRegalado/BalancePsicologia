@@ -1,25 +1,38 @@
-import type { FaqItem, FaqSectionContent } from "@/types/content";
+import type { FaqItem, FaqSectionContent, PricingPlan } from "@/types/content";
+import { brandConfig } from "@/config/brand";
+import { pricingPlans } from "@/content/pricing";
+
+function getPricingPlan(id: PricingPlan["id"]) {
+  const plan = pricingPlans.find((item) => item.id === id);
+
+  if (!plan) {
+    throw new Error(`Missing pricing plan: ${id}`);
+  }
+
+  return plan;
+}
+
+const individualPlan = getPricingPlan("individual");
+const couplePlan = getPricingPlan("couple");
+const familyPlan = getPricingPlan("family");
 
 export const faqItems: FaqItem[] = [
   {
     question: "¿Cómo puedo solicitar información?",
-    answer:
-      "Muy pronto se integrarán los canales oficiales para iniciar contacto con Balance Psicología.",
+    answer: `Actualmente puedes solicitar información por WhatsApp al ${brandConfig.contact.whatsappDisplay} o consultar los perfiles oficiales de Balance Psicología.`,
   },
   {
     question: "¿Dónde se encuentra Balance Psicología?",
-    answer:
-      "La atención se ubica en Aguascalientes. La dirección exacta se publicará cuando la información esté lista.",
+    answer: `Balance Psicología se encuentra en ${brandConfig.address.clinicName}, ${brandConfig.address.display}. Puedes consultar la ubicación en Google Maps.`,
   },
   {
     question: "¿Los costos ya están disponibles?",
-    answer:
-      "La información comercial se publicará de forma clara cuando existan datos aprobados para compartir.",
+    answer: `Sí. Los costos publicados son ${individualPlan.price} para ${individualPlan.name.toLowerCase()}, ${couplePlan.price} para ${couplePlan.name.toLowerCase()} y ${familyPlan.price} para ${familyPlan.name.toLowerCase()}.`,
   },
   {
     question: "¿La solicitud de cita confirma una agenda?",
     answer:
-      "La solicitud funciona como primer contacto. La confirmación de una cita dependerá de los canales oficiales de Balance Psicología.",
+      "No. El mensaje inicia el proceso de contacto; la fecha y hora se consideran confirmadas únicamente después de recibir respuesta.",
   },
 ];
 

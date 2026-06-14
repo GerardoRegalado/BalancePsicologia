@@ -70,6 +70,39 @@ describe("project readiness", () => {
     expect(appointmentSectionContent.steps).toHaveLength(3);
   });
 
+  it("keeps the FAQ aligned with published public inputs", () => {
+    expect(faqSectionContent.items).toHaveLength(4);
+
+    const contactFaq = faqSectionContent.items[0]!;
+    const locationFaq = faqSectionContent.items[1]!;
+    const pricingFaq = faqSectionContent.items[2]!;
+    const appointmentFaq = faqSectionContent.items[3]!;
+
+    expect(contactFaq.question).toBe("¿Cómo puedo solicitar información?");
+    expect(contactFaq.answer).toContain(brandConfig.contact.whatsappDisplay);
+
+    expect(locationFaq.question).toBe(
+      "¿Dónde se encuentra Balance Psicología?",
+    );
+    expect(locationFaq.answer).toContain(brandConfig.address.clinicName);
+    expect(locationFaq.answer).toContain(brandConfig.address.display);
+
+    expect(pricingFaq.question).toBe("¿Los costos ya están disponibles?");
+    for (const plan of pricingPlans) {
+      expect(pricingFaq.answer).toContain(plan.price);
+    }
+
+    expect(appointmentFaq.question).toBe(
+      "¿La solicitud de cita confirma una agenda?",
+    );
+    expect(appointmentFaq.answer).toMatch(/No\./);
+    expect(appointmentFaq.answer).toMatch(/después de recibir respuesta/i);
+
+    expect(JSON.stringify(faqSectionContent.items)).not.toMatch(
+      /Muy pronto|Próximamente|se integrarán los canales|la dirección exacta se publicará|la información comercial se publicará|cuando la información esté lista/i,
+    );
+  });
+
   it("uses the approved WhatsApp contact without a prefilled message", () => {
     expect(brandConfig.contact.whatsappDisplay).toBe("449 555 6035");
     expect(brandConfig.contact.whatsappInternational).toBe("524495556035");
