@@ -8,7 +8,7 @@ export { faqItems, faqSectionContent } from "@/content/faq";
 export { featureSectionContent } from "@/content/features";
 export { heroContent } from "@/content/hero";
 export { landingHeroContent, landingNavigation } from "@/content/landing";
-export { leadFormContent } from "@/content/lead-form";
+export { appointmentSectionContent } from "@/content/lead-form";
 export { packagePreviews, packagesSectionContent } from "@/content/packages";
 export { pricingPlans } from "@/content/pricing";
 export { serviceItems, servicesSectionContent } from "@/content/services";

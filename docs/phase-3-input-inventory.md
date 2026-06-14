@@ -97,13 +97,14 @@ Notas:
 | Formato recibido | Numero nacional, codigo de pais, numero internacional sin espacios y numero visible capturados; mensaje prellenado pendiente |
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
-| Destino futuro | 3.4 Integracion de WhatsApp y contacto real; 3.8 flujo publico final de solicitud de cita |
-| Observaciones o pendientes | El numero esta aprobado y documentado. Phase 3.4 integra `https://wa.me/524495556035` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. El mensaje prellenado queda pendiente de aprobacion posterior. WhatsApp aparece en CTA del header, CTA principal del hero, menu mobile, seccion de contacto y footer |
+| Destino futuro | 3.9 QA final de enlaces y contenido |
+| Observaciones o pendientes | El numero esta aprobado y documentado. Phase 3.4 integra `https://wa.me/524495556035` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. Phase 3.8 consolida WhatsApp como canal principal de solicitud: hero, header, menu mobile y seccion de agenda usan la misma URL. El formulario visual fue retirado; la landing no recopila, almacena ni envia datos. No existe agenda automatica ni confirmacion inmediata. El mensaje prellenado queda pendiente de aprobacion posterior. WhatsApp aparece en CTA del header, CTA principal del hero, menu mobile, seccion de agenda, seccion de contacto y footer |
 
 Notas:
 
 - Phase 3.4 publica el numero visible `449 555 6035` y centraliza `https://wa.me/524495556035` en `config/brand.ts`.
 - El enlace de WhatsApp no usa mensaje prellenado ni parametros adicionales.
+- Phase 3.8 completa el flujo publico de solicitud de cita mediante WhatsApp y mantiene `#agenda` como explicacion del proceso.
 - El mensaje prellenado queda pendiente de aprobacion posterior.
 
 ### 4. Redes sociales
@@ -141,13 +142,14 @@ Notas:
 | Clasificacion | `Publico y aprobado` para costos y modalidades; `Publico, pendiente de validacion` para duracion y condiciones |
 | Estado de validacion | `Aprobado` para costos y modalidades; `En revision` para duracion y condiciones |
 | Destino futuro | 3.8 consistencia de CTAs; 3.9 revision de contenido sensible/SEO |
-| Observaciones o pendientes | Phase 3.7 completada. Los costos y modalidades aprobados se publican como Terapia individual `$450 MXN`, Terapia de pareja `$700 MXN` y Terapia familiar `$900 MXN`. `content/pricing.ts` queda como fuente canonica y `content/packages.ts` deriva sus items desde ahi. Duracion y condiciones publicas continuan pendientes. No existen paquetes publicados, pagos online ni backend financiero. No se inventaron promociones, descuentos, condiciones ni resultados clinicos |
+| Observaciones o pendientes | Phase 3.7 completada y cerrada por aprobacion del cliente. Los costos y modalidades aprobados se publican como Terapia individual `$450 MXN`, Terapia de pareja `$700 MXN` y Terapia familiar `$900 MXN`. Las tres modalidades tienen jerarquia equivalente y no existe modalidad destacada. `content/pricing.ts` queda como fuente canonica y `content/packages.ts` deriva sus items desde ahi. Duracion y condiciones publicas continuan pendientes. No existen paquetes publicados, pagos online ni backend financiero. No se inventaron promociones, descuentos, condiciones ni resultados clinicos |
 
 Notas:
 
 - `content/pricing.ts` contiene los tres costos reales aprobados y funciona como fuente canonica.
 - `content/packages.ts` deriva nombres, descripciones y precios desde `pricingPlans`.
 - La seccion de costos publica precios por sesion, sin destacar una modalidad sobre otra.
+- Phase 3.7 queda cerrada.
 - Duracion y condiciones siguen pendientes y no se publican.
 - Finanzas internas, pagos online, saldos, recibos o facturacion quedan fuera de Phase 3.
 
@@ -161,14 +163,32 @@ Notas:
 | Formato recibido | Terapia individual, Terapia de pareja y Terapia familiar integradas; condiciones y duracion pendientes |
 | Clasificacion | `Publico y aprobado` para nombres y copy publico actual; `Publico, pendiente de validacion` para duracion y condiciones |
 | Estado de validacion | `Aprobado` para nombres y copy publico actual; `En revision` para duracion y condiciones |
-| Destino futuro | 3.8 flujo publico de solicitud de cita |
-| Observaciones o pendientes | Phase 3.7 completada. Los nombres publicos definitivos son Terapia individual, Terapia de pareja y Terapia familiar. La seccion de servicios deriva sus tarjetas desde `pricingPlans` para mantener consistencia con costos, sin mostrar precios en servicios. No se agregaron especialidades, duraciones, afirmaciones clinicas nuevas ni resultados prometidos |
+| Destino futuro | 3.9 revision final de contenido sensible/SEO |
+| Observaciones o pendientes | Phase 3.7 completada y cerrada por aprobacion del cliente. Los nombres publicos definitivos son Terapia individual, Terapia de pareja y Terapia familiar. La seccion de servicios deriva sus tarjetas desde `pricingPlans` para mantener consistencia con costos, sin mostrar precios en servicios. Las tres modalidades tienen jerarquia equivalente y no existe modalidad destacada. No se agregaron especialidades, duraciones, afirmaciones clinicas nuevas ni resultados prometidos |
 
 Notas:
 
 - El copy publico integrado mantiene un tono general y prudente.
 - Duracion y condiciones siguen pendientes.
 - Cualquier afirmacion clinica futura debe revisarse con especial cuidado antes de publicarse.
+
+### 6A. Flujo publico de solicitud de cita
+
+| Campo | Registro |
+| --- | --- |
+| Nombre o categoria | Flujo publico de solicitud de cita |
+| Estado de disponibilidad | Integrado en Phase 3.8 |
+| Fuente | WhatsApp aprobado en `docs/phase-3-public-inputs.md`; `config/brand.ts`; `content/hero.ts`; `content/lead-form.ts` |
+| Formato recibido | Canal principal por WhatsApp sin mensaje prellenado |
+| Clasificacion | `Publico y aprobado` |
+| Estado de validacion | `Aprobado` |
+| Destino futuro | 3.9 QA final, favicon, Open Graph, metadata y SEO |
+| Observaciones o pendientes | Phase 3.8 completada. WhatsApp es el unico canal principal para solicitar cita. Hero, header, menu mobile y seccion de agenda usan la misma URL aprobada. La seccion `#agenda` explica el proceso con tres pasos y CTA a WhatsApp, mas enlace secundario a `#costos`. El formulario visual fue retirado. La landing no recopila, almacena ni envia datos; no existe backend, agenda automatica ni confirmacion inmediata. No se agrego mensaje prellenado |
+
+Notas:
+
+- Evitar solicitar diagnostico, sintomas detallados, historia clinica, medicamentos, documentos, fotografias, identificaciones o informacion de emergencia desde la landing publica.
+- QA final, favicon, Open Graph, metadata y SEO quedan para Phase 3.9.
 
 ### 7. Estructura utilizada para historial clinico
 

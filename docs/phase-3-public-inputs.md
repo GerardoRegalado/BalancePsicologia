@@ -36,6 +36,8 @@ Superficies integradas en Phase 3.4:
 - Seccion de contacto.
 - Footer.
 
+Nota Phase 3.8: WhatsApp queda consolidado como canal principal de solicitud de cita. Hero, header, menu mobile y seccion de agenda usan la misma URL `https://wa.me/524495556035`. El formulario visual fue retirado; la landing no recopila, almacena ni envia datos. No existe agenda automatica, confirmacion inmediata ni mensaje prellenado. La seccion `#agenda` explica el proceso y dirige a WhatsApp o a `#costos`.
+
 ## Redes sociales
 
 ### Facebook
@@ -88,7 +90,7 @@ Nota: La direccion visible completa y el enlace de Google Maps se integraron pri
 | Sesion de pareja | $700 MXN | PENDIENTE | PENDIENTE | Aprobado para publicacion |
 | Sesion familiar | $900 MXN | PENDIENTE | PENDIENTE | Aprobado para publicacion |
 
-Nota: Los costos y nombres de modalidades estan aprobados e integrados en Phase 3.7. Las tres modalidades quedaron alineadas entre servicios y costos. La duracion y condiciones publicas siguen pendientes. No se publicaron promociones, paquetes ni descuentos. La revision final de CTAs queda para Phase 3.8 y la revision SEO final queda para Phase 3.9.
+Nota: El cliente aprobo la integracion de Terapia individual `$450 MXN`, Terapia de pareja `$700 MXN` y Terapia familiar `$900 MXN`. Los costos y nombres de modalidades estan aprobados e integrados en Phase 3.7. Las tres modalidades tienen jerarquia equivalente, ninguna modalidad esta destacada y no se publicaron paquetes, promociones ni descuentos. La duracion y condiciones publicas siguen pendientes. Phase 3.7 queda cerrada. La revision final de CTAs se atiende en Phase 3.8 y la revision SEO final queda para Phase 3.9.
 
 ## Datos publicos adicionales
 

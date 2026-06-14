@@ -179,31 +179,21 @@ export type FooterContent = {
   };
 };
 
-export type LeadFormField = {
-  name: string;
-  label: string;
-  type: "text" | "email" | "textarea" | "select";
-  required: boolean;
-  placeholder: string;
-  helperText?: string;
-  options?: string[];
-};
-
-export type LeadFormContent = {
+export type AppointmentSectionContent = {
   id: string;
   eyebrow: string;
   title: string;
   description: string;
   publicNote: string;
-  aside: {
+  intro: {
     title: string;
     description: string;
-    points: {
-      title: string;
-      description: string;
-    }[];
   };
-  fields: LeadFormField[];
-  visualSubmitLabel: string;
+  steps: {
+    title: string;
+    description: string;
+  }[];
+  primaryAction: ContentAction;
+  secondaryAction: ContentAction;
   privacyNote: string;
 };

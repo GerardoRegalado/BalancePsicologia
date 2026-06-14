@@ -17,7 +17,7 @@ export const heroContent: HeroContent = {
       external: true,
     },
     {
-      label: "Conocer opciones",
+      label: "Cómo agendar",
       href: "#agenda",
       variant: "secondary",
     },

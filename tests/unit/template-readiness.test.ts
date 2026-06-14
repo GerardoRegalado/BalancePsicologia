@@ -10,7 +10,7 @@ import {
 import { faqSectionContent } from "@/content/faq";
 import { featureSectionContent } from "@/content/features";
 import { heroContent } from "@/content/hero";
-import { leadFormContent } from "@/content/lead-form";
+import { appointmentSectionContent } from "@/content/lead-form";
 import { packagesSectionContent, packagePreviews } from "@/content/packages";
 import { pricingPlans } from "@/content/pricing";
 import { serviceItems, servicesSectionContent } from "@/content/services";
@@ -63,15 +63,7 @@ describe("project readiness", () => {
     );
     expect(footerContent.credit.label).toBe("Gerardo Regalado");
     expect(footerContent.credit.href).toBe("https://www.gerardoregalado.dev/");
-    expect(leadFormContent.fields.map((field) => field.name)).toEqual(
-      expect.arrayContaining([
-        "name",
-        "phone",
-        "email",
-        "serviceInterest",
-        "message",
-      ]),
-    );
+    expect(appointmentSectionContent.steps).toHaveLength(3);
   });
 
   it("uses the approved WhatsApp contact without a prefilled message", () => {
@@ -94,10 +86,35 @@ describe("project readiness", () => {
     expect(heroContent.actions[0]).not.toHaveProperty("disabled");
     expect(heroContent.actions[1]).toEqual(
       expect.objectContaining({
-        label: "Conocer opciones",
+        label: "Cómo agendar",
         href: "#agenda",
         variant: "secondary",
       }),
+    );
+
+    expect(appointmentSectionContent.primaryAction).toEqual(
+      expect.objectContaining({
+        label: "Solicitar cita por WhatsApp",
+        mobileLabel: "Solicitar cita por WhatsApp",
+        href: brandConfig.contact.whatsappUrl,
+        variant: "primary",
+        external: true,
+      }),
+    );
+    expect(appointmentSectionContent.secondaryAction).toEqual(
+      expect.objectContaining({
+        label: "Ver costos",
+        href: "#costos",
+        variant: "secondary",
+      }),
+    );
+    expect("fields" in appointmentSectionContent).toBe(false);
+    expect("visualSubmitLabel" in appointmentSectionContent).toBe(false);
+    expect(JSON.stringify(appointmentSectionContent)).not.toMatch(
+      /Próximamente|vista previa visual|Canales oficiales próximamente|agenda automática|confirmación inmediata/i,
+    );
+    expect(appointmentSectionContent.privacyNote).toMatch(
+      /Evita compartir información clínica sensible/i,
     );
 
     expect(

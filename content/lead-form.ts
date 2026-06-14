@@ -1,76 +1,45 @@
-import type { LeadFormContent } from "@/types/content";
+import { brandConfig } from "@/config/brand";
+import type { AppointmentSectionContent } from "@/types/content";
 
-export const leadFormContent: LeadFormContent = {
+export const appointmentSectionContent: AppointmentSectionContent = {
   id: "agenda",
-  eyebrow: "Agenda básica",
-  title: "Solicitud de cita",
+  eyebrow: "Agenda",
+  title: "Solicita tu cita",
   description:
-    "Este espacio muestra la información básica que ayudará a iniciar contacto con Balance Psicología.",
-  publicNote:
-    "Próximamente se integrarán los canales oficiales para enviar solicitudes.",
-  aside: {
-    title: "Primer contacto claro y cuidadoso",
+    "Inicia el proceso de contacto por WhatsApp para consultar disponibilidad y coordinar una sesión.",
+  publicNote: "El envío de un mensaje no confirma automáticamente una cita.",
+  intro: {
+    title: "Un primer contacto claro y sencillo",
     description:
-      "La solicitud se plantea como un primer acercamiento, sin agenda automática ni confirmación inmediata.",
-    points: [
-      {
-        title: "Información esencial",
-        description:
-          "Solo se consideran datos generales de contacto para orientar el siguiente paso.",
-      },
-      {
-        title: "Sin datos clínicos sensibles",
-        description:
-          "El primer contacto no requiere información sensible ni detalles personales profundos.",
-      },
-    ],
+      "WhatsApp es el canal principal para solicitar información y comenzar el proceso para agendar.",
   },
-  fields: [
+  steps: [
     {
-      name: "name",
-      label: "Nombre",
-      type: "text",
-      required: true,
-      placeholder: "Tu nombre",
+      title: "Escríbenos por WhatsApp",
+      description: "Inicia el contacto desde el botón de esta sección.",
     },
     {
-      name: "phone",
-      label: "Teléfono o WhatsApp",
-      type: "text",
-      required: true,
-      placeholder: "Canal de contacto",
+      title: "Consulta disponibilidad",
+      description:
+        "Revisa directamente las opciones disponibles para coordinar tu sesión.",
     },
     {
-      name: "email",
-      label: "Correo opcional",
-      type: "email",
-      required: false,
-      placeholder: "tucorreo@ejemplo.com",
-    },
-    {
-      name: "serviceInterest",
-      label: "Servicio de interés",
-      type: "select",
-      required: true,
-      placeholder: "Selecciona una opción",
-      options: [
-        "Acompañamiento individual",
-        "Acompañamiento para parejas",
-        "Acompañamiento familiar",
-        "Quiero recibir orientación",
-      ],
-    },
-    {
-      name: "message",
-      label: "Mensaje breve",
-      type: "textarea",
-      required: false,
-      placeholder: "Cuéntanos únicamente cómo prefieres que te contacten.",
-      helperText:
-        "Evita compartir información clínica sensible en este primer contacto.",
+      title: "Confirma tu cita",
+      description:
+        "La fecha y hora se consideran confirmadas únicamente después de recibir respuesta.",
     },
   ],
-  visualSubmitLabel: "Canales oficiales próximamente",
-  privacyNote:
-    "La solicitud será habilitada cuando existan canales oficiales aprobados.",
+  primaryAction: {
+    label: "Solicitar cita por WhatsApp",
+    mobileLabel: "Solicitar cita por WhatsApp",
+    href: brandConfig.contact.whatsappUrl,
+    variant: "primary",
+    external: true,
+  },
+  secondaryAction: {
+    label: "Ver costos",
+    href: "#costos",
+    variant: "secondary",
+  },
+  privacyNote: "Evita compartir información clínica sensible en el primer mensaje.",
 };
