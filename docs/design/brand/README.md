@@ -77,6 +77,24 @@ Reglas de separacion:
 - Phase 3.3 debera preferir PNG transparente aprobado si no existe SVG candidato fiel y aprobado.
 - No existen candidatos SVG creados en esta fase; la fuente vectorial oficial sigue pendiente del cliente.
 
+## Integracion tecnica Phase 3.9
+
+Phase 3.9 integra tecnicamente favicon y Open Graph sin modificar los originales ni redisenar la identidad.
+
+| Uso | Archivo | Fuente | Estado |
+| --- | --- | --- | --- |
+| Favicon | `app/icon.png` | `public/brand/balance-favicon-transparent-candidate.png` | Integrado tecnicamente; validacion contextual final pendiente en Phase 3.10 |
+| Apple icon | `app/apple-icon.png` | `public/brand/balance-favicon-transparent-candidate.png` | Integrado tecnicamente; validacion contextual final pendiente en Phase 3.10 |
+| Open Graph | `public/media/balance-psicologia-og.png` | Logo horizontal transparente aprobado | Creado en Phase 3.9; aprobacion visual final pendiente en Phase 3.10 |
+
+Notas:
+
+- `app/favicon.ico` heredado fue retirado.
+- `public/media/og-default.svg` del template fue eliminado.
+- No se modificaron archivos fuente en `docs/design/brand/source/`.
+- No se genero SVG nuevo ni se vectorizo el logo.
+- El nuevo OG mide 1200x630 y usa colores aprobados de identidad.
+
 ## Cierre contextual Phase 3.3
 
 El cliente reviso y aprobo visualmente en la landing los dos PNG transparentes integrados en header y footer el 2026-06-13.
@@ -117,4 +135,5 @@ docs/design/brand/
 
 - Phase 3.2: revisar formatos, seleccionar variantes, validar contraste/legibilidad y preparar derivados.
 - Phase 3.3: integrar identidad visual aprobada en UI/configuracion de marca.
-- Phase 3.9: validar favicon, Open Graph y metadata final.
+- Phase 3.9: integrar tecnicamente favicon, Open Graph y metadata final.
+- Phase 3.10: validacion visual final de favicon, Open Graph y QA publico antes de promocion.

@@ -221,3 +221,41 @@ El cliente reviso y aprobo visualmente en la landing real los PNG transparentes 
 - No se modifico metadata ni SEO.
 - No se integraron WhatsApp, redes sociales, ubicacion ni costos.
 - No se aprobaron favicon, Open Graph, fuente vectorial oficial ni variantes no utilizadas.
+
+## Phase 3.9 - Favicon y Open Graph
+
+Fecha de integracion tecnica: 2026-06-13
+
+Phase 3.9 integra tecnicamente favicon y Open Graph usando derivados aprobados, sin modificar los archivos fuente ni redisenar la identidad.
+
+### Favicon
+
+- Fuente: `public/brand/balance-favicon-transparent-candidate.png`.
+- Destinos:
+  - `app/icon.png`.
+  - `app/apple-icon.png`.
+- `app/favicon.ico` fue eliminado por corresponder al favicon heredado/template.
+- Estado: integrado tecnicamente; validacion contextual final pendiente en Phase 3.10.
+
+### Open Graph
+
+- Asset eliminado: `public/media/og-default.svg`.
+- Asset creado: `public/media/balance-psicologia-og.png`.
+- Formato: PNG.
+- Dimensiones: 1200x630.
+- Metodo: composicion deterministica local con logo horizontal transparente aprobado, fondo claro de identidad, `#324f47` y `#6d5b47`.
+- Copy incluido:
+  - `Balance Psicología`.
+  - `Terapia psicológica en Aguascalientes`.
+  - `Terapia individual, de pareja y familiar`.
+  - `Clínica MIND`.
+- No incluye telefono, precios, redes, direccion completa, promesas clinicas, testimonios ni textos del template.
+- Estado: creado tecnicamente; aprobacion visual final pendiente en Phase 3.10.
+
+Confirmaciones:
+
+- No se modificaron `docs/design/brand/source/*`.
+- No se uso IA.
+- No se descargaron imagenes externas.
+- No se agregaron fuentes al repositorio.
+- No se creo SVG falso ni vectorizacion automatica.

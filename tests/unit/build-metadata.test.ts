@@ -6,19 +6,23 @@ describe("buildMetadata", () => {
   it("returns Balance Psicología metadata by default", () => {
     const metadata = buildMetadata();
 
-    expect(metadata.metadataBase?.toString()).toBe(`${siteConfig.url}/`);
+    expect(metadata.metadataBase?.toString()).toBe(`${siteConfig.canonicalUrl}/`);
     expect(siteConfig.url).toBe("https://www.balancepsicologia.com");
-    expect(siteConfig.defaultTitle).toBe("Balance Psicología");
+    expect(siteConfig.defaultTitle).toBe(
+      "Balance Psicología | Terapia en Aguascalientes",
+    );
     expect(siteConfig.locale).toBe("es_MX");
     expect(metadata.title).toEqual({
       default: siteConfig.defaultTitle,
       template: siteConfig.titleTemplate,
     });
     expect(metadata.description).toBe(siteConfig.description);
-    expect(metadata.alternates?.canonical).toBe(`${siteConfig.url}/`);
+    expect(metadata.alternates?.canonical).toBe(
+      `${siteConfig.canonicalUrl}/`,
+    );
     expect(metadata.openGraph?.siteName).toBe("Balance Psicología");
     expect(metadata.openGraph?.locale).toBe("es_MX");
-    expect(metadata.openGraph?.url).toBe(`${siteConfig.url}/`);
+    expect(metadata.openGraph?.url).toBe(`${siteConfig.canonicalUrl}/`);
     expect(metadata.twitter).toMatchObject({ card: "summary_large_image" });
   });
 
@@ -30,12 +34,16 @@ describe("buildMetadata", () => {
     });
 
     expect(metadata.title).toBe("Contacto");
-    expect(metadata.alternates?.canonical).toBe(`${siteConfig.url}/#contacto`);
-    expect(metadata.robots).toEqual({ index: false, follow: false });
+    expect(metadata.alternates?.canonical).toBe(
+      `${siteConfig.canonicalUrl}/#contacto`,
+    );
+    expect(metadata.robots).toEqual(
+      expect.objectContaining({ index: false, follow: false }),
+    );
     expect(metadata.openGraph?.images).toEqual([
       expect.objectContaining({
-        url: `${siteConfig.url}${siteConfig.ogImage}`,
-        alt: siteConfig.defaultTitle,
+        url: `${siteConfig.canonicalUrl}${siteConfig.ogImage}`,
+        alt: "Balance Psicología",
       }),
     ]);
   });

@@ -44,8 +44,8 @@ El objetivo es distinguir que puede avanzar a fases publicas de fine tuning, que
 | Formato recibido | PNG fuente: `favicon.png`, `logo_horizontal.png`, `logo_monochrome_blanco.png`, `logo_monochrome_color.png`, `logo_monochrome_negro.png` |
 | Clasificacion | `Publico y aprobado` para header/footer integrados; `Publico, pendiente de validacion` para favicon, Open Graph, fuente vectorial y variantes no utilizadas |
 | Estado de validacion | `Aprobado` para header/footer; `En revision` para pendientes restantes |
-| Destino futuro | 3.2 Preparacion y validacion de logos/assets; 3.3 Integracion de identidad visual real; 3.9 validacion final de favicon/imagen OG |
-| Observaciones o pendientes | Auditoria Phase 3.2 completada, correccion Phase 3.2A documentada e integracion contextual Phase 3.3 aplicada. El cliente reviso y aprobo visualmente en la landing el 2026-06-13 el header con `balance-logo-horizontal-color-transparent.png` a 145px mobile y 185px desktop, y el footer con `balance-logo-stacked-color-transparent.png` a 165px mobile y 145px desktop. `balance-logo-stacked-white-transparent.png` no se usa en esta fase porque el footer actual es claro. `balance-favicon-transparent-candidate.png` queda para evaluacion futura en Phase 3.9. No hay SVG candidato aprobado; confirmar fuente vectorial SVG/PDF/AI oficial con el cliente. Los SVG automaticos no se consideran maestros oficiales. Planificar reemplazo del Open Graph del template en Phase 3.9 |
+| Destino futuro | 3.10 validacion visual final de favicon/imagen OG y QA publico |
+| Observaciones o pendientes | Auditoria Phase 3.2 completada, correccion Phase 3.2A documentada e integracion contextual Phase 3.3 aplicada. El cliente reviso y aprobo visualmente en la landing el 2026-06-13 el header con `balance-logo-horizontal-color-transparent.png` a 145px mobile y 185px desktop, y el footer con `balance-logo-stacked-color-transparent.png` a 165px mobile y 145px desktop. `balance-logo-stacked-white-transparent.png` no se usa en esta fase porque el footer actual es claro. Phase 3.9 integra tecnicamente favicon desde `balance-favicon-transparent-candidate.png`, elimina `app/favicon.ico`, elimina `public/media/og-default.svg` y crea `public/media/balance-psicologia-og.png`. No hay SVG candidato aprobado; confirmar fuente vectorial SVG/PDF/AI oficial con el cliente. Los SVG automaticos no se consideran maestros oficiales. Aprobacion visual final de favicon y OG queda reservada para Phase 3.10 |
 
 Notas:
 
@@ -58,9 +58,9 @@ Notas:
 - Ningun fuente tiene transparencia real; todos son PNG RGB con fondo opaco.
 - Los PNG transparentes son derivados RGBA, no fuentes originales.
 - No se crearon candidatos SVG porque no hay herramienta local de trazado fiel disponible; la fuente vectorial oficial sigue pendiente del cliente.
-- `app/favicon.ico` se considera favicon existente del proyecto, no necesariamente favicon final aprobado.
-- `public/media/og-default.svg` se considera asset OG actual/generico, no necesariamente Open Graph final aprobado.
-- `public/media/og-default.svg` contiene identidad del template base. Debe considerarse rechazado como asset final; Phase 3.2 solo documenta esta situacion y su reemplazo real se atendera en Phase 3.9.
+- `app/favicon.ico` heredado fue retirado en Phase 3.9.
+- `public/media/og-default.svg` contenia identidad del template base y fue eliminado en Phase 3.9.
+- `public/media/balance-psicologia-og.png` es el nuevo asset OG tecnico y requiere validacion visual final en Phase 3.10.
 - No se debe redisenar el logo sin aprobacion expresa.
 
 ### 2. Ubicacion publica del consultorio
@@ -73,8 +73,8 @@ Notas:
 | Formato recibido | Nombre publico del consultorio, calle y numero, colonia, codigo postal, ciudad, estado, pais, direccion visible completa y URL oficial de Google Maps capturados; texto breve para llegar sigue pendiente |
 | Clasificacion | `Publico y aprobado` para direccion visible y Google Maps; `Publico, pendiente de validacion` para texto breve para llegar |
 | Estado de validacion | `Aprobado` para direccion visible y Google Maps; `En revision` para texto breve para llegar |
-| Destino futuro | 3.9 SEO local y metadata; texto breve para llegar cuando sea aprobado |
-| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`. El cliente confirmo que Google Maps Embed API quedo configurada, que el mapa real aparece correctamente en la landing, que el fallback continua disponible para entornos sin variable y que la correccion visual de contraste fue aceptada; Phase 3.6A queda cerrada. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real, mapa embebido cuando existe `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`, fallback cuando falta configuracion y CTA a Google Maps. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
+| Destino futuro | Texto breve para llegar cuando sea aprobado; QA final Phase 3.10 |
+| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`. El cliente confirmo que Google Maps Embed API quedo configurada, que el mapa real aparece correctamente en la landing, que el fallback continua disponible para entornos sin variable y que la correccion visual de contraste fue aceptada; Phase 3.6A queda cerrada. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real, mapa embebido cuando existe `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`, fallback cuando falta configuracion y CTA a Google Maps. Phase 3.9 agrega JSON-LD local prudente con `ProfessionalService`, direccion, telefono internacional, mapa y redes aprobadas. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente |
 
 Notas:
 
@@ -183,15 +183,34 @@ Notas:
 | Formato recibido | Canal principal provisional por WhatsApp sin mensaje prellenado |
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
-| Destino futuro | 3.9 QA final, favicon, Open Graph, metadata y SEO |
+| Destino futuro | Phase 3.10 QA publico y validacion final |
 | Observaciones o pendientes | Phase 3.8 completada y Phase 3.8A documentada. WhatsApp es el canal principal provisional durante la etapa actual de la landing. Hero, header, menu mobile y seccion de agenda usan la misma URL aprobada. La seccion `#agenda` explica el proceso con tres pasos y CTA a WhatsApp, mas enlace secundario a `#costos`. El formulario visual deshabilitado fue retirado. La landing no recopila, almacena ni envia datos; no existe backend, agenda automatica ni confirmacion inmediata. No se agrego mensaje prellenado. La eliminacion del formulario actual no cancela el formulario futuro: ese flujo queda fuera de Phase 3 y debera conectarse al modulo privado de leads |
 
 Notas:
 
 - Evitar solicitar diagnostico, sintomas detallados, historia clinica, medicamentos, documentos, fotografias, identificaciones o informacion de emergencia desde la landing publica.
 - El formulario futuro de captacion publica queda documentado en `docs/future/public-lead-intake-and-patient-conversion.md`.
-- Phase 3.9 se limita a QA publico, metadata, favicon, Open Graph y SEO.
-- QA final, favicon, Open Graph, metadata y SEO quedan para Phase 3.9.
+- QA publico, favicon, Open Graph y metadata renderizada quedan para Phase 3.10.
+
+### 6B. SEO, metadata, favicon y Open Graph
+
+| Campo | Registro |
+| --- | --- |
+| Nombre o categoria | SEO, metadata, favicon y Open Graph |
+| Estado de disponibilidad | Integrado tecnicamente en Phase 3.9 |
+| Fuente | `config/site.ts`; `lib/seo/*`; `app/robots.ts`; `app/sitemap.ts`; `docs/phase-3-9-seo-audit.md`; assets en `app/` y `public/media/` |
+| Formato recibido | Canonical, title, description, keywords, OG PNG, favicon PNG, robots, sitemap y JSON-LD local |
+| Clasificacion | `Publico y aprobado` para datos usados; `Publico, pendiente de validacion` para validacion visual final de favicon/OG |
+| Estado de validacion | `Aprobado` para integracion tecnica; `En revision` para QA visual final |
+| Destino futuro | Phase 3.10 QA publico y validacion visual final antes de promocion |
+| Observaciones o pendientes | Phase 3.9 implementada. Canonical fija `https://www.balancepsicologia.com/`. Production puede indexarse solo si el entorno efectivo es `production` y el hostname es `www.balancepsicologia.com`; development, preview, staging y `.vercel.app` resuelven `noindex,nofollow`. Robots y sitemap usan solo canonical de produccion. JSON-LD local usa `ProfessionalService` y no incluye email, horarios, coordenadas, ratings, reviews ni precios. Contenido legal final sigue pendiente y no se publica en Phase 3.9 |
+
+Notas:
+
+- QA final, favicon, Open Graph y metadata renderizada quedan para Phase 3.10.
+- No se agregaron analytics, cookies, tracking, Search Console verification ni Google Tag Manager.
+- No se crearon rutas legales.
+- El futuro formulario publico no puede entrar en produccion sin aviso y consentimiento aprobados.
 
 ### 7. Estructura utilizada para historial clinico
 
@@ -233,15 +252,16 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Estado visual actual de header/footer: `Aprobado visualmente en contexto` desde 2026-06-13.
 - Derivados opacos anteriores quedan como fallback documentado, no como opcion preferida.
 - No hay SVG candidato aprobado; un SVG automatico no debe tratarse como maestro oficial.
-- Favicon candidato preparado: `public/brand/balance-favicon-candidate.png`, pero su reemplazo real queda para Phase 3.9.
-- Favicon transparente candidato preparado: `public/brand/balance-favicon-transparent-candidate.png`, tambien reservado para Phase 3.9.
-- Favicon actual: puede revisarse como artefacto existente, pero no debe asumirse como final aprobado.
+- Favicon integrado tecnicamente en Phase 3.9 desde `public/brand/balance-favicon-transparent-candidate.png`.
+- Open Graph integrado tecnicamente en Phase 3.9 como `public/media/balance-psicologia-og.png`.
+- Favicon y Open Graph quedan pendientes de validacion visual final en Phase 3.10.
+- Favicon heredado `app/favicon.ico` y OG del template `public/media/og-default.svg` fueron retirados.
 
 ### Pendientes de validacion
 
 - Logo principal y variantes.
-- Favicon candidato.
-- Imagen o asset para Open Graph.
+- Validacion visual final del favicon integrado.
+- Validacion visual final del Open Graph integrado.
 - Fuente vectorial SVG/PDF/AI/EPS, si existe.
 - Aprobacion humana de `balance-logo-stacked-white-transparent.png` si se usa sobre footer oscuro.
 - Variantes transparentes oficiales del cliente para fondos de color u oscuros, si existen.

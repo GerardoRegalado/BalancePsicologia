@@ -92,6 +92,19 @@ Nota: La direccion visible completa y el enlace de Google Maps se integraron pri
 
 Nota: El cliente aprobo la integracion de Terapia individual `$450 MXN`, Terapia de pareja `$700 MXN` y Terapia familiar `$900 MXN`. Los costos y nombres de modalidades estan aprobados e integrados en Phase 3.7. Las tres modalidades tienen jerarquia equivalente, ninguna modalidad esta destacada y no se publicaron paquetes, promociones ni descuentos. La duracion y condiciones publicas siguen pendientes. Phase 3.7 queda cerrada. La revision final de CTAs se atiende en Phase 3.8 y la revision SEO final queda para Phase 3.9.
 
+## SEO, metadata y assets publicos
+
+| Campo | Valor |
+| --- | --- |
+| Canonical | https://www.balancepsicologia.com/ |
+| Idioma | es-MX |
+| Title default | Balance Psicología \| Terapia en Aguascalientes |
+| Open Graph | /media/balance-psicologia-og.png |
+| Favicon | app/icon.png y app/apple-icon.png |
+| Estado de validacion | Integrado tecnicamente en Phase 3.9; validacion visual final pendiente en Phase 3.10 |
+
+Nota: Phase 3.9 elimina el Open Graph del template, integra el favicon derivado, agrega robots, sitemap, politica `noindex` para development/preview/staging y datos estructurados locales prudentes. No se publican aviso de privacidad, terminos, politica de cookies ni consentimiento porque el contenido legal final sigue pendiente. El futuro formulario publico no puede entrar en produccion sin aviso y consentimiento aprobados.
+
 ## Datos publicos adicionales
 
 | Campo | Valor |
@@ -100,6 +113,9 @@ Nota: El cliente aprobo la integracion de Terapia individual `$450 MXN`, Terapia
 | Horario de atencion | PENDIENTE |
 | Modalidad presencial | PENDIENTE |
 | Modalidad en linea | PENDIENTE |
+| Aviso de privacidad | PENDIENTE |
+| Terminos y condiciones | PENDIENTE |
+| Consentimiento para formulario futuro | PENDIENTE |
 | Otra informacion destinada a la landing | PENDIENTE |
 
 ## Checklist de aprobacion
