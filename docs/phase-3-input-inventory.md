@@ -74,7 +74,7 @@ Notas:
 | Clasificacion | `Publico y aprobado` para direccion visible y Google Maps; `Publico, pendiente de validacion` para texto breve para llegar |
 | Estado de validacion | `Aprobado` para direccion visible y Google Maps; `En revision` para texto breve para llegar |
 | Destino futuro | 3.9 SEO local y metadata; texto breve para llegar cuando sea aprobado |
-| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real, mapa embebido cuando existe `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`, fallback cuando falta configuracion y CTA a Google Maps. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
+| Observaciones o pendientes | Phase 3.6 completada para integracion publica de ubicacion. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`. El cliente confirmo que Google Maps Embed API quedo configurada, que el mapa real aparece correctamente en la landing, que el fallback continua disponible para entornos sin variable y que la correccion visual de contraste fue aceptada; Phase 3.6A queda cerrada. La direccion visible completa `Jacaranda 552, Las Arboledas, 20020 Aguascalientes, Ags.`, el nombre `Clínica MIND` y el enlace de Google Maps estan aprobados e integrados. La direccion aparece en footer, la tarjeta de contacto enlaza a Google Maps y la seccion de ubicacion muestra Clínica MIND, direccion real, mapa embebido cuando existe `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`, fallback cuando falta configuracion y CTA a Google Maps. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente. SEO local y metadata continuan pendientes para Phase 3.9 |
 
 Notas:
 
@@ -84,7 +84,7 @@ Notas:
 - La vista abstracta anterior fue retirada.
 - La seccion de ubicacion usa Google Maps Embed API con iframe lazy cuando la variable publica restringida esta configurada.
 - Si falta configuracion, la seccion muestra fallback limpio con CTA externo.
-- No se declara el mapa aprobado visualmente hasta que el cliente lo revise funcionando con una clave valida.
+- Phase 3.6A queda cerrada por confirmacion del cliente; no se documentan API keys, identificadores de Google Cloud, facturacion ni valores de variables de entorno.
 - No se agregan referencias para llegar, entrecalles, piso, numero interior, horarios, estacionamiento ni indicaciones privadas.
 
 ### 3. WhatsApp publico
@@ -135,18 +135,20 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Costos de sesiones |
-| Estado de disponibilidad | Parcialmente capturados dentro del repositorio |
+| Estado de disponibilidad | Capturados dentro del repositorio e integrados en servicios y costos |
 | Fuente | Cliente / valores capturados en `docs/phase-3-public-inputs.md`; `docs/project-scope.md`; `docs/quote-addendum-phase-3.md`; placeholders actuales en `content/pricing.ts` |
-| Formato recibido | Costos publicos para sesion individual, sesion de pareja y sesion familiar capturados; duracion y condiciones pendientes |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `En revision` |
-| Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 consistencia de CTAs; 3.9 revision de contenido sensible/SEO |
-| Observaciones o pendientes | Los costos y nombres de modalidades estan aprobados y documentados. Confirmar duracion, condiciones publicas, texto comercial y exclusiones antes de integrar. No inventar promociones, duracion, descuentos, paquetes, condiciones ni resultados clinicos |
+| Formato recibido | Costos publicos para sesion individual, sesion de pareja y sesion familiar capturados e integrados; duracion y condiciones pendientes |
+| Clasificacion | `Publico y aprobado` para costos y modalidades; `Publico, pendiente de validacion` para duracion y condiciones |
+| Estado de validacion | `Aprobado` para costos y modalidades; `En revision` para duracion y condiciones |
+| Destino futuro | 3.8 consistencia de CTAs; 3.9 revision de contenido sensible/SEO |
+| Observaciones o pendientes | Phase 3.7 completada. Los costos y modalidades aprobados se publican como Terapia individual `$450 MXN`, Terapia de pareja `$700 MXN` y Terapia familiar `$900 MXN`. `content/pricing.ts` queda como fuente canonica y `content/packages.ts` deriva sus items desde ahi. Duracion y condiciones publicas continuan pendientes. No existen paquetes publicados, pagos online ni backend financiero. No se inventaron promociones, descuentos, condiciones ni resultados clinicos |
 
 Notas:
 
-- `content/pricing.ts` contiene placeholders editoriales, no costos reales.
-- Los costos deben validarse antes de integrarse en la landing.
+- `content/pricing.ts` contiene los tres costos reales aprobados y funciona como fuente canonica.
+- `content/packages.ts` deriva nombres, descripciones y precios desde `pricingPlans`.
+- La seccion de costos publica precios por sesion, sin destacar una modalidad sobre otra.
+- Duracion y condiciones siguen pendientes y no se publican.
 - Finanzas internas, pagos online, saldos, recibos o facturacion quedan fuera de Phase 3.
 
 ### 6. Servicios y modalidades relacionados
@@ -154,18 +156,19 @@ Notas:
 | Campo | Registro |
 | --- | --- |
 | Nombre o categoria | Servicios/modalidades relacionados con costos y oferta publica |
-| Estado de disponibilidad | Modalidades publicas capturadas; copy editorial y condiciones finales pendientes de validacion |
+| Estado de disponibilidad | Modalidades publicas capturadas e integradas; condiciones finales pendientes de validacion |
 | Fuente | Valores capturados en `docs/phase-3-public-inputs.md`; `docs/client-discovery.md`; `docs/project-scope.md`; `content/services.ts`; cliente para confirmacion final |
-| Formato recibido | Sesion individual, sesion de pareja y sesion familiar capturadas; condiciones y duracion pendientes |
-| Clasificacion | `Publico, pendiente de validacion` |
-| Estado de validacion | `En revision` |
-| Destino futuro | 3.7 Integracion de costos y servicios reales; 3.8 flujo publico de solicitud de cita |
-| Observaciones o pendientes | Los nombres de modalidades estan aprobados y documentados. Confirmar relacion final con costos, duracion, condiciones y copy aprobado antes de integrar. No inventar especialidades, duraciones, promesas clinicas ni resultados |
+| Formato recibido | Terapia individual, Terapia de pareja y Terapia familiar integradas; condiciones y duracion pendientes |
+| Clasificacion | `Publico y aprobado` para nombres y copy publico actual; `Publico, pendiente de validacion` para duracion y condiciones |
+| Estado de validacion | `Aprobado` para nombres y copy publico actual; `En revision` para duracion y condiciones |
+| Destino futuro | 3.8 flujo publico de solicitud de cita |
+| Observaciones o pendientes | Phase 3.7 completada. Los nombres publicos definitivos son Terapia individual, Terapia de pareja y Terapia familiar. La seccion de servicios deriva sus tarjetas desde `pricingPlans` para mantener consistencia con costos, sin mostrar precios en servicios. No se agregaron especialidades, duraciones, afirmaciones clinicas nuevas ni resultados prometidos |
 
 Notas:
 
-- El copy actual debe tratarse como editorial hasta que el cliente apruebe nombres, modalidades y condiciones.
-- Cualquier afirmacion clinica debe revisarse con especial cuidado antes de publicarse.
+- El copy publico integrado mantiene un tono general y prudente.
+- Duracion y condiciones siguen pendientes.
+- Cualquier afirmacion clinica futura debe revisarse con especial cuidado antes de publicarse.
 
 ### 7. Estructura utilizada para historial clinico
 
@@ -221,7 +224,6 @@ Este insumo no debe integrarse en la landing publica, `content/`, `config/`, scr
 - Variantes transparentes oficiales del cliente para fondos de color u oscuros, si existen.
 - Mensaje prellenado de WhatsApp.
 - Duracion y condiciones de sesiones.
-- Servicios/modalidades y copy comercial.
 
 ### Pendientes de captura
 

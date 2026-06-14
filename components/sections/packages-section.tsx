@@ -12,16 +12,12 @@ export function PackagesSection() {
       className="bg-surface-container-low"
     >
       <div className="grid gap-5 md:grid-cols-3 md:gap-8">
-        {packagesSectionContent.items.map((item, index) => (
+        {packagesSectionContent.items.map((item) => (
           <article
             key={item.name}
-            className={
-              index === 1
-                ? "flex flex-col rounded-lg border border-primary/20 bg-surface-container-lowest p-6 shadow-atmospheric-sm md:min-h-72 md:p-8"
-                : "flex flex-col rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6 md:min-h-72 md:p-8"
-            }
+            className="flex flex-col rounded-lg border border-outline-variant/60 bg-surface-container-lowest p-6 md:min-h-72 md:p-8"
           >
-            <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">
+            <p className="font-serif text-3xl font-medium text-on-surface md:text-4xl">
               {item.meta}
             </p>
             <h3 className="mt-4 font-serif text-2xl font-medium text-on-surface">

@@ -1,5 +1,6 @@
 import { adminConfig } from "@/config/admin";
 import { brandConfig } from "@/config/brand";
+import { mapsConfig } from "@/config/maps";
 import { siteConfig } from "@/config/site";
 import {
   contactSectionContent,
@@ -10,8 +11,9 @@ import { faqSectionContent } from "@/content/faq";
 import { featureSectionContent } from "@/content/features";
 import { heroContent } from "@/content/hero";
 import { leadFormContent } from "@/content/lead-form";
-import { packagePreviews } from "@/content/packages";
-import { serviceItems } from "@/content/services";
+import { packagesSectionContent, packagePreviews } from "@/content/packages";
+import { pricingPlans } from "@/content/pricing";
+import { serviceItems, servicesSectionContent } from "@/content/services";
 import {
   testimonialItems,
   testimonialsSectionContent,
@@ -45,6 +47,7 @@ describe("project readiness", () => {
     expect(featureSectionContent.items.length).toBeGreaterThanOrEqual(4);
     expect(serviceItems.length).toBeGreaterThanOrEqual(3);
     expect(packagePreviews.length).toBeGreaterThanOrEqual(3);
+    expect(packagePreviews).toHaveLength(3);
     expect(testimonialsSectionContent.items).toBe(testimonialItems);
     expect(testimonialsSectionContent.emptyState.title).toMatch(/testimonios/i);
     expect(faqSectionContent.items.length).toBeGreaterThanOrEqual(4);
@@ -192,14 +195,66 @@ describe("project readiness", () => {
     expect(locationSectionContent.clinicName).toBe("Clínica MIND");
     expect(locationSectionContent.address).toBe(brandConfig.address.display);
     expect(locationSectionContent.mapsUrl).toBe(brandConfig.address.mapsUrl);
+    expect(mapsConfig.query).toBe(
+      `${brandConfig.address.clinicName}, ${brandConfig.address.display}`,
+    );
     expect(JSON.stringify(locationSectionContent)).not.toMatch(
       /ubicación exacta se integrará|Referencia general|Área general de atención|vista abstracta|ayuda visual|mapa aproximado/i,
     );
-    expect(packagePreviews.map((item) => item.detail).join(" ")).not.toContain(
-      "$450",
-    );
     expect(JSON.stringify(locationSectionContent)).not.toMatch(
       /entrecalles|estacionamiento|horarios|piso|interior|referencia para llegar/i,
+    );
+  });
+
+  it("publishes only the approved therapy modalities and session costs", () => {
+    expect(pricingPlans).toHaveLength(3);
+    expect(pricingPlans.map((plan) => plan.name)).toEqual([
+      "Terapia individual",
+      "Terapia de pareja",
+      "Terapia familiar",
+    ]);
+    expect(pricingPlans.map((plan) => plan.price)).toEqual([
+      "$450 MXN",
+      "$700 MXN",
+      "$900 MXN",
+    ]);
+
+    for (const plan of pricingPlans) {
+      expect(plan).not.toHaveProperty("featured");
+    }
+
+    expect(packagesSectionContent.items).toEqual(
+      pricingPlans.map((plan) => ({
+        name: plan.name,
+        summary: plan.description,
+        detail: "Costo por sesión",
+        meta: plan.price,
+      })),
+    );
+    expect(packagePreviews).toBe(packagesSectionContent.items);
+    expect(servicesSectionContent.items.map((item) => item.title)).toEqual(
+      pricingPlans.map((plan) => plan.name),
+    );
+    expect(serviceItems.map((item) => item.name)).toEqual(
+      pricingPlans.map((plan) => plan.name),
+    );
+
+    const commercialContent = JSON.stringify({
+      packagesSectionContent,
+      pricingPlans,
+      serviceItems,
+      servicesSectionContent,
+    });
+
+    expect(commercialContent).not.toMatch(
+      /Próximamente|Orientación inicial|Proceso de continuidad|Sesión de acompañamiento/i,
+    );
+    expect(commercialContent).not.toMatch(/paquete|descuento|promoción/i);
+    expect(commercialContent).not.toMatch(
+      /\b\d+\s*(minutos|min|horas|hrs|h)\b/i,
+    );
+    expect(commercialContent).not.toMatch(
+      /cancelación|reembolso|facturación|forma de pago|mensualidad|bono/i,
     );
   });
 

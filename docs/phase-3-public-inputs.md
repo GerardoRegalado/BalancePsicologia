@@ -78,17 +78,17 @@ Nota Phase 3.5A: Facebook e Instagram se mantienen en seccion de contacto, foote
 | Texto breve para llegar | PENDIENTE |
 | Estado de validacion | Aprobado para publicacion |
 
-Nota: La direccion visible completa y el enlace de Google Maps se integraron primero en el footer durante Phase 3.5A. En Phase 3.6 tambien se integran en la tarjeta de contacto y en la seccion de ubicacion mediante enlace externo a Google Maps. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`, dependiente de `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`. Si la variable no existe, se muestra fallback con CTA externo. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente y SEO local/metadata quedan para Phase 3.9.
+Nota: La direccion visible completa y el enlace de Google Maps se integraron primero en el footer durante Phase 3.5A. En Phase 3.6 tambien se integran en la tarjeta de contacto y en la seccion de ubicacion mediante enlace externo a Google Maps. Phase 3.6A rechaza visualmente la vista abstracta anterior y la sustituye por Google Maps Embed API en modo `place`, dependiente de `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_API_KEY`. El cliente confirmo que Google Maps Embed API quedo configurada, que el mapa real aparece correctamente en la landing, que el fallback continua disponible para entornos sin variable y que la correccion visual de contraste fue aceptada; Phase 3.6A queda cerrada. No se usa Maps JavaScript API, geolocalizacion ni almacenamiento de ubicaciones de visitantes. El texto breve para llegar sigue pendiente y SEO local/metadata quedan para Phase 3.9.
 
 ## Costos y sesiones
 
 | Servicio o modalidad | Costo publico | Duracion | Condiciones | Estado |
 | --- | --- | --- | --- | --- |
-| Sesion individual | $450 MXN | PENDIENTE | PENDIENTE | En revision |
-| Sesion de pareja | $700 MXN | PENDIENTE | PENDIENTE | En revision |
-| Sesion familiar | $900 MXN | PENDIENTE | PENDIENTE | En revision |
+| Sesion individual | $450 MXN | PENDIENTE | PENDIENTE | Aprobado para publicacion |
+| Sesion de pareja | $700 MXN | PENDIENTE | PENDIENTE | Aprobado para publicacion |
+| Sesion familiar | $900 MXN | PENDIENTE | PENDIENTE | Aprobado para publicacion |
 
-Nota: Los costos y nombres de modalidades estan aprobados. La duracion y condiciones publicas siguen pendientes. No inventar paquetes, descuentos, promociones ni politicas de cancelacion.
+Nota: Los costos y nombres de modalidades estan aprobados e integrados en Phase 3.7. Las tres modalidades quedaron alineadas entre servicios y costos. La duracion y condiciones publicas siguen pendientes. No se publicaron promociones, paquetes ni descuentos. La revision final de CTAs queda para Phase 3.8 y la revision SEO final queda para Phase 3.9.
 
 ## Datos publicos adicionales
 

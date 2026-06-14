@@ -58,9 +58,12 @@ export type AboutSectionContent = {
 };
 
 export type PricingPlan = {
+  id: "individual" | "couple" | "family";
   name: string;
+  price: string;
   description: string;
-  featured: boolean;
+  icon: "individual" | "couple" | "family";
+  tags: string[];
 };
 
 export type FaqItem = {
