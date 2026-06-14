@@ -1489,14 +1489,15 @@ Integrar costos, modalidades y condiciones comerciales publicas aprobadas, elimi
 
 #### Objetivo
 
-Consolidar WhatsApp como canal publico principal, revisar CTAs, estados, navegacion y evitar formularios que almacenen datos sin scope.
+Consolidar WhatsApp como canal publico principal provisional de la landing actual, revisar CTAs, estados, navegacion y evitar formularios que aparenten capturar datos sin backend aprobado.
 
 #### Entregables
 
 - CTA publico principal hacia WhatsApp.
 - Navegacion y estados revisados.
-- Formulario visual ajustado o desactivado si implica almacenamiento no aprobado.
+- Formulario visual deshabilitado retirado para no simular funcionalidad.
 - Microcopy claro de solicitud inicial.
+- Nota conceptual de que el formulario publico futuro queda fuera de Phase 3 y debera conectarse a un flujo privado seguro de leads.
 
 #### Archivos o carpetas probables
 
@@ -1509,6 +1510,8 @@ Consolidar WhatsApp como canal publico principal, revisar CTAs, estados, navegac
 
 - El flujo publico no guarda datos.
 - No hay agenda automatica.
+- WhatsApp se entiende como solucion temporal/provisional de la landing actual.
+- La ausencia de formulario en Phase 3 no cancela el formulario publico futuro.
 - Los CTAs son claros en desktop/mobile.
 
 #### Validacion manual
@@ -1528,6 +1531,7 @@ Consolidar WhatsApp como canal publico principal, revisar CTAs, estados, navegac
 - No backend.
 - No base de datos.
 - No agenda automatica.
+- No implementar captacion futura de leads en Phase 3.
 
 #### Prompt sugerido de implementacion
 
@@ -1755,6 +1759,7 @@ Mapa futuro sujeto a nuevo scope, cotizacion, seguridad, privacidad y aprobacion
 - 5.7 Disenar Firestore Rules, App Check y Cloud Functions base.
 - 5.8 Implementar auditoria minima, observabilidad, backups y budgets.
 - 5.9 QA de seguridad con datos ficticios.
+- 5.10 Definir captacion publica segura, modulo de leads, creacion manual, origenes, estados y auditoria de conversion lead-paciente.
 
 Version 5.x no incluye todavia historial clinico completo ni IA real.
 
@@ -1763,12 +1768,14 @@ Version 5.x no incluye todavia historial clinico completo ni IA real.
 Mapa futuro sujeto a discovery clinico, legal, privacidad y aprobacion. La estructura de historial clinico disponible se registra como insumo privado para discovery/modelado, sin datos reales ni ejemplos identificables.
 
 - 6.1 Discovery y modelado de estructura real de historial clinico.
-- 6.2 Pacientes y perfiles con permisos por workspace/profesional.
-- 6.3 Notas de sesion e historial con correcciones/anulaciones.
-- 6.4 Citas internas, estados, busqueda y filtros.
-- 6.5 Auditoria, exportacion, borrado y retencion.
-- 6.6 Finanzas administrativas si se aprueban.
-- 6.7 Pruebas con datos ficticios y QA de permisos.
+- 6.2 Bandeja de leads, seguimiento, creacion manual y conversion humana a paciente.
+- 6.3 Pacientes y perfiles con permisos por workspace/profesional.
+- 6.4 Separacion estricta entre lead, paciente e historial clinico.
+- 6.5 Notas de sesion e historial con correcciones/anulaciones.
+- 6.6 Citas internas, estados, busqueda y filtros.
+- 6.7 Auditoria, exportacion, borrado y retencion.
+- 6.8 Finanzas administrativas si se aprueban.
+- 6.9 Pruebas con datos ficticios y QA de permisos.
 
 ## Version 7.x - Asistente de IA supervisado
 

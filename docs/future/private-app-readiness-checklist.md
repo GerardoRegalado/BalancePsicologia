@@ -55,8 +55,10 @@ Estos puntos no son asesoria legal final. Deben validarse con asesoria legal/pro
 - [ ] Roles iniciales definidos.
 - [ ] Matriz de permisos definida.
 - [ ] Modelo conceptual de pacientes definido.
+- [ ] Modelo conceptual de leads definido.
 - [ ] Modelo conceptual de notas definido.
 - [ ] Modelo conceptual de auditoria definido.
+- [ ] Relacion lead-paciente definida.
 - [ ] Separacion publica/privada definida.
 - [ ] Estrategia de ambientes production/preview/staging definida.
 - [ ] Estrategia de backups definida.
@@ -72,6 +74,8 @@ Estos puntos no son asesoria legal final. Deben validarse con asesoria legal/pro
 - [ ] Manejo de secretos definido.
 - [ ] Validaciones server-side definidas.
 - [ ] Rate limits definidos.
+- [ ] Controles antispam definidos.
+- [ ] App Check/CAPTCHA equivalente evaluado para captacion publica.
 - [ ] Monitoreo y alertas definidos.
 
 ## 7. Checklist de datos clinicos
@@ -111,6 +115,26 @@ Estos puntos no son asesoria legal final. Deben validarse con asesoria legal/pro
 - [ ] Proceso para errores humanos definido.
 - [ ] Proceso para soporte definido.
 - [ ] Revision de auditoria definida.
+
+## 9A. Checklist de leads y captacion publica futura
+
+- [ ] Campos del formulario publico definidos.
+- [ ] Aviso de privacidad del formulario validado.
+- [ ] Consentimiento definido.
+- [ ] Ciclo de vida de leads definido.
+- [ ] Estados de leads aprobados.
+- [ ] Origenes de leads aprobados.
+- [ ] Permisos para creacion manual definidos.
+- [ ] Proceso de conversion lead-paciente aprobado.
+- [ ] Politica de duplicados definida.
+- [ ] Campos que pueden copiarse al paciente definidos.
+- [ ] Controles antispam definidos.
+- [ ] Rate limiting definido.
+- [ ] App Check/CAPTCHA equivalente evaluado.
+- [ ] Auditoria de conversion definida.
+- [ ] Retencion y borrado de leads definidos.
+- [ ] Reglas para texto libre definidas.
+- [ ] Separacion de informacion clinica definida.
 
 ## 10. Checklist de finanzas y administracion interna
 

@@ -27,6 +27,7 @@ Antes de implementar una app privada debe definirse, como minimo:
 - Limites de uso.
 - Ambientes separados.
 - Estrategia para staging/production.
+- Flujo de leads y captacion publica segura, si aplica.
 
 No deben agregarse Firebase, Firestore, Gemini, Cloud Functions ni dependencias relacionadas hasta que exista scope aprobado para Fase 3 o una fase privada equivalente.
 
@@ -47,8 +48,14 @@ Estos puntos no son asesoria legal definitiva. Deben tratarse como criterios a v
 - Control de accesos.
 - Bitacora o auditoria.
 - Minimizacion de datos.
+- Datos minimos para leads.
+- Consentimiento especifico del formulario publico.
+- Retencion y borrado de leads.
+- Reglas para texto libre.
 
 La app privada no debe almacenar informacion sensible hasta que existan decisiones aprobadas sobre que datos se capturan, para que se usan, quien puede verlos, cuanto tiempo se conservan y como se eliminan o exportan cuando corresponda.
+
+Los mensajes de redes sociales o WhatsApp no deben considerarse consentimiento suficiente para crear expediente clinico.
 
 ## 4. Limites operativos
 
@@ -65,6 +72,13 @@ Antes de usar la app privada en operacion real se debe definir:
 - Como se desactiva un usuario.
 - Como se recupera acceso.
 - Como se revisan logs.
+- Quien puede crear leads manualmente.
+- Como se define el origen de un lead.
+- Que estados puede tener un lead.
+- Como se detectan duplicados.
+- Como se convierte un lead en paciente.
+- Que campos pueden copiarse al paciente.
+- Como se previene spam o abuso.
 
 Estas reglas deben quedar claras antes de construir flujos internos. La operacion no debe depender de convenciones informales, botones ocultos o confianza en que el frontend impide acciones no autorizadas.
 

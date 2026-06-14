@@ -71,7 +71,7 @@ export function AppointmentSection() {
           aria-labelledby="appointment-contact-title"
         >
           <p className="text-xs font-semibold tracking-[0.14em] text-secondary uppercase">
-            Canal principal
+            Canal disponible actualmente
           </p>
           <h3
             id="appointment-contact-title"

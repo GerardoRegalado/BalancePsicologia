@@ -108,10 +108,18 @@ describe("project readiness", () => {
         variant: "secondary",
       }),
     );
+    expect(appointmentSectionContent.description).toMatch(/Actualmente/);
+    expect(appointmentSectionContent.intro.description).toMatch(/Por ahora/);
+    expect(JSON.stringify(appointmentSectionContent)).not.toMatch(
+      /permanente|siempre|definitivo/i,
+    );
     expect("fields" in appointmentSectionContent).toBe(false);
     expect("visualSubmitLabel" in appointmentSectionContent).toBe(false);
     expect(JSON.stringify(appointmentSectionContent)).not.toMatch(
       /Próximamente|vista previa visual|Canales oficiales próximamente|agenda automática|confirmación inmediata/i,
+    );
+    expect(JSON.stringify(appointmentSectionContent)).not.toMatch(
+      /Firebase|Firestore|lead|paciente|app privada|Cloud Function/i,
     );
     expect(appointmentSectionContent.privacyNote).toMatch(
       /Evita compartir información clínica sensible/i,

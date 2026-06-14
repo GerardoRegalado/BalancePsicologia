@@ -57,6 +57,8 @@ Las siguientes entidades sirven como lenguaje comun para discutir la app privada
 - `users`: identidades autenticadas que podrian acceder a la app privada.
 - `memberships`: relacion entre un usuario y un workspace, incluyendo estado de acceso.
 - `roles`: permisos o capacidades asignadas dentro de un workspace.
+- `leads`: solicitudes o contactos comerciales/administrativos previos al registro como paciente.
+- `leadActivities`: eventos o seguimientos conceptuales de un lead, si el diseno futuro lo justifica.
 - `patients`: registros de pacientes asociados a un workspace.
 - `sessionNotes`: notas de sesion vinculadas a pacientes y protegidas por permisos.
 - `aiAssistances`: borradores, resumenes o apoyos generados por IA para revision profesional.
@@ -65,6 +67,8 @@ Las siguientes entidades sirven como lenguaje comun para discutir la app privada
 
 Estas entidades deben mantenerse como conceptos hasta que exista una fase privada aprobada con decisiones de seguridad, privacidad y modelado de datos.
 
+Los leads deben tener origen, estado y relacion auditable con pacientes cuando exista conversion. La conversion lead-paciente no debe cambiar el tipo del lead ni copiar mensajes libres al expediente clinico: debe crear un paciente vinculado mediante accion humana explicita y auditoria.
+
 ## 5. Reglas conceptuales de dependencia
 
 En una fase futura:
@@ -72,6 +76,7 @@ En una fase futura:
 - La landing publica no debe importar servicios privados.
 - Los componentes publicos no deben conocer pacientes, notas ni usuarios internos.
 - La app privada no debe usar contenido editorial de marketing como fuente de datos clinicos.
+- La app privada puede recibir leads desde una capa segura, pero no debe tratar solicitudes publicas como expedientes clinicos.
 - Firebase/adapters deben quedar detras de servicios o funciones controladas.
 - IA debe pasar por capa segura, no por componentes de UI.
 - Permisos deben validarse fuera del frontend visual.

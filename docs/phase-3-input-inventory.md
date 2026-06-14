@@ -98,13 +98,14 @@ Notas:
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
 | Destino futuro | 3.9 QA final de enlaces y contenido |
-| Observaciones o pendientes | El numero esta aprobado y documentado. Phase 3.4 integra `https://wa.me/524495556035` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. Phase 3.8 consolida WhatsApp como canal principal de solicitud: hero, header, menu mobile y seccion de agenda usan la misma URL. El formulario visual fue retirado; la landing no recopila, almacena ni envia datos. No existe agenda automatica ni confirmacion inmediata. El mensaje prellenado queda pendiente de aprobacion posterior. WhatsApp aparece en CTA del header, CTA principal del hero, menu mobile, seccion de agenda, seccion de contacto y footer |
+| Observaciones o pendientes | El numero esta aprobado y documentado. Phase 3.4 integra `https://wa.me/524495556035` sin mensaje prellenado, sin parametros `text`, UTM ni tracking. Phase 3.8A aclara que WhatsApp es el canal principal provisional durante la etapa actual de la landing: hero, header, menu mobile y seccion de agenda usan la misma URL. El formulario visual deshabilitado fue retirado para no simular funcionalidad; esto no cancela un formulario publico futuro, que queda fuera de Phase 3 y debera conectarse a un flujo privado seguro de leads. La landing no recopila, almacena ni envia datos. No existe agenda automatica ni confirmacion inmediata. WhatsApp y redes permaneceran como canales alternativos, y contactos externos podran registrarse manualmente en una fase privada futura. El mensaje prellenado queda pendiente de aprobacion posterior. WhatsApp aparece en CTA del header, CTA principal del hero, menu mobile, seccion de agenda, seccion de contacto y footer |
 
 Notas:
 
 - Phase 3.4 publica el numero visible `449 555 6035` y centraliza `https://wa.me/524495556035` en `config/brand.ts`.
 - El enlace de WhatsApp no usa mensaje prellenado ni parametros adicionales.
 - Phase 3.8 completa el flujo publico de solicitud de cita mediante WhatsApp y mantiene `#agenda` como explicacion del proceso.
+- Phase 3.8A aclara que WhatsApp es una solucion temporal/provisional de la landing actual; el formulario publico futuro queda fuera de Phase 3.
 - El mensaje prellenado queda pendiente de aprobacion posterior.
 
 ### 4. Redes sociales
@@ -179,15 +180,17 @@ Notas:
 | Nombre o categoria | Flujo publico de solicitud de cita |
 | Estado de disponibilidad | Integrado en Phase 3.8 |
 | Fuente | WhatsApp aprobado en `docs/phase-3-public-inputs.md`; `config/brand.ts`; `content/hero.ts`; `content/lead-form.ts` |
-| Formato recibido | Canal principal por WhatsApp sin mensaje prellenado |
+| Formato recibido | Canal principal provisional por WhatsApp sin mensaje prellenado |
 | Clasificacion | `Publico y aprobado` |
 | Estado de validacion | `Aprobado` |
 | Destino futuro | 3.9 QA final, favicon, Open Graph, metadata y SEO |
-| Observaciones o pendientes | Phase 3.8 completada. WhatsApp es el unico canal principal para solicitar cita. Hero, header, menu mobile y seccion de agenda usan la misma URL aprobada. La seccion `#agenda` explica el proceso con tres pasos y CTA a WhatsApp, mas enlace secundario a `#costos`. El formulario visual fue retirado. La landing no recopila, almacena ni envia datos; no existe backend, agenda automatica ni confirmacion inmediata. No se agrego mensaje prellenado |
+| Observaciones o pendientes | Phase 3.8 completada y Phase 3.8A documentada. WhatsApp es el canal principal provisional durante la etapa actual de la landing. Hero, header, menu mobile y seccion de agenda usan la misma URL aprobada. La seccion `#agenda` explica el proceso con tres pasos y CTA a WhatsApp, mas enlace secundario a `#costos`. El formulario visual deshabilitado fue retirado. La landing no recopila, almacena ni envia datos; no existe backend, agenda automatica ni confirmacion inmediata. No se agrego mensaje prellenado. La eliminacion del formulario actual no cancela el formulario futuro: ese flujo queda fuera de Phase 3 y debera conectarse al modulo privado de leads |
 
 Notas:
 
 - Evitar solicitar diagnostico, sintomas detallados, historia clinica, medicamentos, documentos, fotografias, identificaciones o informacion de emergencia desde la landing publica.
+- El formulario futuro de captacion publica queda documentado en `docs/future/public-lead-intake-and-patient-conversion.md`.
+- Phase 3.9 se limita a QA publico, metadata, favicon, Open Graph y SEO.
 - QA final, favicon, Open Graph, metadata y SEO quedan para Phase 3.9.
 
 ### 7. Estructura utilizada para historial clinico

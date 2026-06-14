@@ -18,10 +18,15 @@ Debe cubrir unicamente:
 - Ubicacion publica.
 - SEO y presencia profesional.
 - Solicitud visual o canal publico cuando exista.
+- En una fase futura aprobada, formulario minimo de solicitud de contacto.
+- Aviso de privacidad asociado al formulario publico.
+- Envio de solicitud a un endpoint seguro.
 
 La superficie publica debe funcionar de forma independiente. No debe depender de una app privada, de modelos internos, de reglas de permisos, de datos clinicos ni de proveedores pensados para una fase privada futura.
 
 La landing publica puede facilitar contacto o solicitud inicial por canales aprobados, pero no debe operar como sistema clinico, panel interno, gestor de pacientes ni expediente digital.
+
+Si se implementa un formulario publico futuro, ese formulario no administrara leads, no mostrara pacientes, no accedera a expedientes y no escribira directamente en colecciones privadas. Toda gestion de solicitudes, seguimiento, conversion y auditoria ocurrira en la app privada o en una capa segura autorizada.
 
 ## 2. Staging
 
@@ -56,6 +61,10 @@ En una fase posterior, la app privada podria incluir:
 - Login.
 - Usuarios internos.
 - Roles.
+- Bandeja de leads.
+- Seguimiento de leads.
+- Creacion manual de leads.
+- Conversion auditable de lead a paciente.
 - Pacientes.
 - Notas de sesion.
 - Auditoria.
@@ -69,6 +78,8 @@ Esta subfase no implementa ninguno de esos elementos. Solo documenta la frontera
 - La landing publica no debe importar logica privada.
 - La landing publica no debe depender de Firebase.
 - La landing publica no debe consultar datos clinicos.
+- La landing publica no debe escribir directamente en colecciones privadas.
+- La landing publica no debe administrar leads ni pacientes.
 - La landing publica no debe exponer `/admin`.
 - La landing publica no debe enlazar `app.balancepsicologia.com` hasta que exista una app privada real aprobada.
 - Los workflows internos no deben vivir en componentes publicos.

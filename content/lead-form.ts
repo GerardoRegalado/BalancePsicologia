@@ -6,12 +6,12 @@ export const appointmentSectionContent: AppointmentSectionContent = {
   eyebrow: "Agenda",
   title: "Solicita tu cita",
   description:
-    "Inicia el proceso de contacto por WhatsApp para consultar disponibilidad y coordinar una sesión.",
+    "Actualmente, puedes iniciar el proceso de contacto por WhatsApp para consultar disponibilidad y coordinar una sesión.",
   publicNote: "El envío de un mensaje no confirma automáticamente una cita.",
   intro: {
     title: "Un primer contacto claro y sencillo",
     description:
-      "WhatsApp es el canal principal para solicitar información y comenzar el proceso para agendar.",
+      "Por ahora, WhatsApp es el canal disponible para solicitar información y comenzar el proceso para agendar.",
   },
   steps: [
     {

@@ -14,6 +14,7 @@ describe("appointment flow component", () => {
     expect(component).not.toContain("<textarea");
     expect(component).not.toContain("disabled");
     expect(component).not.toContain('type="submit"');
+    expect(component).toContain("Canal disponible actualmente");
   });
 
   it("keeps header and mobile navigation wired to the external primary action", () => {

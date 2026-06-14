@@ -36,6 +36,7 @@ Inicialmente podria usarse para un solo consultorio o una sola usuaria, pero el 
 - `users`.
 - `memberships`.
 - `roles`.
+- `leads`.
 - `patients`.
 - `sessionNotes`.
 - `aiAssistances`.
@@ -43,6 +44,8 @@ Inicialmente podria usarse para un solo consultorio o una sola usuaria, pero el 
 - `settings`.
 
 Estas entidades son conceptuales. No deben crearse schemas, modelos, interfaces TypeScript, fixtures ni datos reales en Fase 2.x.
+
+Los leads representan solicitudes o contactos comerciales/administrativos previos al registro como paciente. Deben mantenerse separados de pacientes, notas y expedientes clinicos.
 
 ## 4. Roles conceptuales
 
@@ -83,6 +86,23 @@ Flujo recomendado:
 Flujo prohibido:
 
 `Frontend -> Gemini`
+
+## 6A. Flujo conceptual de captacion publica y leads
+
+Flujo recomendado para un formulario publico futuro:
+
+`Marketing form -> Cloud Function o endpoint seguro -> leads -> app privada autenticada -> conversion humana -> patients`
+
+Flujos prohibidos:
+
+- `Marketing frontend -> escritura directa a patients`.
+- `Marketing frontend -> sessionNotes`.
+- `Marketing frontend -> historial clinico`.
+- `Marketing frontend -> Firestore privado sin capa segura`.
+
+El endpoint o Cloud Function futuro debera validar datos, limitar abuso, verificar consentimiento, asignar `workspaceId`, registrar origen y crear solo un lead. No debe crear automaticamente pacientes ni historiales clinicos.
+
+No se deciden todavia colecciones, indices, Firestore Rules exactas ni modelo final de datos.
 
 La IA debe pasar por una capa segura que valide permisos, minimice datos, controle costos, evite contenido clinico en logs y devuelva respuestas revisables antes de almacenarlas como asistencia.
 

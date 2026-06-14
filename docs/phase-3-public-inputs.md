@@ -36,7 +36,7 @@ Superficies integradas en Phase 3.4:
 - Seccion de contacto.
 - Footer.
 
-Nota Phase 3.8: WhatsApp queda consolidado como canal principal de solicitud de cita. Hero, header, menu mobile y seccion de agenda usan la misma URL `https://wa.me/524495556035`. El formulario visual fue retirado; la landing no recopila, almacena ni envia datos. No existe agenda automatica, confirmacion inmediata ni mensaje prellenado. La seccion `#agenda` explica el proceso y dirige a WhatsApp o a `#costos`.
+Nota Phase 3.8A: WhatsApp queda consolidado como canal principal provisional durante la etapa actual de la landing. Hero, header, menu mobile y seccion de agenda usan la misma URL `https://wa.me/524495556035`. El formulario visual deshabilitado fue retirado para no simular funcionalidad; esto no cancela un formulario publico futuro, que queda fuera de Phase 3 y debera conectarse a un flujo privado seguro de leads. La landing de Phase 3 no recopila, almacena ni envia datos. No existe agenda automatica, confirmacion inmediata ni mensaje prellenado. WhatsApp y redes permaneceran como canales alternativos, y los contactos externos podran registrarse manualmente en una fase privada futura.
 
 ## Redes sociales
 
