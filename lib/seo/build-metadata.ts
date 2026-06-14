@@ -10,13 +10,14 @@ type MetadataInput = {
   noIndex?: boolean;
 };
 
-const metadataBase = new URL(siteConfig.url);
+const canonicalBase = new URL(siteConfig.canonicalUrl);
 
 function absoluteUrl(path: string) {
-  return new URL(path, metadataBase).toString();
+  return new URL(path, canonicalBase).toString();
 }
 
 export function buildMetadata(input: MetadataInput = {}): Metadata {
+  const noIndex = input.noIndex === true || !siteConfig.isIndexable;
   const title = input.title
     ? input.title
     : {
@@ -29,7 +30,7 @@ export function buildMetadata(input: MetadataInput = {}): Metadata {
   const imageUrl = absoluteUrl(input.image ?? siteConfig.ogImage);
 
   return {
-    metadataBase,
+    metadataBase: canonicalBase,
     title,
     description,
     keywords: [...siteConfig.keywords],
@@ -62,10 +63,42 @@ export function buildMetadata(input: MetadataInput = {}): Metadata {
       ? {
           index: false,
           follow: false,
+          noarchive: true,
+          nosnippet: false,
+          googleBot: {
+            index: false,
+            follow: false,
+            noarchive: true,
+            nosnippet: false,
+          },
         }
       : {
-          index: true,
-          follow: true,
+          index: !noIndex,
+          follow: !noIndex,
+          ...(noIndex
+            ? {
+                noarchive: true,
+                nosnippet: false,
+              }
+            : {
+                "max-image-preview": "large",
+                "max-snippet": -1,
+                "max-video-preview": -1,
+              }),
+          googleBot: noIndex
+            ? {
+                index: false,
+                follow: false,
+                noarchive: true,
+                nosnippet: false,
+              }
+            : {
+                index: true,
+                follow: true,
+                "max-image-preview": "large",
+                "max-snippet": -1,
+                "max-video-preview": -1,
+              },
         },
   };
 }

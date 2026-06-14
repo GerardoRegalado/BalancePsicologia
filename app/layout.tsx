@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Serif_4, Work_Sans } from "next/font/google";
 import { buildMetadata } from "@/lib/seo/build-metadata";
+import { buildLocalBusinessJsonLd } from "@/lib/seo/build-local-business-json-ld";
 import "./globals.css";
 
 const sourceSerif = Source_Serif_4({
@@ -18,6 +19,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = buildMetadata();
+const localBusinessJsonLd = buildLocalBusinessJsonLd();
 
 export default function RootLayout({
   children,
@@ -30,6 +32,15 @@ export default function RootLayout({
       className={`${sourceSerif.variable} ${workSans.variable} antialiased`}
     >
       <body className="bg-background text-on-surface min-h-screen font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd).replace(
+              /</g,
+              "\\u003c",
+            ),
+          }}
+        />
         {children}
       </body>
     </html>

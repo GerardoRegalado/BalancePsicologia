@@ -40,7 +40,11 @@ describe("project readiness", () => {
       /template|repo base|prepara una landing/i,
     );
     expect(siteConfig.description).toMatch(/Aguascalientes/);
-    expect(siteConfig.ogImage).toMatch(/^\/media\//);
+    expect(siteConfig.defaultTitle).toBe(
+      "Balance Psicología | Terapia en Aguascalientes",
+    );
+    expect(siteConfig.canonicalUrl).toBe("https://www.balancepsicologia.com");
+    expect(siteConfig.ogImage).toBe("/media/balance-psicologia-og.png");
   });
 
   it("keeps the public content model prepared for the next landing phase", () => {
