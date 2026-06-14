@@ -203,7 +203,7 @@ Notas:
 | Clasificacion | `Publico y aprobado` para datos usados; `Publico, pendiente de validacion` para validacion visual final de favicon/OG |
 | Estado de validacion | `Aprobado` para integracion tecnica; `En revision` para QA visual final |
 | Destino futuro | Phase 3.10 QA publico y validacion visual final antes de promocion |
-| Observaciones o pendientes | Phase 3.9 implementada. Canonical fija `https://www.balancepsicologia.com/`. Production puede indexarse solo si el entorno efectivo es `production` y el hostname es `www.balancepsicologia.com`; development, preview, staging y `.vercel.app` resuelven `noindex,nofollow`. Robots y sitemap usan solo canonical de produccion. JSON-LD local usa `ProfessionalService` y no incluye email, horarios, coordenadas, ratings, reviews ni precios. Phase 3.9A sanitiza la FAQ para retirar respuestas obsoletas sobre canales, ubicacion y costos, y la alinea con WhatsApp, direccion y `pricingPlans`. Contenido legal final sigue pendiente y no se publica en Phase 3.9 |
+| Observaciones o pendientes | Phase 3.9 implementada. Canonical fija `https://www.balancepsicologia.com/`. Production puede indexarse solo si el entorno efectivo es `production` y el hostname es `www.balancepsicologia.com`; development, preview, staging y `.vercel.app` resuelven `noindex,nofollow`. Robots y sitemap usan solo canonical de produccion. JSON-LD local usa `ProfessionalService` y no incluye email, horarios, coordenadas, ratings, reviews ni precios. Phase 3.9A sanitiza la FAQ para retirar respuestas obsoletas sobre canales, ubicacion y costos, y la alinea con WhatsApp, direccion y `pricingPlans`. Phase 3.10 corrige la doble puntuacion de FAQ, cierra copy incompleto de Nosotros, oculta testimonios mientras no existan autorizados y prepara reporte QA pre-staging. Contenido legal final sigue pendiente y no se publica en Phase 3 |
 
 Notas:
 
@@ -212,6 +212,7 @@ Notas:
 - No se crearon rutas legales.
 - El futuro formulario publico no puede entrar en produccion sin aviso y consentimiento aprobados.
 - La FAQ conserva cuatro preguntas y queda alineada con datos publicos ya integrados; no se modifican servicios, precios ni datos aprobados.
+- `docs/phase-3-10-qa-report.md` registra el estado del release candidate; la auditoria visual externa y la seleccion de SHA quedan pendientes antes de staging.
 
 ### 7. Estructura utilizada para historial clinico
 

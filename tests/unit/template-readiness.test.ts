@@ -2,6 +2,7 @@ import { adminConfig } from "@/config/admin";
 import { brandConfig } from "@/config/brand";
 import { mapsConfig } from "@/config/maps";
 import { siteConfig } from "@/config/site";
+import { aboutSectionContent } from "@/content/about";
 import {
   contactSectionContent,
   footerContent,
@@ -101,6 +102,13 @@ describe("project readiness", () => {
     expect(JSON.stringify(faqSectionContent.items)).not.toMatch(
       /Muy pronto|Próximamente|se integrarán los canales|la dirección exacta se publicará|la información comercial se publicará|cuando la información esté lista/i,
     );
+    expect(JSON.stringify(faqSectionContent.items)).not.toContain("Ags..");
+    expect(JSON.stringify(faqSectionContent.items)).not.toMatch(/\.\./);
+    expect(aboutSectionContent.body).not.toMatch(
+      /se integrará|se integrarán|cuando la información esté disponible|información esté disponible/i,
+    );
+    expect(testimonialItems).toEqual([]);
+    expect(testimonialsSectionContent.items).toBe(testimonialItems);
   });
 
   it("uses the approved WhatsApp contact without a prefilled message", () => {

@@ -5,7 +5,7 @@ export const aboutSectionContent: AboutSectionContent = {
   eyebrow: "Nosotros",
   title: "Nuestra filosofía",
   lead: "Creemos en la terapia como un proceso colaborativo, humano y cuidadoso. Balance Psicología busca ofrecer un espacio donde puedas hablar con calma, sentirte escuchado y ordenar lo que estás viviendo sin juicio.",
-  body: "El acompañamiento se presenta con una mirada ética, cercana y respetuosa del ritmo de cada persona. La información clínica específica, trayectoria profesional y detalles del equipo se integrarán únicamente cuando la información esté disponible.",
+  body: "El acompañamiento se presenta con una mirada ética, cercana y respetuosa del ritmo de cada persona, priorizando la escucha, la claridad y un trabajo colaborativo.",
   images: [
     {
       src: "/media/about-hands-mug.png",

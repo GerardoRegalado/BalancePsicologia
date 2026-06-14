@@ -23,7 +23,7 @@ export const faqItems: FaqItem[] = [
   },
   {
     question: "¿Dónde se encuentra Balance Psicología?",
-    answer: `Balance Psicología se encuentra en ${brandConfig.address.clinicName}, ${brandConfig.address.display}. Puedes consultar la ubicación en Google Maps.`,
+    answer: `Balance Psicología se encuentra en ${brandConfig.address.clinicName}, ${brandConfig.address.display} Puedes consultar la ubicación en Google Maps.`,
   },
   {
     question: "¿Los costos ya están disponibles?",
